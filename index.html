@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EL&M</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="libs/tailwind/tailwind.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="index.html">
+            <img src="assets/icons/headLogo.svg" alt="" class="object-contain">
+          </a>
+          <ul class="flex items-center justify-center ml-6 menu-nav">
+            <li class="h-24 active">
+              <a href="#"
+                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150" id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover">Services</a>
+              <!-- Dropdown menu -->
+              <div id="dropdownHover"
+                class="z-10 hidden bg-white w-full max-w-nav">
+                  <div class="p-2 flex">
+                    <div class="services-img overflow-hidden">
+                      <img src="assets/imgs/services-drop.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <ul class="ml-4 drop-nav">
+                      <li>
+                        <a href="#" class="flex items-start justify-between p-2 bg-white">
+                          <span class="overflow-hidden">
+                            <span class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">University placements </span>
+                            <small class="text-gray text-xs font-normal leading-18 truncate">In posuere euismod eget feugiat morbi proin.</small>
+                          </span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15" stroke="#6941C6" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex items-start justify-between p-2">
+                          <span class="overflow-hidden">
+                            <span class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">School Placements</span>
+                            <small class="text-gray text-xs font-normal leading-18 truncate">In posuere euismod eget feugiat morbi proin.</small>
+                          </span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15" stroke="#6941C6" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="flex items-start justify-between p-2">
+                          <span class="overflow-hidden">
+                            <span class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">Short Courses </span>
+                            <small class="text-gray text-xs font-normal leading-18 truncate">In posuere euismod eget feugiat morbi proin..</small>
+                          </span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15" stroke="#6941C6" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+            </li>
+            <li class="h-24"><a href="#"
+                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">About
+                us</a></li>
+            <li class="h-24"><a href="#"
+                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">Blogs
+                & News</a></li>
+            <li class="h-24"><a href="#"
+                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">Contact
+                us</a></li>
+            <li class="h-24"><a href="#"
+                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center">
+          <ul class="flex items-center">
+            <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/facebook.svg" alt="" class="w-5"></a>
+            </li>
+            <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/linkedin.svg" alt="" class="w-5"></a>
+            </li>
+            <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/twitter.svg" alt="" class="w-5"></a>
+            </li>
+            <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/instagram.svg" alt="" class="w-5"></a>
+            </li>
+          </ul>
+          <p class="flex items-center mb-0">
+            <img src="assets/icons/phone.svg" alt="" class="mr-2 w-5">
+            <a href="tel:+447823213024" class="font-normal text-base text-white">+447823213024</a>
+          </p>
+
+          <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+            class="text-center inline-flex items-center ml-6 text-base font-normal" type="button">
+            <img src="assets/icons/GB.svg" alt="">
+            <span class="font-normal text-base text-white ml-2 mr-1">En</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M16.25 7.5L10 13.75L3.75 7.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- Dropdown menu -->
+          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 shadow w-32 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+              <li>
+                <a href="#"
+                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                  <img src="assets/icons/GB.svg" alt="">
+                  <span class="font-normal text-base ml-2">Az</span>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                  <img src="assets/icons/GB.svg" alt="">
+                  <span class="font-normal text-base ml-2">En</span>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                  <img src="assets/icons/GB.svg" alt="">
+                  <span class="font-normal text-base ml-2">Ru</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="page-box">
+    <h1 class="max-w-xl m-auto mb-6 text-5xl title mt-0 pt-8">Privacy Policy</h1>
+    <div class="max-w-xl m-auto desc pb-8">
+      Venenatis tristique egestas sit dolor sodales consequat scelerisque. Pharetra pharetra eleifend nulla id eros
+      dolor.
+      Laoreet maecenas a massa risus egestas in porttitor. Non eu in ipsum at nulla tincidunt id sagittis ut. Quis
+      ullamcorper iaculis accumsan libero. Velit at lectus blandit vitae. Nisl imperdiet pulvinar condimentum quam nulla
+      scelerisque dui. Non volutpat əminəm ki heç bir şey s tristique accumsan venenatis. Libero enim eget lectus id.
+      Tincidunt
+      pulvinar metus nibh erat. Id congue netus vitae sed tortor quis sem. Tortor purus accumsan venenatis ac consequat
+      blandit magnis.
+    </div>
+  </div>
+  <footer class="bg-dark-purple">
+    <div class="container mx-auto">
+      <div class="pt-16 pb-14">
+        <div class="grid grid-cols-3 gap-4">
+          <div class="">
+            <a href="index.html" class="logo">
+              <img src="assets/icons/logo.svg" alt="" class="object-contain">
+            </a>
+            <div class="mt-16 pt-2">
+              <span class="text-light-purple font-normal text-sm">Find us on</span>
+              <ul class="mt-4 flex items-center">
+                <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/facebook.svg" alt=""></a></li>
+                <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/linkedin.svg" alt=""></a></li>
+                <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/twitter.svg" alt=""></a></li>
+                <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/instagram.svg" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="">
+            <p class="leading-5 text-light-purple font-normal text-sm mb-4">Menu</p>
+            <ul>
+              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Services</a></li>
+              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Blog</a></li>
+              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">About us</a></li>
+              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Contact us</a></li>
+              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="">
+            <p class="leading-5 text-light-purple font-normal text-sm mb-4">Info</p>
+            <ul>
+              <li class="flex items-start mb-2">
+                <img src="assets/icons/map.svg" alt="" class="mr-2">
+                <span class="font-normal text-base text-light-white max180px">167-169 Great Portland  Street,
+                  London</span>
+              </li>
+              <li class="flex items-start mb-2">
+                <img src="assets/icons/footer-phone.svg" alt="" class="mr-2">
+                <a href="tel:+447823213024" class="font-normal text-base text-light-white">+447823213024</a>
+              </li>
+              <li class="flex items-start mb-2">
+                <img src="assets/icons/envelope.svg" alt="" class="mr-2">
+                <a href="mailto:sample@sample.com" class="font-normal text-base text-light-white">sample@sample.com</a>
+              </li>
+            </ul>
+            <div class="mt-16">
+              <div class="text-light-white text-3xl font-normal foot-title mb-2">Subscribe to our Newsletter</div>
+              <p class="text-light-white text-base font-normal">Nunc vitae ullamcorper vel turpis viverra dolor libero
+                in. Commodo sit mus at velit dis.</p>
+            </div>
+            <form action="">
+              <div class="foot-form mt-4 flex items-center justify-start">
+                <div class="relative w-full">
+                  <input type="text" class="h-11 text-base font-normal text-dark-purple pl-4 pr-4 w-full"
+                    placeholder="sample@sample.com">
+                  <span class="absolute help-icon" title="Subscribe to our Newsletter"><img src="assets/icons/help.svg"
+                      alt=""></span>
+                </div>
+                <button type="submit"
+                  class="inline-flex items-center justify-center h-11 bg-white text-dark-purple text-base leading-6 font-semibold subscribe-btn ml-4">
+                  Subscribe
+                  <img src="assets/icons/arrow-narrow-right.svg" alt="" class="ml-2">
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-bg-light-purple">
+      <div class="container mx-auto flex justify-between items-center py-2">
+        <p class="text-light-purple font-normal text-sm">2024, EL&M Consulting</p>
+        <ul class="flex items-center justify-center">
+          <li class="ml-6"><a href="#" class="text-light-purple font-normal text-sm">Privacy & Policy</a></li>
+          <li class="ml-6"><a href="#" class="text-light-purple font-normal text-sm">Terms & Conditions</a></li>
+          <li class="ml-6"><a href="#" class="text-light-purple font-normal text-sm">Data privacy</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- jQuery -->
+  <script src="libs/jquery/jquery-3.6.4.min.js"></script>
+  <!-- Flowbite JS -->
+  <script src="libs/flowbite/flowbite.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
