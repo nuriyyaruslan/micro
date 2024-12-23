@@ -143,7 +143,7 @@ footer .logo img{
     width: calc(100% - 248px);
 }
 
-.drop-nav a,.all-faq-questions button[aria-expanded="true"] svg{
+.drop-nav a,.all-faq-questions button[aria-expanded="true"] svg,.services-item img{
     transition: all .4s ease;
 }
 
@@ -621,3 +621,55 @@ footer .logo img{
     bottom:0;
     right:0;
 }
+
+.services-title{
+    border-radius: 0px 40px;
+}
+
+.services h4{
+    font-size: 40px;
+    letter-spacing: -0.8px;
+    line-height: 56px;
+}
+
+.services .services-content{
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.services .services-item:first-child .services-content{
+    background-image: url('../icons/services-bg1.svg') !important;
+}
+
+.services .services-item:last-child .services-content{
+    background-image: url('../icons/services-bg5.svg') !important;
+}
+
+.services .services-item:nth-child(2) .services-content{
+    background-image: url('../icons/services-bg2.svg') !important;
+}
+
+.services .services-item:nth-child(3) .services-content{
+    background-image: url('../icons/services-bg3.svg') !important;
+}
+
+.services .services-item:nth-child(4) .services-content{
+    background-image: url('../icons/services-bg4.svg') !important;
+}
+
+.services .services-item:nth-child(odd) .services-content{
+    background-image: url('../icons/services-bg4.svg');
+}
+
+.services .services-item:nth-child(even) .services-content{
+    background-image: url('../icons/services-bg1.svg');
+}
+
+.services-item img:hover{
+    transform: scale(1.2);
+}
+
+.min-h72{
+    min-height: 72px;
+}
+
