@@ -19,8 +19,28 @@ body{
     color:#682B82;
 }
 
+.elm-500{
+    color:#A14FC5;
+}
+
+.elm-600{
+    color:#7B3399;
+}
+
+.success-50{
+    background-color: #ECFDF3;
+}
+
+.success-700{
+    color: #027A48;
+}
+
 .elm-bg-700{
     background-color: #682B82;
+}
+
+.elm-300{
+    color:#C694DC;
 }
 
 .text-dark-purple{
@@ -36,6 +56,14 @@ body{
 
 .elm-400{
     color:#B675D1;
+}
+
+.elm-200{
+    color: #DABAE8;
+}
+
+.elm-50{
+    background-color: #F5ECF9;
 }
 
 .text-gray{
@@ -86,7 +114,8 @@ footer .logo img{
 .header{
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
     background: rgba(255, 255, 255, 0.02);
-    background-color: #682B82; /* test style */
+    /* background-color: #682B82;  */
+    /* test style */
 }
 
 .menu-nav>li{
@@ -221,7 +250,7 @@ footer .logo img{
     border-bottom-right-radius: 40px;
 }
 
-.contact-form-img::before,.contact-form-img::after{
+.contact-form-img::before,.contact-form-img::after,.google-map::before,.google-map::after,.acceptences-content::before,.acceptences::before,.acceptences::after{
     content: '';
     display: block;
     position: absolute;
@@ -288,7 +317,7 @@ footer .logo img{
     border-color:#682B82;
   }
   
-  .checkmark:after {
+  .checkmark:after{
     content: "";
     position: absolute;
     display: none;
@@ -309,3 +338,286 @@ footer .logo img{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+  /* CONTACT PAGE */
+
+  .map-content{
+    height: 509px;
+    border-radius: 0px 40px;
+    background-color: orange;
+  }
+
+  .google-map::before{
+    width: 217px;
+    height: 217px;
+    background-color: #EBD9F2;
+    top:-16px;
+    left:-16px;
+    z-index: -1;
+  }
+
+  .google-map::after{
+    width: 120px;
+    height: 120px;
+    background-color: #A14FC5;
+    right: -16px;
+    bottom:-16px;
+    z-index: -1;
+  }
+
+  .acceptences-content{
+    min-height: 256px;
+    background-image: url('../icons/n.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+  .light-acceptences{
+    background-image: url('../icons/quote.png');
+  }
+
+  .acceptences-content h4{
+    max-width: 658px;
+  }
+
+  .acceptences-content p{
+    max-width: 452px;
+  }
+
+  .acceptences-image{
+    width: 28%;
+    border-bottom-left-radius: 64px;
+  }
+
+  .acceptences-content{
+    width: 72%;
+    border-top-right-radius: 64px;
+  }
+
+  .acceptences-content::before,.light-acceptences::before{
+    height: 92%;
+    width: 32px;
+    border-top-left-radius: 26px;
+    border-bottom-left-radius: 26px;
+    background-color: #682B82;
+    position: absolute;
+    left: -32px;
+    top: 4%;
+  }
+
+  .light-acceptences::before{
+    background-color: #F5ECF9;
+  }
+
+  .acceptences::before{
+    width: 96px;
+    height: 96px;
+    background-color: #C694DC;
+    top: -16px;
+    left: -16px;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .acceptences::after{
+    width: 192px;
+    height: 192px;
+    background-color: #3A1849;
+    bottom:-16px;
+    right:-16px;
+    z-index: -1;
+  }
+
+  .blogs-line{
+    height: 1px;
+  }
+
+  .blogs-filter li.active a{
+    background-color: #F5ECF9;
+    color:#682B82;
+  }
+
+  .line-clamp-2,.line-clamp-3{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  .line-clamp-2{
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3{
+    -webkit-line-clamp: 3;
+  }
+
+  .height-60{
+    height: 60px;
+  }
+
+  .custom-pagination .active a{
+    background-color: #F9FAFB;
+  }
+
+  .custom-pagination li{
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .min-w-10{
+    min-width: 40px;
+  }
+
+  .filter-dropdown{
+    width: 304px;
+  }
+
+.min-w-16{
+    min-width: 64px;
+}
+
+.blogs-news-content h2,.blogs-news-content h3,.blogs-news-content h4, .blogs-news-content h5, .blogs-news-content h6{
+    margin-top:24px;
+    margin-bottom:24px;
+    color:#682B82;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.blogs-news-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top:24px;
+    margin-bottom:24px;
+}
+
+.blogs-news-content iframe{
+    margin-top: 20px;
+    margin-bottom:24px;
+    width: 100%;
+}
+
+.our-approach-img{
+    height: 672px;
+}
+
+.min-h-168{
+    min-height: 168px;
+}
+
+.value-img{
+    background-color: #fff;
+    position: relative;
+    z-index: 6;
+}
+
+.value-img-box::before,.value-img-box::after{
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.value-img-box::before{
+    width: 44px;
+    height: 44px;
+    background-color: #C694DC;
+    left: -4px;
+    top:-4px;
+}
+
+.value-img-box::after{
+    width: 32px;
+    height: 32px;
+    bottom:-4px;
+    right:-4px;
+    background-color: #EBD9F2;
+}
+
+.value-img-cover{
+   background: rgb(161,79,197);
+    background: linear-gradient(90deg, rgba(161,79,197,0.24079569327731096) 0%, rgba(161,79,197,0.01827468487394958) 100%);
+}
+
+.our-values{
+    z-index: 2;
+}
+
+.value-bg{
+    z-index: -1;
+}
+
+.w-percent40{
+    width: 40%;
+}
+
+.w-percent60{
+    width: 60%;
+}
+
+.about-item:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.about-item:nth-child(even) .about-content{
+    padding-right: 16px;
+}
+
+.about-item:nth-child(odd) .about-content{
+    padding-left: 16px;
+}
+
+.about-img-cover{
+    height: 418px;
+}
+
+.about-item:nth-child(odd) .about-img-cover{
+    border-radius: 40px 0px;
+}
+
+.about-item:nth-child(even) .about-img-cover{
+    border-radius: 0px 40px;
+}
+
+.about-img{
+    position: relative;
+}
+
+.about-img::after{
+    content: '';
+    width: 220px;
+    height: 220px;
+    background-color: #F5ECF9;
+    position: absolute;
+    z-index: -1;
+}
+
+.about-img::before{
+    content: '';
+    width: 96px;
+    height: 96px;
+    background-color: #682B82;
+    position: absolute;
+    z-index: -1;
+}
+
+.about-item:nth-child(odd) .about-img::before{
+    left: 0;
+    bottom: 0;
+}
+
+.about-item:nth-child(even) .about-img::before{
+    left: 0;
+    top: 0;
+}
+
+.about-item:nth-child(odd) .about-img::after{
+    top:0;
+    right:0;
+}
+
+.about-item:nth-child(even) .about-img::after{
+    bottom:0;
+    right:0;
+}
