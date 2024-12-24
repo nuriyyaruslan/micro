@@ -114,8 +114,10 @@ footer .logo img{
 .header{
     border-bottom: 1px solid rgba(255, 255, 255, 0.24);
     background: rgba(255, 255, 255, 0.02);
-    /* background-color: #682B82;  */
-    /* test style */
+}
+
+.header.active{
+    background-color: #682B82;
 }
 
 .menu-nav>li{
@@ -673,3 +675,21 @@ footer .logo img{
     min-height: 72px;
 }
 
+.home-about .about-img::after{
+    left: 0;
+    background-color: #682B82;
+}
+
+.home-about:nth-child(odd) .about-img::before{
+    right: 0;
+    left: auto;
+    background-color: #C694DC;
+}
+
+.home-about:nth-child(odd) .about-content{
+    padding-left: 24px;
+}
+
+.partners-items img{
+    height: 75px;
+}
