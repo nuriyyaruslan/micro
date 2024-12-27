@@ -94,4 +94,31 @@ $(function () {
     $('.owl-next').click();
   })
 
+  //Cookies modal
+  $('.cookie-accept-all').click(function(){
+    $('#cookies-modal').addClass('hidden');
+  })
+
+  //Cookies toggles buttons
+  $('.toggle').on('change', function () {
+    if ($(this).is(':checked')) {
+      console.log($(this).attr('id') + ' enabled');
+    } else {
+      console.log($(this).attr('id') + ' disabled');
+    }
+  })
+  $('.cookie-customize').click(function(){
+    $('.cookies-content').addClass('hidden');
+    $('.cookies-cutomise').removeClass('hidden');
+  })
+
+  $('.cookie-close').click(function(){
+    $('.cookies-content').removeClass('hidden');
+    $('.cookies-cutomise').addClass('hidden');
+  })
+
+  $('.accept-all').click(function(){
+    $('#cookies-modal').addClass('hidden');
+  })
+
 });

@@ -15,6 +15,75 @@
 </head>
 
 <body>
+  <!-- Cookies modal -->
+  <div id="cookies-modal" class="flex">
+    <div class="container m-auto elm-50 cookies-content rounded-3xl p-6 fixed bottom-6 left-0 right-0">
+      <div class="flex">
+        <div class="w-percent70">
+          <h5 class="elm-dark-purple text-5xl font-medium title mb-4">We value your privacy</h5>
+          <div class="elm-600 text-base leading-6 font-normal">
+            Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu vel vulputate ut. In odio volutpat elementum nisi amet. Mauris dictum pulvinar bibendum vitae lectus etiam. In amet pretium id amet laoreet. Pulvinar tristique sed imperdiet at ligula felis amet aliquet.
+          </div>
+        </div>
+        <ul class="w-percent30 pl-4">
+          <li class="mb-4">
+            <button type="button" class="accept-all purple-border elm-dark-purple text-white font-semibold leading-6 text-center block px-5 py-3 w-full">Accept All</button>
+          </li>
+          <li class="mb-4">
+            <button type="button" class="reject-all purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Reject All</button>
+          </li>
+          <li class="mb-4">
+            <button type="button" class="cookie-customize purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Customize</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="cookies-cutomise m-auto elm-50 rounded-3xl p-6 bottom-6 left-0 right-0 hidden">
+      <div class="flex items-center justify-between mb-6">
+        <h6 class="elm-dark-purple text-2xl leading-8 font-medium">Cookie Policy</h6>
+        <button type="button" class="cookie-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M17 7L7 17M7 7L17 17" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="cookie-policy">
+        <div class="option mb-6 flex justify-between items-center">
+          <label for="necessary">
+            <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Necesarry</p>
+            <div class="elm-600 text-sm leading-5 font-normal">
+              Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu vel vulputate ut.
+            </div>
+          </label>
+          <input type="checkbox" id="necessary" class="toggle h-9">
+        </div>
+        <div class="option mb-6 flex justify-between items-center">
+          <label for="functional">
+            <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Functional</p>
+            <div class="elm-600 text-sm leading-5 font-normal">
+              Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu vel vulputate ut.
+            </div>
+          </label>
+          <input type="checkbox" id="functional" class="toggle h-9">
+        </div>
+        <div class="option mb-6 flex justify-between items-center">
+          <label for="analytics">
+            <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Analytics</p>
+            <div class="elm-600 text-sm leading-5 font-normal">
+              Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu vel vulputate ut.
+            </div>
+          </label>
+          <input type="checkbox" id="analytics" class="toggle h-9">
+        </div>
+      </div>  
+      <div class="grid grid-cols-3 gap-2">
+        <button type="button" class="accept-all purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Reject All</button>
+        <button type="button" class="save-preferences purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Save my preferences</button>
+        <button type="button" class="cookie_accept_all purple-border text-white font-semibold leading-6 text-center block px-5 py-3 w-full">Accept All</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Calendly modal -->
   <div id="calendly-modal" tabindex="-1" aria-hidden="true"
     class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full">
@@ -162,7 +231,7 @@
     <div id="default-carousel" class="relative w-full" data-carousel="static">
       <div class="relative h-screen overflow-hidden">
         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-          <video class="w-full h-full" autoplay muted loop>
+          <video class="w-full h-full object-cover" autoplay muted loop>
             <source src="assets/imgs/londonvideo.mp4" type="video/mp4">
           </video>
           <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
@@ -174,7 +243,7 @@
               <a href="#"
                 class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
                 Request a Service
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
                     stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -193,7 +262,7 @@
               <a href="#"
                 class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
                 Request a Service
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
                     stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -212,7 +281,7 @@
               <a href="#"
                 class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
                 Request a Service
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
                     stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -924,7 +993,6 @@
       </div>
     </div>
   </footer>
-
   <!-- jQuery -->
   <script src="libs/jquery/jquery-3.6.4.min.js"></script>
   <!-- Flowbite JS -->
