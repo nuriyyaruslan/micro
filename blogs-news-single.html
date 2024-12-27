@@ -8,11 +8,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="libs/tailwind/tailwind.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <!-- Calendly modal -->
+    <div id="calendly-modal" tabindex="-1" aria-hidden="true"
+    class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full">
+    <div class="bg-white max-h-full rounded-lg calendly-modal-content w-full overflow-hidden">
+        <iframe src="https://calendly.com" width="100%" height="100%" style="border:none;">
+        </iframe>
+    </div>
+    </div>
     <header class="header fixed w-full z-50">
         <div class="container mx-auto">
             <div class="flex items-center justify-between">
@@ -35,7 +45,8 @@
                                     </div>
                                     <ul class="ml-4 drop-nav">
                                         <li>
-                                            <a href="services.html" class="flex items-start justify-between p-2 bg-white">
+                                            <a href="services.html"
+                                                class="flex items-start justify-between p-2 bg-white">
                                                 <span class="overflow-hidden">
                                                     <span
                                                         class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">University
@@ -230,31 +241,72 @@
         </div>
     </section>
     <section class="blogs-news-content">
-        <div class="max-w-960 m-auto mt-16 mb-6 border-t border-t-gray-200 border-x-4 text-gray-700 text-base font-normal leading-6">
+        <div
+            class="max-w-960 m-auto mt-16 mb-6 border-t border-t-gray-200 border-x-4 text-gray-700 text-base font-normal leading-6">
             <h4>The UK education system is divided into four main stages:</h4>
-            Primary Education (Ages 4-11): Primary education begins with Reception and goes up to Year 6. This stage focuses on foundational skills in subjects such as English, mathematics, science, and basic social studies. Students take national exams, like the SATs in Year 2 and Year 6, to assess progress.
+            Primary Education (Ages 4-11): Primary education begins with Reception and goes up to Year 6. This stage
+            focuses on foundational skills in subjects such as English, mathematics, science, and basic social studies.
+            Students take national exams, like the SATs in Year 2 and Year 6, to assess progress.
             <br> <br>
-            Secondary Education (Ages 11-16): Students move to secondary school for Years 7-11, studying core subjects such as English, mathematics, and science, alongside additional subjects like history, geography, and a foreign language. At the end of Year 11, students take the General Certificate of Secondary Education (GCSE) exams. These exams are crucial as they influence further education and career pathways.
-            Post-16 Education (Ages 16-18): After GCSEs, students may choose to continue their studies by pursuing A-Levels, BTECs, or vocational training. A-Levels are academic qualifications typically required for university admission, while BTECs and vocational qualifications offer practical skills in specific fields like business, technology, or the arts.
+            Secondary Education (Ages 11-16): Students move to secondary school for Years 7-11, studying core subjects
+            such as English, mathematics, and science, alongside additional subjects like history, geography, and a
+            foreign language. At the end of Year 11, students take the General Certificate of Secondary Education (GCSE)
+            exams. These exams are crucial as they influence further education and career pathways.
+            Post-16 Education (Ages 16-18): After GCSEs, students may choose to continue their studies by pursuing
+            A-Levels, BTECs, or vocational training. A-Levels are academic qualifications typically required for
+            university admission, while BTECs and vocational qualifications offer practical skills in specific fields
+            like business, technology, or the arts.
             <br> <br>
-            Higher Education (18+ Years): The UK is home to some of the world’s oldest and most prestigious universities, such as the University of Oxford, University of Cambridge, and the London School of Economics. Students can pursue undergraduate degrees, typically three to four years, and may continue with postgraduate studies in their chosen field.
+            Higher Education (18+ Years): The UK is home to some of the world’s oldest and most prestigious
+            universities, such as the University of Oxford, University of Cambridge, and the London School of Economics.
+            Students can pursue undergraduate degrees, typically three to four years, and may continue with postgraduate
+            studies in their chosen field.
             <img src="assets/imgs/blog-single1.jpeg" alt="">
             <h4>Key Features of UK Education</h4>
-            Prestigious Universities and Colleges: The UK is home to numerous renowned institutions that consistently rank highly in global rankings. Institutions such as Oxford, Cambridge, and Imperial College London are known for their rigorous academic standards and rich history of excellence. These institutions have stood the test of time, shaping the minds of generations of students and contributing significantly to the academic landscape.
+            Prestigious Universities and Colleges: The UK is home to numerous renowned institutions that consistently
+            rank highly in global rankings. Institutions such as Oxford, Cambridge, and Imperial College London are
+            known for their rigorous academic standards and rich history of excellence. These institutions have stood
+            the test of time, shaping the minds of generations of students and contributing significantly to the
+            academic landscape.
             <br> <br>
-            Specialized Undergraduate Courses: In contrast to many other countries, students in the UK often select a specific course or major before beginning university, enabling them to delve deeply into a particular subject right from the start of their degree program. This early specialization allows students to focus on their areas of interest and develop a strong foundation in their chosen field of study, setting them up for success in their future careers.
+            Specialized Undergraduate Courses: In contrast to many other countries, students in the UK often select a
+            specific course or major before beginning university, enabling them to delve deeply into a particular
+            subject right from the start of their degree program. This early specialization allows students to focus on
+            their areas of interest and develop a strong foundation in their chosen field of study, setting them up for
+            success in their future careers.
             <br> <br>
-            <iframe width="966" height="543" src="https://www.youtube.com/embed/JwC-Qx1lJso" title="Start your dreams with us!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            
-            Emphasis on Independent Learning: The UK education system promotes self-directed learning, encouraging students to take charge of their educational journey. This focus on self-study aims to cultivate independence, critical thinking, and problem-solving abilities. By empowering students to drive their own learning experiences, the UK education system equips them with valuable skills that extend beyond the classroom and into their professional lives.
-            Diverse Student Population: With a student body representing various nations, the UK's education system thrives on a multitude of perspectives, creating a multicultural learning environment that enriches the educational experience. Interacting with peers from different cultural backgrounds not only broadens students' horizons but also fosters a deeper understanding and appreciation of diversity. This diverse student population adds vibrancy to campus life and enhances the overall learning environment for everyone involved.
+            <iframe width="966" height="543" src="https://www.youtube.com/embed/JwC-Qx1lJso"
+                title="Start your dreams with us!" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            Emphasis on Independent Learning: The UK education system promotes self-directed learning, encouraging
+            students to take charge of their educational journey. This focus on self-study aims to cultivate
+            independence, critical thinking, and problem-solving abilities. By empowering students to drive their own
+            learning experiences, the UK education system equips them with valuable skills that extend beyond the
+            classroom and into their professional lives.
+            Diverse Student Population: With a student body representing various nations, the UK's education system
+            thrives on a multitude of perspectives, creating a multicultural learning environment that enriches the
+            educational experience. Interacting with peers from different cultural backgrounds not only broadens
+            students' horizons but also fosters a deeper understanding and appreciation of diversity. This diverse
+            student population adds vibrancy to campus life and enhances the overall learning environment for everyone
+            involved.
             <br> <br>
-            The UK National Curriculum ensures a standardized educational experience across the country, particularly for primary and secondary education. Core subjects are supplemented by other important areas such as physical education, music, and arts. In recent years, there has been a growing focus on digital literacy and mental health support within schools.
+            The UK National Curriculum ensures a standardized educational experience across the country, particularly
+            for primary and secondary education. Core subjects are supplemented by other important areas such as
+            physical education, music, and arts. In recent years, there has been a growing focus on digital literacy and
+            mental health support within schools.
             <img src="assets/imgs/blog-single2.jpeg" alt="">
             <h4>The Future of Education in the UK</h4>
-            As the world evolves, so does education in the UK. Increasingly, digital tools and online learning are becoming integrated into the curriculum, preparing students for the future workforce. With the growing need for technological skills, the UK’s education system is expected to expand its focus on STEM (Science, Technology, Engineering, and Mathematics) fields, along with developing critical soft skills.
+            As the world evolves, so does education in the UK. Increasingly, digital tools and online learning are
+            becoming integrated into the curriculum, preparing students for the future workforce. With the growing need
+            for technological skills, the UK’s education system is expected to expand its focus on STEM (Science,
+            Technology, Engineering, and Mathematics) fields, along with developing critical soft skills.
             <br> <br>
-            In conclusion, the UK’s education system remains a benchmark for excellence, combining rich academic traditions with forward-thinking approaches to prepare students for a globalized world. Whether for local or international students, education in the UK offers a wealth of opportunities and pathways, providing a solid foundation for a successful future.
+            In conclusion, the UK’s education system remains a benchmark for excellence, combining rich academic
+            traditions with forward-thinking approaches to prepare students for a globalized world. Whether for local or
+            international students, education in the UK offers a wealth of opportunities and pathways, providing a solid
+            foundation for a successful future.
         </div>
     </section>
     <section class="blogs-news">
@@ -357,12 +409,14 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="index.html" class="inline-flex items-center justify-center btn-bg mt-10 px-4 py-2 h-11 min-w-152">
+                    <a href="index.html"
+                        class="inline-flex items-center justify-center btn-bg mt-10 px-4 py-2 h-11 min-w-152">
                         <span class="elm-dark-purple mr-2 font-semibold text-base">See more</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                          <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15" stroke="#682B82" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15" stroke="#682B82"
+                                stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                     </a>
+                    </a>
                 </div>
             </div>
         </div>
@@ -502,6 +556,14 @@
                                 </div>
                             </div>
                             <div class="mb-4 mt-2">
+                                <button type="button"
+                                  class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
+                                  data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
+                                  <img src="assets/icons/time.svg" alt="" class="mr-2">
+                                  Choose available time
+                                </button>
+                              </div>
+                            <div class="mb-4 mt-2">
                                 <label class="container-checkbox relative block cursor-pointer pl-8">
                                     <a href="privacy-policy.html" target="_blank"
                                         class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
@@ -552,15 +614,18 @@
                     <div class="">
                         <p class="leading-5 text-light-purple font-normal text-sm mb-4">Menu</p>
                         <ul>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University placements </a></li>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Short Courses</a></li>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">School Placements</a></li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University
+                                    placements </a></li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Short Courses</a>
+                            </li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">School
+                                    Placements</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Blog</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">About us</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Contact us</a>
                             </li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">FAQ</a></li>
-                          </ul>
+                        </ul>
                     </div>
                     <div class="">
                         <p class="leading-5 text-light-purple font-normal text-sm mb-4">Info</p>
@@ -613,20 +678,25 @@
             <div class="container mx-auto flex justify-between items-center py-2">
                 <p class="text-light-purple font-normal text-sm">2024, EL&M Consulting</p>
                 <ul class="flex items-center justify-center">
-                    <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy & Policy</a></li>
-                    <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms & Conditions</a>
+                    <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy
+                            & Policy</a></li>
+                    <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms &
+                            Conditions</a>
                     </li>
-                    <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data privacy</a></li>
+                    <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data
+                            privacy</a></li>
                 </ul>
             </div>
         </div>
     </footer>
-     <!-- jQuery -->
-     <script src="libs/jquery/jquery-3.6.4.min.js"></script>
-     <!-- Flowbite JS -->
-     <script src="libs/flowbite/flowbite.min.js"></script>
-     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtd_du9lL428kWQNUGeIaQk6NwBg7RUg&callback=initMap"></script>
-     <script src="js/scripts.js"></script>
+    <!-- jQuery -->
+    <script src="libs/jquery/jquery-3.6.4.min.js"></script>
+    <!-- Flowbite JS -->
+    <script src="libs/flowbite/flowbite.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtd_du9lL428kWQNUGeIaQk6NwBg7RUg&callback=initMap"></script>
+    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

@@ -8,11 +8,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="libs/tailwind/tailwind.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <!-- Calendly modal -->
+    <div id="calendly-modal" tabindex="-1" aria-hidden="true"
+        class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full">
+        <div class="bg-white max-h-full rounded-lg calendly-modal-content w-full overflow-hidden">
+            <iframe src="https://calendly.com" width="100%" height="100%" style="border:none;">
+            </iframe>
+        </div>
+    </div>
     <header class="header fixed w-full z-50">
         <div class="container mx-auto">
             <div class="flex items-center justify-between">
@@ -442,6 +452,14 @@
                                 </div>
                             </div>
                             <div class="mb-4 mt-2">
+                                <button type="button"
+                                    class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
+                                    data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
+                                    <img src="assets/icons/time.svg" alt="" class="mr-2">
+                                    Choose available time
+                                </button>
+                            </div>
+                            <div class="mb-4 mt-2">
                                 <label class="container-checkbox relative block cursor-pointer pl-8">
                                     <a href="privacy-policy.html" target="_blank"
                                         class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
@@ -567,6 +585,7 @@
     <script src="libs/flowbite/flowbite.min.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtd_du9lL428kWQNUGeIaQk6NwBg7RUg&callback=initMap"></script>
+    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 

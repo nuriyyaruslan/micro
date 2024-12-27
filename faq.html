@@ -8,11 +8,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="libs/tailwind/tailwind.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <!-- Calendly modal -->
+    <div id="calendly-modal" tabindex="-1" aria-hidden="true"
+        class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full">
+        <div class="bg-white max-h-full rounded-lg calendly-modal-content w-full overflow-hidden">
+            <iframe src="https://calendly.com" width="100%" height="100%" style="border:none;">
+            </iframe>
+        </div>
+    </div>
     <header class="header fixed w-full z-50">
         <div class="container mx-auto">
             <div class="flex items-center justify-between">
@@ -35,7 +45,8 @@
                                     </div>
                                     <ul class="ml-4 drop-nav">
                                         <li>
-                                            <a href="services.html" class="flex items-start justify-between p-2 bg-white">
+                                            <a href="services.html"
+                                                class="flex items-start justify-between p-2 bg-white">
                                                 <span class="overflow-hidden">
                                                     <span
                                                         class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">University
@@ -373,7 +384,6 @@
                         The tab JavaScript swaps classes to control the content visibility and styling.</p>
                 </div>
             </div>
-
         </div>
     </section>
     <section class="contact-form">
@@ -454,12 +464,14 @@
                                 <div class="relative phone-prefix">
                                     <div class="pl-3 absolute phone-prefix-cover top-2">
                                         <div class="flex items-center w-12">
-                                            <select id="phone-number" class="text-gray-900 text-base block w-16 focus:outline-none">
+                                            <select id="phone-number"
+                                                class="text-gray-900 text-base block w-16 focus:outline-none">
                                                 <option value="US">US</option>
                                                 <option value="AZ">AZ</option>
                                                 <option value="TR">TR</option>
                                             </select>
-                                            <svg class="pointer-events-none absolute right-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            <svg class="pointer-events-none absolute right-1"
+                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                                 viewBox="0 0 20 20" fill="none">
                                                 <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667"
                                                     stroke-linecap="round" stroke-linejoin="round" />
@@ -472,48 +484,68 @@
                                 </div>
                             </div>
                             <div class="mb-4 mt-2">
-                                <label for="hear-about"
-                                    class="block mb-2 text-sm font-medium leading-5 text-gray">How did you hear about us?</label>
-                                   <div class="relative">
-                                    <select id="hear-about" class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
+                                <label for="hear-about" class="block mb-2 text-sm font-medium leading-5 text-gray">How
+                                    did you hear about us?</label>
+                                <div class="relative">
+                                    <select id="hear-about"
+                                        class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
                                         <option value="" selected>Select...</option>
                                         <option value="linkedin">Linkedin</option>
                                         <option value="google">Google</option>
                                         <option value="facebook">Facebook</option>
                                     </select>
-                                    <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                   </div>
+                                    <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="mb-4 mt-2">
                                 <label for="services"
                                     class="block mb-2 text-sm font-medium leading-5 text-gray">Services</label>
-                                   <div class="relative">
-                                    <select id="services" class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
+                                <div class="relative">
+                                    <select id="services"
+                                        class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
                                         <option value="" selected>Select...</option>
                                         <option value="trust">Trust</option>
                                         <option value="⁠excellence">⁠Excellence</option>
                                         <option value="commitment">Commitment</option>
                                         <option value="global-perspective">Global Perspective</option>
                                     </select>
-                                    <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                   </div>
+                                    <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="mb-4 mt-2">
+                                <button type="button"
+                                    class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
+                                    data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
+                                    <img src="assets/icons/time.svg" alt="" class="mr-2">
+                                    Choose available time
+                                </button>
                             </div>
                             <div class="mb-4 mt-2">
                                 <label class="container-checkbox relative block cursor-pointer pl-8">
-                                    <a href="privacy-policy.html" target="_blank" class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy & Policy</a>
-                                    <input type="checkbox" checked="checked" class="absolute opacity-0 cursor-pointer w-0 h-0">
+                                    <a href="privacy-policy.html" target="_blank"
+                                        class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
+                                        Policy</a>
+                                    <input type="checkbox" checked="checked"
+                                        class="absolute opacity-0 cursor-pointer w-0 h-0">
                                     <span class="checkmark w-5 h-5 absolute left-0 bg-white border"></span>
                                 </label>
                             </div>
                             <button type="submit"
                                 class="flex items-center justify-center w-full elm-bg-700 h-11 text-white font-semibold leading-6">
                                 <span>Request a Service</span>
-                                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none">
+                                    <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </form>
@@ -547,15 +579,18 @@
                     <div class="">
                         <p class="leading-5 text-light-purple font-normal text-sm mb-4">Menu</p>
                         <ul>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University placements </a></li>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Short Courses</a></li>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">School Placements</a></li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University
+                                    placements </a></li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Short Courses</a>
+                            </li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">School
+                                    Placements</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Blog</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">About us</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Contact us</a>
                             </li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">FAQ</a></li>
-                          </ul>
+                        </ul>
                     </div>
                     <div class="">
                         <p class="leading-5 text-light-purple font-normal text-sm mb-4">Info</p>
@@ -608,20 +643,25 @@
             <div class="container mx-auto flex justify-between items-center py-2">
                 <p class="text-light-purple font-normal text-sm">2024, EL&M Consulting</p>
                 <ul class="flex items-center justify-center">
-                    <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy & Policy</a></li>
-                    <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms & Conditions</a>
+                    <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy
+                            & Policy</a></li>
+                    <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms &
+                            Conditions</a>
                     </li>
-                    <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data privacy</a></li>
+                    <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data
+                            privacy</a></li>
                 </ul>
             </div>
         </div>
     </footer>
-      <!-- jQuery -->
-      <script src="libs/jquery/jquery-3.6.4.min.js"></script>
-      <!-- Flowbite JS -->
-      <script src="libs/flowbite/flowbite.min.js"></script>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtd_du9lL428kWQNUGeIaQk6NwBg7RUg&callback=initMap"></script>
-      <script src="js/scripts.js"></script>
+    <!-- jQuery -->
+    <script src="libs/jquery/jquery-3.6.4.min.js"></script>
+    <!-- Flowbite JS -->
+    <script src="libs/flowbite/flowbite.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtd_du9lL428kWQNUGeIaQk6NwBg7RUg&callback=initMap"></script>
+    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

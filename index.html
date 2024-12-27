@@ -8,11 +8,21 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="libs/tailwind/tailwind.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+  <!-- Calendly modal -->
+  <div id="calendly-modal" tabindex="-1" aria-hidden="true"
+    class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full">
+    <div class="bg-white max-h-full rounded-lg calendly-modal-content w-full overflow-hidden">
+      <iframe src="https://calendly.com" width="100%" height="100%" style="border:none;">
+      </iframe>
+    </div>
+  </div>
   <header class="header fixed w-full z-50">
     <div class="container mx-auto">
       <div class="flex items-center justify-between">
@@ -148,22 +158,80 @@
       </div>
     </div>
   </header>
-  <section class="relative h-screen">
-    <img src="assets/imgs/london.jpeg" alt="" class="w-full h-full object-cover">
-    <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
-        <div class="container m-auto">
-            <h1 class="title text-white font-medium text-5xl mb-4">EL&M Education Consultancy</h1>
-            <p class="text-white font-normal text-base leading-6 max-w-452 mb-4">Cum ac parturient nulla hendrerit aenean turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
-            <a href="#"
-            class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
-            Request a Service
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+  <section class="home-slider">
+    <div id="default-carousel" class="relative w-full" data-carousel="static">
+      <div class="relative h-screen overflow-hidden">
+        <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+          <video class="w-full h-full" autoplay muted loop>
+            <source src="assets/imgs/londonvideo.mp4" type="video/mp4">
+          </video>
+          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
+            <div class="container m-auto">
+              <h1 class="title text-white font-medium text-5xl mb-4">EL&M Education Consultancy</h1>
+              <p class="text-white font-normal text-base leading-6 max-w-452 mb-4">Cum ac parturient nulla hendrerit
+                aenean
+                turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
+              <a href="#"
+                class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
+                Request a Service
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
+                    stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
+        <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+          <img src="assets/imgs/contact-cover.jpeg" alt="" class="w-full h-full object-cover">
+          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
+            <div class="container m-auto">
+              <h1 class="title text-white font-medium text-5xl mb-4">EL&M Education Consultancy</h1>
+              <p class="text-white font-normal text-base leading-6 max-w-452 mb-4">Cum ac parturient nulla hendrerit
+                aenean
+                turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
+              <a href="#"
+                class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
+                Request a Service
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
+                    stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+          <img src="assets/imgs/faq.jpeg" alt="" class="w-full h-full object-cover">
+          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
+            <div class="container m-auto">
+              <h1 class="title text-white font-medium text-5xl mb-4">EL&M Education Consultancy</h1>
+              <p class="text-white font-normal text-base leading-6 max-w-452 mb-4">Cum ac parturient nulla hendrerit
+                aenean
+                turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
+              <a href="#"
+                class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
+                Request a Service
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
+                    stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse slider-indicators">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+          data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+          data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+          data-carousel-slide-to="2"></button>
+      </div>
     </div>
-</section>
+  </section>
   <section class="about-section pt-16 pb-16">
     <div class="container m-auto">
       <div class="about-item home-about grid grid-cols-2">
@@ -175,7 +243,11 @@
         <div class="about-content pt-12">
           <h5 class="title text-gray-800 font-medium text-4xl mb-2">Welcome to  EL&M Education Consultancy</h5>
           <div class="text-gray-700 font-normal text-base leading-6">
-            Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu commodo cras arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla nunc morbi turpis elit. Urna posuere vestibulum tempus in augue. Accumsan facilisi amet diam mi ac a eu arcu. Elementum quam adipiscing dui ac eros risus varius integer pulvinar. Nunc fames in ut duis hac urna vitae est semper. Sit fermentum enim auctor cras bibendum egestas. In.
+            Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu commodo cras
+            arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla nunc morbi turpis elit.
+            Urna posuere vestibulum tempus in augue. Accumsan facilisi amet diam mi ac a eu arcu. Elementum quam
+            adipiscing dui ac eros risus varius integer pulvinar. Nunc fames in ut duis hac urna vitae est semper. Sit
+            fermentum enim auctor cras bibendum egestas. In.
           </div>
           <a href="index.html" class="inline-flex items-center justify-center btn-bg mt-6 px-4 py-2 h-11 min-w-152">
             <span class="elm-dark-purple mr-2 font-semibold text-base">Learn more</span>
@@ -356,6 +428,79 @@
   </section>
   <section class="pt-16 pb-14">
     <div class="container m-auto">
+      <h3 class="title title-color text-4xl font-medium mb-2 text-center">Testimonials</h3>
+      <h4 class="text-gray font-normal text-base leading-6 text-center">
+        At phasellus pulvinar id nisi porta ullamcorper iaculis.
+      </h4>
+      <div class="container mt-4 mx-auto">
+        <div class="relative">
+          <button type="button"
+            class="elm-50 w-16 h-16 absolute left-0 flex items-center justify-center prev-btn cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M20 26L10 16L20 6" stroke="#682B82" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="owl-carousel owl-theme testimonials">
+            <div class="elm-50 py-16 px-12 testimonial relative">
+              <div class="max-w-nav m-auto text-center">
+                <h4 class="elm-dark-purple text-5xl title-space title mb-6 font-medium">What our families says</h4>
+                <div class="mb-6 elm-500 text-lg font-normal leading-7">
+                  Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu
+                  commodo cras arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla
+                  nunc morbi turpis elit. Urna posuere vestibulum tempus in augue.
+                </div>
+                <p class="text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
+                <span class="elm-500 text-sm font-normal leading-5">Student at Cambridge University</span>
+              </div>
+              <img src="assets/icons/testimonial-quote1.svg" alt="" class="absolute top-6 left-6 pointer-events-none">
+              <img src="assets/icons/testimonial-quote2.svg" alt=""
+                class="absolute bottom-6 right-6 pointer-events-none">
+            </div>
+            <div class="elm-50 py-16 px-12 testimonial relative">
+              <div class="max-w-nav m-auto text-center">
+                <h4 class="elm-dark-purple text-5xl title-space title mb-6 font-medium">What our families says</h4>
+                <div class="mb-6 elm-500 text-lg font-normal leading-7">
+                  Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu
+                  commodo cras arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla
+                  nunc morbi turpis elit. Urna posuere vestibulum tempus in augue.
+                </div>
+                <p class="text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
+                <span class="elm-500 text-sm font-normal leading-5">Student at Cambridge University</span>
+              </div>
+              <img src="assets/icons/testimonial-quote1.svg" alt="" class="absolute top-6 left-6 pointer-events-none">
+              <img src="assets/icons/testimonial-quote2.svg" alt=""
+                class="absolute bottom-6 right-6 pointer-events-none">
+            </div>
+            <div class="elm-50 py-16 px-12 testimonial relative">
+              <div class="max-w-nav m-auto text-center">
+                <h4 class="elm-dark-purple text-5xl title-space title mb-6 font-medium">What our families says</h4>
+                <div class="mb-6 elm-500 text-lg font-normal leading-7">
+                  Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu
+                  commodo cras arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla
+                  nunc morbi turpis elit. Urna posuere vestibulum tempus in augue.
+                </div>
+                <p class="text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
+                <span class="elm-500 text-sm font-normal leading-5">Student at Cambridge University</span>
+              </div>
+              <img src="assets/icons/testimonial-quote1.svg" alt="" class="absolute top-6 left-6 pointer-events-none">
+              <img src="assets/icons/testimonial-quote2.svg" alt=""
+                class="absolute bottom-6 right-6 pointer-events-none">
+            </div>
+          </div>
+          <button type="button"
+            class="elm-50 w-16 h-16 absolute right-0 flex items-center justify-center next-btn cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M12 6L22 16L12 26" stroke="#682B82" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pt-16 pb-14">
+    <div class="container m-auto">
       <h3 class="title title-color text-4xl font-medium mb-2 text-center">Our Partners</h3>
       <h4 class="text-gray font-normal text-base leading-6 text-center">
         At phasellus pulvinar id nisi porta ullamcorper iaculis.
@@ -364,47 +509,56 @@
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner1.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">University of Oxford</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner2.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">Aberdeen</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner3.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">University of Cambridge</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner4.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">Glasgow</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner5.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-4">University of Edinburgh</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner6.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">University of St. Andrews</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner7.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">University of Birmingham</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner8.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">University of Hull</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner9.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">University of Manchester</h4>
-          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis adipiscing urna diam.</div>
+          <div class="text-gray-700 text-base font-normal leading-6">Mollis sed vivamus porttitor sagittis. Eget turpis
+            adipiscing urna diam.</div>
         </div>
       </div>
     </div>
@@ -650,6 +804,14 @@
                 </div>
               </div>
               <div class="mb-4 mt-2">
+                <button type="button"
+                  class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
+                  data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
+                  <img src="assets/icons/time.svg" alt="" class="mr-2">
+                  Choose available time
+                </button>
+              </div>
+              <div class="mb-4 mt-2">
                 <label class="container-checkbox relative block cursor-pointer pl-8">
                   <a href="privacy-policy.html" target="_blank"
                     class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
@@ -752,20 +914,24 @@
       <div class="container mx-auto flex justify-between items-center py-2">
         <p class="text-light-purple font-normal text-sm">2024, EL&M Consulting</p>
         <ul class="flex items-center justify-center">
-          <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy & Policy</a></li>
+          <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy &
+              Policy</a></li>
           <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms & Conditions</a>
           </li>
-          <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data privacy</a></li>
+          <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data privacy</a>
+          </li>
         </ul>
       </div>
     </div>
   </footer>
+
   <!-- jQuery -->
   <script src="libs/jquery/jquery-3.6.4.min.js"></script>
   <!-- Flowbite JS -->
   <script src="libs/flowbite/flowbite.min.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtd_du9lL428kWQNUGeIaQk6NwBg7RUg&callback=initMap"></script>
+  <script src="libs/owl-carousel/owl.carousel.min.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 

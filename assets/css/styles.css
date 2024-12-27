@@ -90,6 +90,10 @@ body{
     max-width: 180px;
 }
 
+.max416px{
+    max-width: 416px;
+}
+
 footer .logo img{
     height: 72px;
 }
@@ -411,9 +415,12 @@ footer .logo img{
     background-color: #F5ECF9;
   }
 
-  .acceptences::before{
+  .acceptences::before,.testimonial::after,.about-img::before{
     width: 96px;
     height: 96px;
+  }
+
+  .acceptences::before{
     background-color: #C694DC;
     top: -16px;
     left: -16px;
@@ -586,19 +593,20 @@ footer .logo img{
     position: relative;
 }
 
-.about-img::after{
+.about-img::after,.testimonial::before{
     content: '';
     width: 220px;
     height: 220px;
-    background-color: #F5ECF9;
     position: absolute;
     z-index: -1;
 }
 
+.about-img::after{
+    background-color: #F5ECF9;
+}
+
 .about-img::before{
     content: '';
-    width: 96px;
-    height: 96px;
     background-color: #682B82;
     position: absolute;
     z-index: -1;
@@ -692,4 +700,202 @@ footer .logo img{
 
 .partners-items img{
     height: 75px;
+}
+
+.slider-indicators button{
+    background-color: #DABAE8;
+}
+.slider-indicators button[aria-current="true"]{
+    background-color: rgba(104, 43, 130, 1);
+}
+
+.slider-indicators{
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom:56px;
+    margin: auto;
+    max-width: 1280px;
+}
+
+.testimonial{
+    border-radius: 40px 0px;
+}
+
+.title-space{
+    letter-spacing: -0.96px;
+}
+
+.testimonial::before{
+    background-color: #682B82;
+    top: -16px;
+    right: -16px;
+}
+
+.testimonial::after{
+    content: '';
+    position: absolute;
+    background-color: #C694DC;
+    left: -16px;
+    bottom:-16px;
+    z-index: -1;
+}
+
+.min-h-400{
+    min-height: 300px;
+}
+
+.position_static{
+    position: static !important;
+}
+
+.testimonial img{
+    width: auto !important;
+}
+
+.testimonials .owl-item{
+    padding: 24px 96px;
+}
+
+.testimonials .owl-nav.disabled+.owl-dots{
+    margin-top:0;
+}
+
+.testimonials .owl-dots .owl-dot span{
+    border-radius: 0;
+    background-color: #EBD9F2;
+}
+
+.testimonials .owl-dots .owl-dot.active span{
+    background-color: #682B82;
+}   
+
+.prev-btn,.next-btn{
+    top:calc(50% - 64px);
+    z-index: 9;
+}
+
+.college-number{
+    border:4px solid #DABAE8;
+}
+
+.college-icon{
+    width: 88px;
+    height: 88px;
+    border:4px solid #682B82;
+}
+
+.college-item{
+    height: 192px;
+    border: 6px solid #DABAE8;
+    width: 86%;
+    position: relative;
+}
+
+.college-item h5{
+    letter-spacing: -0.48px;
+}
+
+.colleges-items .college-item:nth-child(odd) .college-details{
+    padding-left: 24px;
+}
+
+.colleges-items .college-item:nth-child(even) .college-details{
+    padding-right: 24px;
+    text-align: right;
+}
+
+.colleges-items .college-item:nth-child(odd){
+    border-right: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding-left: 40px;
+}
+
+.colleges-items .college-item:nth-child(even){
+    flex-direction: row-reverse;
+    border-left: 0;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+.colleges-items .college-item:nth-child(2){
+    top:-6px;
+}
+
+.colleges-items .college-item:nth-child(3){
+    top:-12px;
+}
+
+.colleges-items .college-item:nth-child(4){
+    top:-18px;
+}
+
+.colleges-items .college-item:nth-child(5){
+    top:-24px;
+}
+
+.colleges-items .college-item:nth-child(6){
+    top:-30px;
+}
+
+.colleges-items .college-item:nth-child(7){
+    top:-36px;
+}
+
+.colleges-items .college-item:nth-child(8){
+    top:-42px;
+}
+
+.colleges-items .college-item:nth-child(9){
+    top:-46px;
+}
+
+.colleges-items .college-item:nth-child(10){
+    top:-52px;
+}
+
+.colleges-items .college-item:nth-child(odd) span{
+    margin-left: -64px;
+}
+
+.colleges-items .college-item:nth-child(even) span{
+    margin-right: -64px;
+}
+
+.colleges-items .college-item:nth-child(odd) .college-icon{
+    margin-left: 14px;
+}
+
+.colleges-items .college-item:nth-child(even) .college-icon{
+    margin-right: 14px;
+}
+
+.college-top{
+    height: 72px;
+    width: 86%;
+    position: relative;
+}
+
+.college-top{
+    border-bottom: 6px solid #DABAE8;
+    border-right: 6px solid #DABAE8;
+    border-bottom-right-radius: 100px;
+    top:6px;
+}
+
+.calendly-modal{
+    background-color: rgba(0, 0, 0, 0.576);
+    padding-top:100px;
+}
+
+.calendly-modal-content{
+    max-width: 800px;
+    margin: auto;
+}
+
+.calendly-modal-content{
+    height: calc(100vh - 150px);
 }

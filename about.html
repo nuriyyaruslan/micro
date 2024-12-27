@@ -8,11 +8,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="libs/tailwind/tailwind.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
+    <!-- Calendly modal -->
+    <div id="calendly-modal" tabindex="-1" aria-hidden="true"
+        class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full">
+        <div class="bg-white max-h-full rounded-lg calendly-modal-content w-full overflow-hidden">
+            <iframe src="https://calendly.com" width="100%" height="100%" style="border:none;">
+            </iframe>
+        </div>
+    </div>
     <header class="header fixed w-full z-50">
         <div class="container mx-auto">
             <div class="flex items-center justify-between">
@@ -35,7 +45,8 @@
                                     </div>
                                     <ul class="ml-4 drop-nav">
                                         <li>
-                                            <a href="services.html" class="flex items-start justify-between p-2 bg-white">
+                                            <a href="services.html"
+                                                class="flex items-start justify-between p-2 bg-white">
                                                 <span class="overflow-hidden">
                                                     <span
                                                         class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">University
@@ -173,27 +184,38 @@
         <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
             <div class="container m-auto">
                 <h1 class="title text-white font-medium text-5xl mb-4">About us</h1>
-                <p class="text-white font-normal text-base leading-6 max-w-452">Cum ac parturient nulla hendrerit aenean turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
+                <p class="text-white font-normal text-base leading-6 max-w-452">Cum ac parturient nulla hendrerit aenean
+                    turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
             </div>
         </div>
     </section>
     <section class="about-section pt-16 pb-16">
         <div class="container m-auto">
-            <h3 class="title title-color text-4xl font-medium mb-2 text-center max-w-452 m-auto">About EL&M Education Consultancy</h3>
+            <h3 class="title title-color text-4xl font-medium mb-2 text-center max-w-452 m-auto">About EL&M Education
+                Consultancy</h3>
             <h4 class="text-gray font-normal text-base leading-6 text-center max-w-960 m-auto max-w-452">
                 At phasellus pulvinar id nisi porta ullamcorper iaculis.
-            </h4>  
+            </h4>
             <div class="about-items">
                 <div class="about-item flex mt-10">
                     <div class="about-img w-percent40 p-4">
                         <div class="about-img-cover overflow-hidden">
                             <img src="assets/imgs/about1.jpeg" alt="" class="w-full h-full object-cover">
-                        </div>  
+                        </div>
                     </div>
                     <div class="about-content w-percent60 pt-12">
-                        <h5 class="title text-gray-800 font-medium text-4xl mb-2">Diam odio condimentum vitae eget urna. Faucibus tortor urna interdum sed in.</h5>
+                        <h5 class="title text-gray-800 font-medium text-4xl mb-2">Diam odio condimentum vitae eget urna.
+                            Faucibus tortor urna interdum sed in.</h5>
                         <div class="text-gray-700 font-normal text-base leading-6">
-                            Ac egestas aliquam tortor elit eget. Rutrum ut condimentum sed non ac leo justo sed morbi. Nisl enim nam varius sit. Fames morbi suscipit nulla quis quis nec lorem. Massa congue tristique dui montes quam scelerisque vitae curabitur. Vestibulum vitae eget aliquam augue proin venenatis. Morbi nunc in vulputate justo enim congue tincidunt mauris. Faucibus gravida est nullam ut in vel. Sed lacus sed viverra amet sed interdum pulvinar volutpat mauris. Ullamcorper ornare accumsan iaculis nisl facilisis ut quam integer. Pellentesque eu eleifend hendrerit id senectus tristique id. In dignissim odio amet duis. Malesuada leo mollis urna quis ornare. A aliquam sagittis id metus euismod cras neque molestie. Fermentum gravida nisl congue lectus faucibus elementum habitasse.
+                            Ac egestas aliquam tortor elit eget. Rutrum ut condimentum sed non ac leo justo sed morbi.
+                            Nisl enim nam varius sit. Fames morbi suscipit nulla quis quis nec lorem. Massa congue
+                            tristique dui montes quam scelerisque vitae curabitur. Vestibulum vitae eget aliquam augue
+                            proin venenatis. Morbi nunc in vulputate justo enim congue tincidunt mauris. Faucibus
+                            gravida est nullam ut in vel. Sed lacus sed viverra amet sed interdum pulvinar volutpat
+                            mauris. Ullamcorper ornare accumsan iaculis nisl facilisis ut quam integer. Pellentesque eu
+                            eleifend hendrerit id senectus tristique id. In dignissim odio amet duis. Malesuada leo
+                            mollis urna quis ornare. A aliquam sagittis id metus euismod cras neque molestie. Fermentum
+                            gravida nisl congue lectus faucibus elementum habitasse.
                         </div>
                     </div>
                 </div>
@@ -201,12 +223,20 @@
                     <div class="about-img w-percent40 p-4">
                         <div class="about-img-cover overflow-hidden">
                             <img src="assets/imgs/about2.jpeg" alt="" class="w-full h-full object-cover">
-                        </div>  
+                        </div>
                     </div>
                     <div class="about-content w-percent60 pt-12">
                         <h5 class="title text-gray-800 font-medium text-4xl mb-2">What is an education consultancy?</h5>
                         <div class="text-gray-700 font-normal text-base leading-6">
-                            Ac egestas aliquam tortor elit eget. Rutrum ut condimentum sed non ac leo justo sed morbi. Nisl enim nam varius sit. Fames morbi suscipit nulla quis quis nec lorem. Massa congue tristique dui montes quam scelerisque vitae curabitur. Vestibulum vitae eget aliquam augue proin venenatis. Morbi nunc in vulputate justo enim congue tincidunt mauris. Faucibus gravida est nullam ut in vel. Sed lacus sed viverra amet sed interdum pulvinar volutpat mauris. Ullamcorper ornare accumsan iaculis nisl facilisis ut quam integer. Pellentesque eu eleifend hendrerit id senectus tristique id. In dignissim odio amet duis. Malesuada leo mollis urna quis ornare. A aliquam sagittis id metus euismod cras neque molestie. Fermentum gravida nisl congue lectus faucibus elementum habitasse.
+                            Ac egestas aliquam tortor elit eget. Rutrum ut condimentum sed non ac leo justo sed morbi.
+                            Nisl enim nam varius sit. Fames morbi suscipit nulla quis quis nec lorem. Massa congue
+                            tristique dui montes quam scelerisque vitae curabitur. Vestibulum vitae eget aliquam augue
+                            proin venenatis. Morbi nunc in vulputate justo enim congue tincidunt mauris. Faucibus
+                            gravida est nullam ut in vel. Sed lacus sed viverra amet sed interdum pulvinar volutpat
+                            mauris. Ullamcorper ornare accumsan iaculis nisl facilisis ut quam integer. Pellentesque eu
+                            eleifend hendrerit id senectus tristique id. In dignissim odio amet duis. Malesuada leo
+                            mollis urna quis ornare. A aliquam sagittis id metus euismod cras neque molestie. Fermentum
+                            gravida nisl congue lectus faucibus elementum habitasse.
                         </div>
                     </div>
                 </div>
@@ -224,7 +254,8 @@
                     <div class="pt-10 pb-10">
                         <div class="value-img-box relative w-16 h-16 m-auto">
                             <div class="value-img w-16 h-16 m-auto">
-                                <div class="value-img-cover flex items-center justify-center absolute top-0 left-0 w-full h-full">
+                                <div
+                                    class="value-img-cover flex items-center justify-center absolute top-0 left-0 w-full h-full">
                                     <img src="assets/icons/HandHeart.svg" alt="">
                                 </div>
                             </div>
@@ -239,7 +270,8 @@
                     <div class="pt-10 pb-10">
                         <div class="value-img-box relative w-16 h-16 m-auto">
                             <div class="value-img w-16 h-16 m-auto">
-                                <div class="value-img-cover flex items-center justify-center absolute top-0 left-0 w-full h-full">
+                                <div
+                                    class="value-img-cover flex items-center justify-center absolute top-0 left-0 w-full h-full">
                                     <img src="assets/icons/GraduationCap.svg" alt="">
                                 </div>
                             </div>
@@ -254,7 +286,8 @@
                     <div class="pt-10 pb-10">
                         <div class="value-img-box relative w-16 h-16 m-auto">
                             <div class="value-img w-16 h-16 m-auto">
-                                <div class="value-img-cover flex items-center justify-center absolute top-0 left-0 w-full h-full">
+                                <div
+                                    class="value-img-cover flex items-center justify-center absolute top-0 left-0 w-full h-full">
                                     <img src="assets/icons/Handshake.svg" alt="">
                                 </div>
                             </div>
@@ -269,7 +302,8 @@
                     <div class="pt-10 pb-10">
                         <div class="value-img-box relative w-16 h-16 m-auto">
                             <div class="value-img w-16 h-16 m-auto">
-                                <div class="value-img-cover flex items-center justify-center absolute top-0 left-0 w-full h-full">
+                                <div
+                                    class="value-img-cover flex items-center justify-center absolute top-0 left-0 w-full h-full">
                                     <img src="assets/icons/Globe.svg" alt="">
                                 </div>
                             </div>
@@ -289,9 +323,11 @@
         <div class="container m-auto">
             <h3 class="title title-color text-4xl font-medium mb-2 text-center">Our Approach</h3>
             <h4 class="text-gray font-normal text-base leading-6 text-center max-w-960 m-auto">
-                Ac egestas aliquam tortor elit eget. Rutrum ut condimentum sed non ac leo justo sed morbi. Nisl enim nam varius sit. Fames morbi suscipit nulla quis quis nec lorem. Massa congue tristique dui montes quam scelerisque vitae curabitur. Vestibulum vitae eget aliquam augue proin venenatis. 
-             </h4>  
-             <div class="grid grid-cols-2 mt-4">
+                Ac egestas aliquam tortor elit eget. Rutrum ut condimentum sed non ac leo justo sed morbi. Nisl enim nam
+                varius sit. Fames morbi suscipit nulla quis quis nec lorem. Massa congue tristique dui montes quam
+                scelerisque vitae curabitur. Vestibulum vitae eget aliquam augue proin venenatis.
+            </h4>
+            <div class="grid grid-cols-2 mt-4">
                 <div class="our-approach-img overflow-hidden">
                     <img src="assets/imgs/ourapproach.jpeg" alt="" class="w-full h-full object-cover">
                 </div>
@@ -299,33 +335,44 @@
                     <li class="px-8 py-4 border-b border-gray-200 min-h-168 flex flex-col justify-center">
                         <p class="flex items-center">
                             <img src="assets/icons/user.svg" alt="">
-                            <small class="ml-2 elm-dark-purple text-2xl leading-8 font-medium">Working With Families</small>
+                            <small class="ml-2 elm-dark-purple text-2xl leading-8 font-medium">Working With
+                                Families</small>
                         </p>
-                        <span class="mt-2 text-gray-700 font-normal text-base leading-6 block">Convallis vulputate libero vestibulum sagittis tristique diam luctus eget. Enim imperdiet enim morbi diam aliquam justo diam.</span>
+                        <span class="mt-2 text-gray-700 font-normal text-base leading-6 block">Convallis vulputate
+                            libero vestibulum sagittis tristique diam luctus eget. Enim imperdiet enim morbi diam
+                            aliquam justo diam.</span>
                     </li>
                     <li class="px-8 py-4 border-b border-gray-200 min-h-168 flex flex-col justify-center">
                         <p class="flex items-center">
                             <img src="assets/icons/ChalkboardTeacher.svg" alt="">
-                            <small class="ml-2 elm-dark-purple text-2xl leading-8 font-medium">Coaching & Mentoring</small>
+                            <small class="ml-2 elm-dark-purple text-2xl leading-8 font-medium">Coaching &
+                                Mentoring</small>
                         </p>
-                        <span class="mt-2 text-gray-700 font-normal text-base leading-6 block">Convallis vulputate libero vestibulum sagittis tristique diam luctus eget. Enim imperdiet enim morbi diam aliquam justo diam.</span>
+                        <span class="mt-2 text-gray-700 font-normal text-base leading-6 block">Convallis vulputate
+                            libero vestibulum sagittis tristique diam luctus eget. Enim imperdiet enim morbi diam
+                            aliquam justo diam.</span>
                     </li>
                     <li class="px-8 py-4 border-b border-gray-200 min-h-168 flex flex-col justify-center">
                         <p class="flex items-center">
                             <img src="assets/icons/Exam.svg" alt="">
-                            <small class="ml-2 elm-dark-purple text-2xl leading-8 font-medium">Getting Acceptence</small>
+                            <small class="ml-2 elm-dark-purple text-2xl leading-8 font-medium">Getting
+                                Acceptence</small>
                         </p>
-                        <span class="mt-2 text-gray-700 font-normal text-base leading-6 block">Convallis vulputate libero vestibulum sagittis tristique diam luctus eget. Enim imperdiet enim morbi diam aliquam justo diam.</span>
+                        <span class="mt-2 text-gray-700 font-normal text-base leading-6 block">Convallis vulputate
+                            libero vestibulum sagittis tristique diam luctus eget. Enim imperdiet enim morbi diam
+                            aliquam justo diam.</span>
                     </li>
                     <li class="px-8 py-4 border-b border-gray-200 min-h-168 flex flex-col justify-center">
                         <p class="flex items-center">
                             <img src="assets/icons/Chalkboard.svg" alt="">
                             <small class="ml-2 elm-dark-purple text-2xl leading-8 font-medium">Online Tutoring</small>
                         </p>
-                        <span class="mt-2 text-gray-700 font-normal text-base leading-6 block">Convallis vulputate libero vestibulum sagittis tristique diam luctus eget. Enim imperdiet enim morbi diam aliquam justo diam.</span>
+                        <span class="mt-2 text-gray-700 font-normal text-base leading-6 block">Convallis vulputate
+                            libero vestibulum sagittis tristique diam luctus eget. Enim imperdiet enim morbi diam
+                            aliquam justo diam.</span>
                     </li>
                 </ul>
-             </div>
+            </div>
         </div>
     </section>
     <section class="pt-16 pb-16">
@@ -336,11 +383,15 @@
                 </div>
                 <div class="elm-50 acceptences-content py-8 px-2 relative light-acceptences">
                     <h4 class="text-white text-5xl font-medium mb-4 mt-2 elm-dark-purple">Let’s get your acceptence</h4>
-                    <p class="mb-4 elm-600 text-base font-normal leading-6">Cum ac parturient nulla hendrerit aenean turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
-                    <a href="#" class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 elm-bg-700 text-white">
+                    <p class="mb-4 elm-600 text-base font-normal leading-6">Cum ac parturient nulla hendrerit aenean
+                        turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
+                    <a href="#"
+                        class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 elm-bg-700 text-white">
                         Request a Service
-                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M3.33301 10H16.6663M16.6663 10L11.6663 5M16.6663 10L11.6663 15" stroke="#fff" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="none">
+                            <path d="M3.33301 10H16.6663M16.6663 10L11.6663 5M16.6663 10L11.6663 15" stroke="#fff"
+                                stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
                 </div>
@@ -482,6 +533,14 @@
                                 </div>
                             </div>
                             <div class="mb-4 mt-2">
+                                <button type="button"
+                                    class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
+                                    data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
+                                    <img src="assets/icons/time.svg" alt="" class="mr-2">
+                                    Choose available time
+                                </button>
+                            </div>
+                            <div class="mb-4 mt-2">
                                 <label class="container-checkbox relative block cursor-pointer pl-8">
                                     <a href="privacy-policy.html" target="_blank"
                                         class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
@@ -491,6 +550,7 @@
                                     <span class="checkmark w-5 h-5 absolute left-0 bg-white border"></span>
                                 </label>
                             </div>
+
                             <button type="submit"
                                 class="flex items-center justify-center w-full elm-bg-700 h-11 text-white font-semibold leading-6">
                                 <span>Request a Service</span>
@@ -532,15 +592,18 @@
                     <div class="">
                         <p class="leading-5 text-light-purple font-normal text-sm mb-4">Menu</p>
                         <ul>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University placements </a></li>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Short Courses</a></li>
-                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">School Placements</a></li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University
+                                    placements </a></li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Short Courses</a>
+                            </li>
+                            <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">School
+                                    Placements</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Blog</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">About us</a></li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Contact us</a>
                             </li>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">FAQ</a></li>
-                          </ul>
+                        </ul>
                     </div>
                     <div class="">
                         <p class="leading-5 text-light-purple font-normal text-sm mb-4">Info</p>
@@ -593,20 +656,25 @@
             <div class="container mx-auto flex justify-between items-center py-2">
                 <p class="text-light-purple font-normal text-sm">2024, EL&M Consulting</p>
                 <ul class="flex items-center justify-center">
-                    <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy & Policy</a></li>
-                    <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms & Conditions</a>
+                    <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy
+                            & Policy</a></li>
+                    <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms &
+                            Conditions</a>
                     </li>
-                    <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data privacy</a></li>
+                    <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data
+                            privacy</a></li>
                 </ul>
             </div>
         </div>
     </footer>
-     <!-- jQuery -->
-     <script src="libs/jquery/jquery-3.6.4.min.js"></script>
-     <!-- Flowbite JS -->
-     <script src="libs/flowbite/flowbite.min.js"></script>
-     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtd_du9lL428kWQNUGeIaQk6NwBg7RUg&callback=initMap"></script>
-     <script src="js/scripts.js"></script>
+    <!-- jQuery -->
+    <script src="libs/jquery/jquery-3.6.4.min.js"></script>
+    <!-- Flowbite JS -->
+    <script src="libs/flowbite/flowbite.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgtd_du9lL428kWQNUGeIaQk6NwBg7RUg&callback=initMap"></script>
+    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
