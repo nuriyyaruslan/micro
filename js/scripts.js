@@ -121,4 +121,10 @@ $(function () {
     $('#cookies-modal').addClass('hidden');
   })
 
+  //MOBILE MENU
+  $('.menu-open-js').click(function(){
+    $('.menu-open,.menu-close').toggleClass('hidden');
+    $('.menu-nav').toggleClass('active');
+  })
+
 });

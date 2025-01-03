@@ -12,13 +12,14 @@
   <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="libs/tailwind/tailwind.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
 </head>
 <body>
-  <header class="bg-white pt-4 pb-4 bg-blur fixed w-full z-50">
-    <div class="container mx-auto">
+  <header class="bg-white bg-blur fixed w-full z-50">
+    <div class="container mx-auto p-4">
       <div class="flex items-center justify-between">
         <a href="index.html">
-          <img src="assets/icons/logopurple.svg" alt="" class="object-contain">
+          <img src="assets/icons/logopurple.svg" alt="" class="object-contain h-10 md:h-16">
         </a>
         <a href="index.html" class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-custom">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -29,8 +30,8 @@
     </div>
   </header>
   <div class="header-layer"></div>
-  <section class="min-h-custom pt-20 pb-20 flex items-center">
-    <div class="max-w-xs m-auto text-center">
+  <section class="min-h-custom py-7 md:py-20 flex items-center">
+    <div class="max-w-sm m-auto text-center px-4">
       <h1 class="text-gray text-2xl font-normal mb-2 title">Success</h1>
       <img src="assets/icons/success.svg" alt="" class="w-full h-full max-w-315 m-auto">
       <p class="mt-2 text-gray text-base font-normal leading-6">Nulla non elementum arcu quis id. Nunc mi volutpat urna sit vestibulum massa risus eu.</p>
@@ -43,10 +44,10 @@
     </div>
   </section>
   <footer class="bg-dark-purple">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
       <div class="pt-16 pb-14">
-        <div class="grid grid-cols-3 gap-4">
-          <div class="">
+        <div class="grid grid-cols-1 gap-6 md:gap-4 md:grid-cols-3">
+          <div>
             <a href="index.html" class="logo">
               <img src="assets/icons/logo.svg" alt="" class="object-contain">
             </a>
@@ -60,7 +61,7 @@
               </ul>
             </div>
           </div>
-          <div class="">
+          <div>
             <p class="leading-5 text-light-purple font-normal text-sm mb-4">Menu</p>
             <ul>
               <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University placements </a></li>
@@ -73,7 +74,7 @@
               <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">FAQ</a></li>
             </ul>
           </div>
-          <div class="">
+          <div>
             <p class="leading-5 text-light-purple font-normal text-sm mb-4">Info</p>
             <ul>
               <li class="flex items-start mb-2">
@@ -96,15 +97,15 @@
                 in. Commodo sit mus at velit dis.</p>
             </div>
             <form action="">
-              <div class="foot-form mt-4 flex items-center justify-start">
+              <div class="foot-form mt-4 flex items-center justify-start lg:flex-row flex-col">
                 <div class="relative w-full">
-                  <input type="text" class="h-11 text-base font-normal text-dark-purple pl-4 pr-4 w-full"
+                  <input type="text" class="h-11 text-base font-normal text-dark-purple pl-4 w-full pr-8"
                     placeholder="sample@sample.com">
                   <span class="absolute help-icon" title="Subscribe to our Newsletter"><img src="assets/icons/help.svg"
                       alt=""></span>
                 </div>
                 <button type="submit"
-                  class="inline-flex items-center justify-center h-11 bg-white text-dark-purple text-base leading-6 font-semibold subscribe-btn ml-4">
+                  class="lg:inline-flex flex items-center justify-center h-11 bg-white text-dark-purple text-base leading-6 font-semibold subscribe-btn lg:ml-4 w-full lg:w-auto lg:mt-0 mt-4">
                   Subscribe
                   <img src="assets/icons/arrow-narrow-right.svg" alt="" class="ml-2">
                 </button>
@@ -115,12 +116,12 @@
       </div>
     </div>
     <div class="border-t border-bg-light-purple">
-      <div class="container mx-auto flex justify-between items-center py-2">
-        <p class="text-light-purple font-normal text-sm">2024, EL&M Consulting</p>
-        <ul class="flex items-center justify-center">
-          <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy & Policy</a></li>
-          <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms & Conditions</a></li>
-          <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data privacy</a></li>
+      <div class="container px-4 mx-auto flex justify-between md:flex-row items-center flex-col py-2">
+        <p class="text-light-purple font-normal text-sm md:mb-0 mb-4">2024, EL&M Consulting</p>
+        <ul class="flex items-center justify-center footer-bottom sm:flex-row flex-col">
+          <li class="md:ml-6 mr-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy & Policy</a></li>
+          <li class="md:ml-6 mr-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms & Conditions</a></li>
+          <li class="md:ml-6 mr-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data privacy</a></li>
         </ul>
       </div>
     </div>
