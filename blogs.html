@@ -12,41 +12,45 @@
     <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="libs/tailwind/tailwind.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
 </head>
 
 <body>
     <!-- Calendly modal -->
     <div id="calendly-modal" tabindex="-1" aria-hidden="true"
-        class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full">
+        class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full px-4">
         <div class="bg-white max-h-full rounded-lg calendly-modal-content w-full overflow-hidden">
             <iframe src="https://calendly.com" width="100%" height="100%" style="border:none;">
             </iframe>
         </div>
     </div>
     <header class="header fixed w-full z-50">
-        <div class="container mx-auto">
-            <div class="flex items-center justify-between">
+        <div class="container px-4 mx-auto">
+            <div class="flex items-center justify-between py-4 xl:py-0">
                 <div class="flex items-center">
-                    <a href="index.html">
-                        <img src="assets/icons/headLogo.svg" alt="" class="object-contain">
+                    <a href="index.html" class="header-logo">
+                        <img src="assets/icons/headLogo.svg" alt="" class="object-contain h-10 xl:h-16">
                     </a>
-                    <ul class="flex items-center justify-center ml-6 menu-nav">
+                    <ul class="items-center justify-center menu-nav xl:ml-6 xl:flex xl:static xl:w-auto xl:h-auto w-full h-full ml-0 fixed top-0 left-0 xl:px-0 px-6">
                         <li class="h-24 active">
                             <a href="#"
-                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150"
+                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between"
                                 id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
-                                data-dropdown-trigger="hover">Services</a>
+                                data-dropdown-trigger="hover">
+                                <span>Services</span>
+                                <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                            </a>
                             <!-- Dropdown menu -->
-                            <div id="dropdownHover" class="z-10 hidden bg-white w-full max-w-nav">
-                                <div class="p-2 flex">
-                                    <div class="services-img overflow-hidden">
+                            <div id="dropdownHover" class="z-10 hidden xl:bg-white w-full max-w-nav">
+                                <div class="xl:p-2 p-0 flex">
+                                    <div class="services-img overflow-hidden xl:block hidden">
                                         <img src="assets/imgs/services-drop.png" alt=""
                                             class="w-full h-full object-cover">
                                     </div>
-                                    <ul class="ml-4 drop-nav">
+                                    <ul class="drop-nav xl:ml-4 ml-0">
                                         <li>
                                             <a href="services.html"
-                                                class="flex items-start justify-between p-2 bg-white">
+                                                class="flex items-start justify-between xl:px-2 py-2 px-4">
                                                 <span class="overflow-hidden">
                                                     <span
                                                         class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">University
@@ -64,7 +68,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="services.html" class="flex items-start justify-between p-2">
+                                            <a href="services.html" class="flex items-start justify-between xl:px-2 py-2 px-4">
                                                 <span class="overflow-hidden">
                                                     <span
                                                         class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">School
@@ -82,7 +86,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="services.html" class="flex items-start justify-between p-2">
+                                            <a href="services.html" class="flex items-start justify-between xl:px-2 py-2 px-4">
                                                 <span class="overflow-hidden">
                                                     <span
                                                         class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">Short
@@ -103,22 +107,38 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="h-24"><a href="about.html"
-                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">About
-                                us</a></li>
-                        <li class="h-24"><a href="blogs.html"
-                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">Blogs
-                                & News</a></li>
-                        <li class="h-24"><a href="contact.html"
-                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">Contact
-                                us</a></li>
-                        <li class="h-24"><a href="faq.html"
-                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">FAQ</a>
+                        <li class="h-24">
+                            <a href="about.html"
+                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between">
+                                <span>About us</span>
+                                <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                            </a>
+                        </li>
+                        <li class="h-24">
+                            <a href="blogs.html"
+                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between">
+                                <span>Blogs & News</span>
+                                <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                            </a>
+                        </li>
+                        <li class="h-24">
+                            <a href="contact.html"
+                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between">
+                                <span>Contact us</span>
+                                <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                            </a>
+                        </li>
+                        <li class="h-24">
+                            <a href="faq.html"
+                                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between">
+                                <span>FAQ</span>
+                                <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div class="flex items-center">
-                    <ul class="flex items-center">
+                    <ul class="hidden items-center xl:flex">
                         <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/facebook.svg" alt=""
                                     class="w-5"></a>
                         </li>
@@ -132,7 +152,7 @@
                                     class="w-5"></a>
                         </li>
                     </ul>
-                    <p class="flex items-center mb-0">
+                    <p class="hidden items-center mb-0 xl:flex">
                         <img src="assets/icons/phone.svg" alt="" class="mr-2 w-5">
                         <a href="tel:+447823213024" class="font-normal text-base text-white">+447823213024</a>
                     </p>
@@ -175,37 +195,70 @@
                             </li>
                         </ul>
                     </div>
+
+                    <button type="button" class="xl:hidden ml-4 menu-open-js">
+                        <img src="assets/icons/menu.svg" alt="" class="menu-open">
+                        <img src="assets/icons/x.svg" alt="" class="menu-close hidden">
+                    </button>
                 </div>
+            </div>
+            <div class="flex items-center justify-between xl:hidden pb-4 header-socials">
+                <ul class="flex items-center">
+                    <li class="mr-6">
+                        <a href="#" target="_blank">
+                            <img src="assets/icons/facebook.svg" alt="" class="w-5">
+                        </a>
+                    </li>
+                    <li class="mr-6">
+                        <a href="#" target="_blank">
+                            <img src="assets/icons/linkedin.svg" alt="" class="w-5">
+                        </a>
+                    </li>
+                    <li class="mr-6">
+                        <a href="#" target="_blank">
+                            <img src="assets/icons/twitter.svg" alt="" class="w-5">
+                        </a>
+                    </li>
+                    <li class="mr-6">
+                        <a href="#" target="_blank">
+                            <img src="assets/icons/instagram.svg" alt="" class="w-5">
+                        </a>
+                    </li>
+                </ul>
+                <p class="flex items-center mb-0">
+                    <img src="assets/icons/phone.svg" alt="" class="mr-2 w-5">
+                    <a href="tel:+447823213024" class="font-normal text-base text-white">+447823213024</a>
+                </p>
             </div>
         </div>
     </header>
     <section class="section-banner relative">
         <img src="assets/imgs/blogs.jpeg" alt="" class="w-full h-full object-cover">
         <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
-            <div class="container m-auto">
-                <h1 class="title text-white font-medium text-5xl mb-4">Blogs & News</h1>
+            <div class="container m-auto px-4">
+                <h1 class="title text-white font-medium text-3xl mb-4 md:text-5xl">Blogs & News</h1>
                 <p class="text-white font-normal text-base leading-6 max-w-452">Cum ac parturient nulla hendrerit aenean
                     turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
             </div>
         </div>
     </section>
     <section class="blogs-news">
-        <div class="container m-auto pt-16 pb-16">
-            <div class="flex items-center justify-between">
-                <ul class="flex items-center justify-center mr-10 blogs-filter">
-                    <li class="mr-6 active"><a href="#"
-                            class="text-gray-700 font-normal leading-7 text-lg bg-gray-100 px-5 py-1 rounded-3xl">All</a>
+        <div class="container m-auto py-10 px-4 sm:py-16">
+            <div class="flex items-start sm:items-center justify-between sm:flex-row flex-col">
+                <ul class="flex items-center justify-center mr-1 ml-1 sm:mr-6 sm:ml-0 blogs-filter sm:w-auto w-full">
+                    <li class="mr-2 sm:mr-6 active"><a href="#"
+                            class="text-gray-700 font-normal leading-7 sm:text-lg text-sm bg-gray-100 px-5 py-1 rounded-3xl">All</a>
                     </li>
-                    <li class="mr-6"><a href="#"
-                            class="text-gray-700 font-normal leading-7 text-lg bg-gray-100 px-5 py-1 rounded-3xl">Blogs</a>
+                    <li class="mr-2 sm:mr-6"><a href="#"
+                            class="text-gray-700 font-normal leading-7 sm:text-lg text-sm bg-gray-100 px-5 py-1 rounded-3xl">Blogs</a>
                     </li>
-                    <li><a href="#"
-                            class="text-gray-700 font-normal leading-7 text-lg bg-gray-100 px-5 py-1 rounded-3xl">News</a>
+                    <li class="mr-2 sm:mr-6"><a href="#"
+                            class="text-gray-700 font-normal leading-7 sm:text-lg text-sm bg-gray-100 px-5 py-1 rounded-3xl">News</a>
                     </li>
                 </ul>
-                <div class="w-full bg-gray-200 blogs-line"></div>
-                <div class="relative">
-                    <button type="button" class="filters-btn ml-10">
+                <div class="w-full bg-gray-200 blogs-line hidden sm:block"></div>
+                <div class="relative sm:w-auto w-full sm:text-right text-center sm:mt-0 mt-4">
+                    <button type="button" class="filters-btn ml-0 sm:ml-10">
                         <div class="filters-open">
                             <div class="flex items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -213,7 +266,7 @@
                                     <path d="M6 12H18M3 6H21M9 18H15" stroke="#344054" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                                <span class="ml-2 text-gray text-base leading-6 font-normal">Filters</span>
+                                <span class="ml-2 text-gray leading-6 font-normal sm:text-base text-sm">Filters</span>
                             </div>
                         </div>
                         <div class="filters-close hidden">
@@ -298,8 +351,8 @@
                     </div>
                 </div>
             </div>
-            <div class="blogs-all mt-10">
-                <div class="grid grid-cols-3 gap-8">
+            <div class="blogs-all mt-2 sm:mt-10">
+                <div class="grid grid-cols-1 gap-4 lg:gap-8 lg:grid-cols-3 sm:grid-cols-2">
                     <div>
                         <a href="blogs-news-single.html">
                             <div class="blog-img h-48 overflow-hidden">
@@ -661,17 +714,17 @@
                         </a>
                     </div>
                 </div>
-                <nav aria-label="Page navigation example" class="mt-8 flex items-center justify-between">
+                <nav aria-label="Page navigation example" class="mt-4 sm:mt-8 flex items-center justify-between">
                     <a href="#"
                         class="flex items-center justify-center font-medium text-gray-600 bg-white text-sm leading-5">
-                        <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                        <svg class="mr-1 sm:mr-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                             fill="none">
                             <path
                                 d="M15.8337 9.99996H4.16699M4.16699 9.99996L10.0003 15.8333M4.16699 9.99996L10.0003 4.16663"
                                 stroke="#475467" stroke-width="1.66667" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        Previous
+                        <span class="sm:flex hidden">Previous</span>
                     </a>
                     <ul class="inline-flex -space-x-px text-sm custom-pagination">
                         <li class="active">
@@ -705,8 +758,8 @@
                     </ul>
                     <a href="#"
                         class="flex items-center justify-center font-medium text-gray-600 bg-white text-sm leading-5">
-                        Next
-                        <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                        <span class="sm:flex hidden">Next</span>
+                        <svg class="ml-1 sm:ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                             fill="none">
                             <path
                                 d="M4.16699 9.99996H15.8337M15.8337 9.99996L10.0003 4.16663M15.8337 9.99996L10.0003 15.8333"
@@ -719,22 +772,27 @@
         </div>
     </section>
     <section class="contact-form">
-        <div class="bg-at pt-16 pb-16">
+        <div class="bg-at sm:py-16 py-12">
             <div class="container mx-auto">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="pr-16">
+                <div class="grid gap-4 lg:grid-cols-2 grid-cols-1">
+                    <div class="pr-10 lg:pr-16 hidden lg:block">
                         <div class="p-4 relative contact-form-img">
                             <div class="contact-img overflow-hidden rounded-tl-6xl rounded-br-6xl relative z-10">
                                 <img src="assets/imgs/contact.jpeg" alt="" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
-                    <div class="pr-16">
-                        <h3 class="title title-color text-4xl font-medium mb-2">Contact us</h3>
-                        <h4 class="text-gray font-normal text-base leading-6">
+                    <div class="pr-0 lg:pr-16">
+                        <h3 class="title title-color sm:text-4xl text-3xl font-medium mb-2 px-4 lg:px-0">Contact us</h3>
+                        <h4 class="text-gray font-normal text-base leading-6 px-4 lg:px-0">
                             At phasellus pulvinar id nisi porta ullamcorper iaculis.
                         </h4>
-                        <div class="grid grid-cols-2 gap-6 mt-6">
+                        <div class="p-4 relative contact-form-img lg:hidden lg:mt-0 mt-9">
+                            <div class="contact-img overflow-hidden rounded-tl-6xl rounded-br-6xl relative z-10">
+                                <img src="assets/imgs/contact.jpeg" alt="" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 gap-4 mt-6 md:gap-6 md:grid-cols-2 lg:px-0 px-4">
                             <div class="p-2">
                                 <p class="flex items-center mb-2 font-normal text-sm leading-5 elm-400">
                                     <img src="assets/icons/contact-phone.svg" alt="" class="mr-2">
@@ -762,135 +820,137 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="flex items-center justify-center">
+                        <div class="flex items-center justify-center lg:px-0 px-4">
                             <span class="or-before-after flex items-center w-full">
                                 <small
                                     class="block elm-dark-purple font-normal text-base leading-6 pl-4 pr-4">or</small>
                             </span>
                         </div>
-                        <form>
-                            <div class="mb-4 mt-2">
-                                <label for="first-name" class="block mb-2 text-sm font-medium leading-5 text-gray">First
-                                    Name</label>
-                                <input type="text" id="first-name"
-                                    class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
-                                    placeholder="Joe" />
-                            </div>
-                            <div class="mb-4 mt-2">
-                                <label for="last-name" class="block mb-2 text-sm font-medium leading-5 text-gray">Last
-                                    Name</label>
-                                <input type="text" id="last-name"
-                                    class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
-                                    placeholder="Doe" />
-                            </div>
-                            <div class="mb-4 mt-2">
-                                <label for="contact-email"
-                                    class="block mb-2 text-sm font-medium leading-5 text-gray">Email</label>
-                                <input type="text" id="contact-email"
-                                    class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
-                                    placeholder="sample@mail.com" />
-                            </div>
-                            <div class="mb-4 mt-2">
-                                <label for="phone-number"
-                                    class="block mb-2 text-sm font-medium leading-5 text-gray">Phone Number</label>
-                                <div class="relative phone-prefix">
-                                    <div class="pl-3 absolute phone-prefix-cover top-2">
-                                        <div class="flex items-center w-12">
-                                            <select id="phone-number"
-                                                class="text-gray-900 text-base block w-16 focus:outline-none">
-                                                <option value="US">US</option>
-                                                <option value="AZ">AZ</option>
-                                                <option value="TR">TR</option>
-                                            </select>
-                                            <svg class="pointer-events-none absolute right-1"
-                                                xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                viewBox="0 0 20 20" fill="none">
-                                                <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                        <div class="lg:px-0 px-4">
+                            <form>
+                                <div class="mb-4 mt-2">
+                                    <label for="first-name" class="block mb-2 text-sm font-medium leading-5 text-gray">First
+                                        Name</label>
+                                    <input type="text" id="first-name"
+                                        class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
+                                        placeholder="Joe" />
+                                </div>
+                                <div class="mb-4 mt-2">
+                                    <label for="last-name" class="block mb-2 text-sm font-medium leading-5 text-gray">Last
+                                        Name</label>
+                                    <input type="text" id="last-name"
+                                        class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
+                                        placeholder="Doe" />
+                                </div>
+                                <div class="mb-4 mt-2">
+                                    <label for="contact-email"
+                                        class="block mb-2 text-sm font-medium leading-5 text-gray">Email</label>
+                                    <input type="text" id="contact-email"
+                                        class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
+                                        placeholder="sample@mail.com" />
+                                </div>
+                                <div class="mb-4 mt-2">
+                                    <label for="phone-number"
+                                        class="block mb-2 text-sm font-medium leading-5 text-gray">Phone Number</label>
+                                    <div class="relative phone-prefix">
+                                        <div class="pl-3 absolute phone-prefix-cover top-2">
+                                            <div class="flex items-center w-12">
+                                                <select id="phone-number"
+                                                    class="text-gray-900 text-base block w-16 focus:outline-none">
+                                                    <option value="US">US</option>
+                                                    <option value="AZ">AZ</option>
+                                                    <option value="TR">TR</option>
+                                                </select>
+                                                <svg class="pointer-events-none absolute right-1"
+                                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                    viewBox="0 0 20 20" fill="none">
+                                                    <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
                                         </div>
+                                        <input type="text" id="phone-number"
+                                            class="w-full block h-10 px-3 py-2 pl-16 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
+                                            placeholder="000 000 00 00" />
                                     </div>
-                                    <input type="text" id="phone-number"
-                                        class="w-full block h-10 px-3 py-2 pl-16 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
-                                        placeholder="000 000 00 00" />
                                 </div>
-                            </div>
-                            <div class="mb-4 mt-2">
-                                <label for="hear-about" class="block mb-2 text-sm font-medium leading-5 text-gray">How
-                                    did you hear about us?</label>
-                                <div class="relative">
-                                    <select id="hear-about"
-                                        class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
-                                        <option value="" selected>Select...</option>
-                                        <option value="linkedin">Linkedin</option>
-                                        <option value="google">Google</option>
-                                        <option value="facebook">Facebook</option>
-                                    </select>
-                                    <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
+                                <div class="mb-4 mt-2">
+                                    <label for="hear-about" class="block mb-2 text-sm font-medium leading-5 text-gray">How
+                                        did you hear about us?</label>
+                                    <div class="relative">
+                                        <select id="hear-about"
+                                            class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
+                                            <option value="" selected>Select...</option>
+                                            <option value="linkedin">Linkedin</option>
+                                            <option value="google">Google</option>
+                                            <option value="facebook">Facebook</option>
+                                        </select>
+                                        <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mb-4 mt-2">
+                                    <label for="services"
+                                        class="block mb-2 text-sm font-medium leading-5 text-gray">Services</label>
+                                    <div class="relative">
+                                        <select id="services"
+                                            class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
+                                            <option value="" selected>Select...</option>
+                                            <option value="trust">Trust</option>
+                                            <option value="⁠excellence">⁠Excellence</option>
+                                            <option value="commitment">Commitment</option>
+                                            <option value="global-perspective">Global Perspective</option>
+                                        </select>
+                                        <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="mb-4 mt-2">
+                                    <button type="button"
+                                        class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
+                                        data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
+                                        <img src="assets/icons/time.svg" alt="" class="mr-2">
+                                        Choose available time
+                                    </button>
+                                </div>
+                                <div class="mb-4 mt-2">
+                                    <label class="container-checkbox relative block cursor-pointer pl-8">
+                                        <a href="privacy-policy.html" target="_blank"
+                                            class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
+                                            Policy</a>
+                                        <input type="checkbox" checked="checked"
+                                            class="absolute opacity-0 cursor-pointer w-0 h-0">
+                                        <span class="checkmark w-5 h-5 absolute left-0 bg-white border"></span>
+                                    </label>
+                                </div>
+                                <button type="submit"
+                                    class="flex items-center justify-center w-full elm-bg-700 h-11 text-white font-semibold leading-6">
+                                    <span>Request a Service</span>
+                                    <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                        viewBox="0 0 20 20" fill="none">
+                                        <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15"
+                                            stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                            stroke-linejoin="round" />
                                     </svg>
-                                </div>
-                            </div>
-                            <div class="mb-4 mt-2">
-                                <label for="services"
-                                    class="block mb-2 text-sm font-medium leading-5 text-gray">Services</label>
-                                <div class="relative">
-                                    <select id="services"
-                                        class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
-                                        <option value="" selected>Select...</option>
-                                        <option value="trust">Trust</option>
-                                        <option value="⁠excellence">⁠Excellence</option>
-                                        <option value="commitment">Commitment</option>
-                                        <option value="global-perspective">Global Perspective</option>
-                                    </select>
-                                    <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="mb-4 mt-2">
-                                <button type="button"
-                                    class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
-                                    data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
-                                    <img src="assets/icons/time.svg" alt="" class="mr-2">
-                                    Choose available time
                                 </button>
-                            </div>
-                            <div class="mb-4 mt-2">
-                                <label class="container-checkbox relative block cursor-pointer pl-8">
-                                    <a href="privacy-policy.html" target="_blank"
-                                        class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
-                                        Policy</a>
-                                    <input type="checkbox" checked="checked"
-                                        class="absolute opacity-0 cursor-pointer w-0 h-0">
-                                    <span class="checkmark w-5 h-5 absolute left-0 bg-white border"></span>
-                                </label>
-                            </div>
-                            <button type="submit"
-                                class="flex items-center justify-center w-full elm-bg-700 h-11 text-white font-semibold leading-6">
-                                <span>Request a Service</span>
-                                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 20 20" fill="none">
-                                    <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15"
-                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <footer class="bg-dark-purple">
-        <div class="container mx-auto">
+        <div class="container mx-auto px-4">
             <div class="pt-16 pb-14">
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="">
+                <div class="grid grid-cols-1 gap-6 md:gap-4 md:grid-cols-3">
+                    <div>
                         <a href="index.html" class="logo">
                             <img src="assets/icons/logo.svg" alt="" class="object-contain">
                         </a>
@@ -908,7 +968,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="">
+                    <div>
                         <p class="leading-5 text-light-purple font-normal text-sm mb-4">Menu</p>
                         <ul>
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University
@@ -924,13 +984,13 @@
                             <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">FAQ</a></li>
                         </ul>
                     </div>
-                    <div class="">
+                    <div>
                         <p class="leading-5 text-light-purple font-normal text-sm mb-4">Info</p>
                         <ul>
                             <li class="flex items-start mb-2">
                                 <img src="assets/icons/map.svg" alt="" class="mr-2">
                                 <span class="font-normal text-base text-light-white max180px">167-169 Great Portland
-                                     Street,
+                                    Street,
                                     London</span>
                             </li>
                             <li class="flex items-start mb-2">
@@ -952,16 +1012,16 @@
                                 in. Commodo sit mus at velit dis.</p>
                         </div>
                         <form action="">
-                            <div class="foot-form mt-4 flex items-center justify-start">
+                            <div class="foot-form mt-4 flex items-center justify-start lg:flex-row flex-col">
                                 <div class="relative w-full">
                                     <input type="text"
-                                        class="h-11 text-base font-normal text-dark-purple pl-4 pr-4 w-full"
+                                        class="h-11 text-base font-normal text-dark-purple pl-4 w-full pr-8"
                                         placeholder="sample@sample.com">
                                     <span class="absolute help-icon" title="Subscribe to our Newsletter"><img
                                             src="assets/icons/help.svg" alt=""></span>
                                 </div>
                                 <button type="submit"
-                                    class="inline-flex items-center justify-center h-11 bg-white text-dark-purple text-base leading-6 font-semibold subscribe-btn ml-4">
+                                    class="lg:inline-flex flex items-center justify-center h-11 bg-white text-dark-purple text-base leading-6 font-semibold subscribe-btn lg:ml-4 w-full lg:w-auto lg:mt-0 mt-4">
                                     Subscribe
                                     <img src="assets/icons/arrow-narrow-right.svg" alt="" class="ml-2">
                                 </button>
@@ -972,16 +1032,15 @@
             </div>
         </div>
         <div class="border-t border-bg-light-purple">
-            <div class="container mx-auto flex justify-between items-center py-2">
-                <p class="text-light-purple font-normal text-sm">2024, EL&M Consulting</p>
-                <ul class="flex items-center justify-center">
-                    <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy
-                            & Policy</a></li>
-                    <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms &
-                            Conditions</a>
-                    </li>
-                    <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data
-                            privacy</a></li>
+            <div class="container px-4 mx-auto flex justify-between md:flex-row items-center flex-col py-2">
+                <p class="text-light-purple font-normal text-sm md:mb-0 mb-4">2024, EL&M Consulting</p>
+                <ul class="flex items-center justify-center footer-bottom sm:flex-row flex-col">
+                    <li class="md:ml-6 mr-6"><a href="privacy-policy.html"
+                            class="text-light-purple font-normal text-sm">Privacy & Policy</a></li>
+                    <li class="md:ml-6 mr-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms &
+                            Conditions</a></li>
+                    <li class="md:ml-6 mr-6"><a href="data-privacy.html"
+                            class="text-light-purple font-normal text-sm">Data privacy</a></li>
                 </ul>
             </div>
         </div>

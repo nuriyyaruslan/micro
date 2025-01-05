@@ -423,7 +423,7 @@ footer .logo img{
   .acceptences::before{
     background-color: #C694DC;
     top: -16px;
-    left: -16px;
+    left: 0;
     bottom: 0;
     z-index: -1;
   }
@@ -433,7 +433,7 @@ footer .logo img{
     height: 192px;
     background-color: #3A1849;
     bottom:-16px;
-    right:-16px;
+    right:0;
     z-index: -1;
   }
 
