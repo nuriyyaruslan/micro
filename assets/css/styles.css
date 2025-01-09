@@ -948,9 +948,9 @@ footer .logo img{
     border:1.5px solid #D0D5DD;
   }
   
- .cookie-policy .toggle:checked {
+.cookie-policy .toggle:checked {
     background: #7F56D9;
-  }
+}
   
  .cookie-policy .toggle::before {
     content: '';
@@ -963,9 +963,9 @@ footer .logo img{
     left: 2px;
     transition: transform 0.3s;
     filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.06)) drop-shadow(0px 1px 3px rgba(16, 24, 40, 0.10));
-  }
+}
   
- .cookie-policy .toggle:checked::before {
+.cookie-policy .toggle:checked::before {
     transform: translateX(30px);
-  }
+}
   
