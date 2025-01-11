@@ -7,6 +7,10 @@ body{
     font-family: "Playfair Display", serif;
 }
 
+.transition-all{
+    transition: all .4s ease;
+}
+
 .title-color{
     color:#1D2939;
 }
@@ -50,6 +54,19 @@ body{
 .btn-bg{
     background-color: #F9F5FF;
 }
+
+.btn-bg:hover{
+    background-color: #682B82;
+}
+
+.btn-bg:hover span{
+    color:#fff;
+}
+
+.btn-bg:hover svg path{
+    stroke:#fff;
+}
+
 .text-purple{
     color:#6941C6;
 }
@@ -969,3 +986,28 @@ footer .logo img{
     transform: translateX(30px);
 }
   
+.blog-item:hover img{
+    transform: scale(1.2);
+}
+
+.blog-item:hover h4{
+    color:#682B82;
+}
+
+.slider-btn:hover{
+    background-color: #682B82;
+    color:#fff;
+}
+
+.slider-btn:hover svg path{
+    stroke:#fff;
+}
+
+.footer ul li a:hover img,.header ul li a:hover img{
+    transform: scale(1.2);
+}
+
+.footer ul li a:hover,.header p a:hover{
+    color:#B675D1;
+}
+
