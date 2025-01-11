@@ -88,6 +88,65 @@
         line-height: 40px; 
         letter-spacing: -0.64px;
     }
+    .our-approach-img{
+        height: 232px;
+    }
+
+    .about-item:nth-child(even),.about-item:nth-child(odd){
+        flex-direction: column;
+    }
+    
+    .about-item:nth-child(even) .about-content{
+        padding-left: 16px;
+    }
+    .w-percent40,.w-percent60{
+        width: 100%;
+    }
+
+    .about-img-cover{
+        height: 246px;
+    }
+    .home-about:nth-child(odd) .about-content{
+        padding-left: 0;
+    }
+    .home-about:nth-child(even) .about-content{
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width:992px){
+    .testimonials .owl-item{
+        padding: 24px 16px;
+    }
+
+    .testimonials .owl-prev{
+        left: 8px;
+    }
+
+    .testimonials .owl-next{
+        right: 8px;
+    }
+
+    .testimonials .owl-dots{
+        margin-top: 36px;
+    }
+
+    .testimonials .owl-prev,.testimonials .owl-next{
+        width: 64px;
+        height: 64px;
+        background: #F5ECF9 !important;
+        position: absolute;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .testimonials .owl-prev span,.testimonials .owl-next span{
+        display: none;
+    }
+    .cookies-cutomise{
+        height: calc(100vh - 32px);
+    }
 }
 
 @media screen and (max-width:768px){
@@ -124,6 +183,64 @@
         height: 240px;
         margin-top:10px;
         margin-bottom:16px;
+    }
+    .colleges-items .college-item:nth-child(odd){
+        border-radius: 20px;
+        border-right:6px solid #DABAE8;
+        padding-left: 16px;
+    }
+    .colleges-items .college-item:nth-child(even){
+        border-radius: 20px;
+        border-left:6px solid #DABAE8;
+        padding-right: 16px;
+    }
+    .college-item,.w-percent70,.w-percent30{
+        width: 100%;
+    }
+    .college-item{
+        height: auto;
+    }
+    .colleges-items .college-item:nth-child(odd) .college-details{
+        padding-left: 0;
+    }
+    .colleges-items .college-item:nth-child(odd) .college-icon{
+        margin-left: 0;
+    }
+    .colleges-items .college-item:nth-child(odd) span,
+    .colleges-items .college-item:nth-child(even) span{
+        margin-left: 0;
+        margin-bottom: 16px;
+        position: absolute;
+        top:-30px;
+    }
+    .colleges-items .college-item:nth-child(even){
+        flex-direction: column;
+    }
+    .colleges-items .college-item:nth-child(even) .college-icon,
+    .colleges-items .college-item:nth-child(even) span{
+        margin-right: 0;
+    }
+    .colleges-items .college-item:nth-child(even) .college-details{
+        padding-right: 0;
+        text-align: center;
+    }
+    .slider-indicators{
+        padding-left: 16px;
+    }
+    .owl-carousel .owl-item img{
+        max-width: 80px;
+    }
+    .cookie-policy .toggle{
+        min-width: 44px;
+    }
+    .cookie-policy .toggle::before{
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+    }
+    .cookie-policy .toggle:checked::before{
+        transform: translateX(21px);
     }
 }
 

@@ -12,221 +12,336 @@
   <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="libs/tailwind/tailwind.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
 </head>
 
 <body>
-  <!-- Cookies modal -->
-  <div id="cookies-modal" class="flex">
-    <div class="container m-auto elm-50 cookies-content rounded-3xl p-6 fixed bottom-6 left-0 right-0">
-      <div class="flex">
-        <div class="w-percent70">
-          <h5 class="elm-dark-purple text-5xl font-medium title mb-4">We value your privacy</h5>
-          <div class="elm-600 text-base leading-6 font-normal">
-            Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu vel vulputate ut. In odio volutpat elementum nisi amet. Mauris dictum pulvinar bibendum vitae lectus etiam. In amet pretium id amet laoreet. Pulvinar tristique sed imperdiet at ligula felis amet aliquet.
+  <!-- Cookies modal :flex -->
+  <div id="cookies-modal" class="hidden">
+    <div class="container m-auto px-4 fixed bottom-6 left-0 right-0">
+     <div class="elm-50 cookies-content rounded-3xl p-4 md:p-6">
+      <div class="flex flex-col md:flex-row">
+        <div class="w-percent70 cookie-parent">
+          <h5 class="elm-dark-purple md:text-5xl text-xl font-medium title mb-4">We value your privacy</h5>
+          <div class="elm-600 md:text-base text-xs leading-6 font-normal line-clamp-2 md:line-clamp-none cookie-txt">
+            Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames
+            blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu
+            vel vulputate ut. In odio volutpat elementum nisi amet. Mauris dictum pulvinar bibendum vitae lectus etiam.
+            In amet pretium id amet laoreet. Pulvinar tristique sed imperdiet at ligula felis amet aliquet.
           </div>
+          <button type="button" class="cookie-read-js text-blue-600 font-normal text-xs">
+            <span class="read-more-txt">Read more</span>
+            <span class="read-less-txt hidden">Read less</span>
+          </button>
         </div>
-        <ul class="w-percent30 pl-4">
+        <ul class="w-percent30 pl-0 md:pl-4 mt-4 md:mt-0">
           <li class="mb-4">
-            <button type="button" class="accept-all purple-border elm-dark-purple text-white font-semibold leading-6 text-center block px-5 py-3 w-full">Accept All</button>
+            <button type="button"
+              class="accept-all purple-border bg-dark-purple text-white font-semibold leading-6 text-center block px-5 py-3 w-full">Accept
+              All</button>
           </li>
           <li class="mb-4">
-            <button type="button" class="reject-all purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Reject All</button>
+            <button type="button"
+              class="reject-all purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Reject
+              All</button>
           </li>
           <li class="mb-4">
-            <button type="button" class="cookie-customize purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Customize</button>
+            <button type="button"
+              class="cookie-customize purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Customize</button>
           </li>
         </ul>
       </div>
+     </div>
     </div>
-    <div class="cookies-cutomise m-auto elm-50 rounded-3xl p-6 bottom-6 left-0 right-0 hidden">
-      <div class="flex items-center justify-between mb-6">
-        <h6 class="elm-dark-purple text-2xl leading-8 font-medium">Cookie Policy</h6>
-        <button type="button" class="cookie-close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M17 7L7 17M7 7L17 17" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
-      <div class="cookie-policy">
-        <div class="option mb-6 flex justify-between items-center">
-          <label for="necessary">
-            <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Necesarry</p>
-            <div class="elm-600 text-sm leading-5 font-normal">
-              Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu vel vulputate ut.
-            </div>
-          </label>
-          <input type="checkbox" id="necessary" class="toggle h-9">
+    <div class="cookies-cutomise m-auto hidden bottom-6 left-0 right-0 p-4 overflow-auto">
+      <div class="elm-50 rounded-3xl p-4 md:p-6">
+        <div class="flex items-center justify-between mb-6">
+          <h6 class="elm-dark-purple text-xl md:text-2xl leading-8 font-medium">Cookie Policy</h6>
+          <button type="button" class="cookie-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M17 7L7 17M7 7L17 17" stroke="#344054" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
         </div>
-        <div class="option mb-6 flex justify-between items-center">
-          <label for="functional">
-            <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Functional</p>
-            <div class="elm-600 text-sm leading-5 font-normal">
-              Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu vel vulputate ut.
-            </div>
-          </label>
-          <input type="checkbox" id="functional" class="toggle h-9">
+        <div class="cookie-policy">
+          <div class="option mb-6 flex justify-between items-center">
+            <label for="necessary" class="cookie-parent">
+              <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Necesarry</p>
+              <div class="elm-600 text-sm leading-5 font-normal pr-4 line-clamp-2 md:line-clamp-none cookie-txt">
+                Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames
+                blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas
+                arcu vel vulputate ut.
+              </div>
+              <button type="button" class="cookie-read-js text-blue-600 font-normal text-xs">
+                <span class="read-more-txt">Read more</span>
+                <span class="read-less-txt hidden">Read less</span>
+              </button>
+            </label>
+            <input type="checkbox" id="necessary" class="toggle h-6 md:h-9">
+          </div>
+          <div class="option mb-6 flex justify-between items-center">
+            <label for="functional" class="cookie-parent">
+              <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Functional</p>
+              <div class="elm-600 text-sm leading-5 font-normal pr-4 line-clamp-2 md:line-clamp-none cookie-txt">
+                Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames
+                blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas
+                arcu vel vulputate ut.
+              </div>
+              <button type="button" class="cookie-read-js text-blue-600 font-normal text-xs">
+                <span class="read-more-txt">Read more</span>
+                <span class="read-less-txt hidden">Read less</span>
+              </button>
+            </label>
+            <input type="checkbox" id="functional" class="toggle h-6 md:h-9">
+          </div>
+          <div class="option mb-6 flex justify-between items-center">
+            <label for="analytics" class="cookie-parent">
+              <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Analytics</p>
+              <div class="elm-600 text-sm leading-5 font-normal pr-4 line-clamp-2 md:line-clamp-none cookie-txt">
+                Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames
+                blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas
+                arcu vel vulputate ut.
+              </div>
+              <button type="button" class="cookie-read-js text-blue-600 font-normal text-xs">
+                <span class="read-more-txt">Read more</span>
+                <span class="read-less-txt hidden">Read less</span>
+              </button>
+            </label>
+            <input type="checkbox" id="analytics" class="toggle h-6 md:h-9">
+          </div>
         </div>
-        <div class="option mb-6 flex justify-between items-center">
-          <label for="analytics">
-            <p class="elm-dark-purple text-left font-medium leading-7 mb-2">Analytics</p>
-            <div class="elm-600 text-sm leading-5 font-normal">
-              Et dolor nulla curabitur sed quam turpis consectetur consequat. Amet sodales ante nulla pharetra fames blandit id iaculis. Id condimentum pharetra faucibus duis sit tincidunt. Sem nunc tellus ut id egestas arcu vel vulputate ut.
-            </div>
-          </label>
-          <input type="checkbox" id="analytics" class="toggle h-9">
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-3">
+          <button type="button"
+            class="accept-all purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Reject
+            All</button>
+          <button type="button"
+            class="save-preferences purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Save
+            my preferences</button>
+          <button type="button"
+            class="cookie_accept_all purple-border text-white font-semibold leading-6 text-center block px-5 py-3 w-full">Accept
+            All</button>
         </div>
-      </div>  
-      <div class="grid grid-cols-3 gap-2">
-        <button type="button" class="accept-all purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Reject All</button>
-        <button type="button" class="save-preferences purple-border px-5 py-3 text-center block elm-dark-purple font-semibold text-base leading-4 w-full">Save my preferences</button>
-        <button type="button" class="cookie_accept_all purple-border text-white font-semibold leading-6 text-center block px-5 py-3 w-full">Accept All</button>
       </div>
     </div>
   </div>
 
   <!-- Calendly modal -->
   <div id="calendly-modal" tabindex="-1" aria-hidden="true"
-    class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full">
+    class="calendly-modal hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center md:inset-0 w-full h-full px-4">
     <div class="bg-white max-h-full rounded-lg calendly-modal-content w-full overflow-hidden">
       <iframe src="https://calendly.com" width="100%" height="100%" style="border:none;">
       </iframe>
     </div>
   </div>
   <header class="header fixed w-full z-50">
-    <div class="container mx-auto">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center">
-          <a href="index.html">
-            <img src="assets/icons/headLogo.svg" alt="" class="object-contain">
-          </a>
-          <ul class="flex items-center justify-center ml-6 menu-nav">
-            <li class="h-24 active">
-              <a href="#"
-                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150"
-                id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover">Services</a>
-              <!-- Dropdown menu -->
-              <div id="dropdownHover" class="z-10 hidden bg-white w-full max-w-nav">
-                <div class="p-2 flex">
-                  <div class="services-img overflow-hidden">
-                    <img src="assets/imgs/services-drop.png" alt="" class="w-full h-full object-cover">
-                  </div>
-                  <ul class="ml-4 drop-nav">
-                    <li>
-                      <a href="services.html" class="flex items-start justify-between p-2 bg-white">
-                        <span class="overflow-hidden">
-                          <span class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">University
-                            placements </span>
-                          <small class="text-gray text-xs font-normal leading-18 truncate">In
-                            posuere euismod eget feugiat morbi proin.</small>
-                        </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                          <path d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15" stroke="#6941C6"
-                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </a>
+    <div class="container px-4 mx-auto">
+        <div class="flex items-center justify-between py-4 xl:py-0">
+            <div class="flex items-center">
+                <a href="index.html" class="header-logo">
+                    <img src="assets/icons/headLogo.svg" alt="" class="object-contain h-10 xl:h-16">
+                </a>
+                <ul class="items-center justify-center menu-nav xl:ml-6 xl:flex xl:static xl:w-auto xl:h-auto w-full h-full ml-0 fixed top-0 left-0 xl:px-0 px-6">
+                    <li class="h-24 active">
+                        <a href="#"
+                            class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between"
+                            id="dropdownHoverButton" data-dropdown-toggle="dropdownHover"
+                            data-dropdown-trigger="hover">
+                            <span>Services</span>
+                            <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownHover" class="z-10 hidden xl:bg-white w-full max-w-nav">
+                            <div class="xl:p-2 p-0 flex">
+                                <div class="services-img overflow-hidden xl:block hidden">
+                                    <img src="assets/imgs/services-drop.png" alt=""
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <ul class="drop-nav xl:ml-4 ml-0">
+                                    <li>
+                                        <a href="services.html"
+                                            class="flex items-start justify-between xl:px-2 py-2 px-4">
+                                            <span class="overflow-hidden">
+                                                <span
+                                                    class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">University
+                                                    placements </span>
+                                                <small class="text-gray text-xs font-normal leading-18 truncate">In
+                                                    posuere euismod eget feugiat morbi proin.</small>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15"
+                                                    stroke="#6941C6" stroke-width="1.66667" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html" class="flex items-start justify-between xl:px-2 py-2 px-4">
+                                            <span class="overflow-hidden">
+                                                <span
+                                                    class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">School
+                                                    Placements</span>
+                                                <small class="text-gray text-xs font-normal leading-18 truncate">In
+                                                    posuere euismod eget feugiat morbi proin.</small>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15"
+                                                    stroke="#6941C6" stroke-width="1.66667" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="services.html" class="flex items-start justify-between xl:px-2 py-2 px-4">
+                                            <span class="overflow-hidden">
+                                                <span
+                                                    class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">Short
+                                                    Courses </span>
+                                                <small class="text-gray text-xs font-normal leading-18 truncate">In
+                                                    posuere euismod eget feugiat morbi proin..</small>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15"
+                                                    stroke="#6941C6" stroke-width="1.66667" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
-                    <li>
-                      <a href="services.html" class="flex items-start justify-between p-2">
-                        <span class="overflow-hidden">
-                          <span class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">School
-                            Placements</span>
-                          <small class="text-gray text-xs font-normal leading-18 truncate">In
-                            posuere euismod eget feugiat morbi proin.</small>
-                        </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                          <path d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15" stroke="#6941C6"
-                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </a>
+                    <li class="h-24">
+                        <a href="about.html"
+                            class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between">
+                            <span>About us</span>
+                            <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                        </a>
                     </li>
-                    <li>
-                      <a href="services.html" class="flex items-start justify-between p-2">
-                        <span class="overflow-hidden">
-                          <span class="block text-purple text-sm font-semibold mb-1 pr-2 truncate">Short
-                            Courses </span>
-                          <small class="text-gray text-xs font-normal leading-18 truncate">In
-                            posuere euismod eget feugiat morbi proin..</small>
-                        </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                          <path d="M3.3335 10H16.6668M16.6668 10L11.6668 5M16.6668 10L11.6668 15" stroke="#6941C6"
-                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </a>
+                    <li class="h-24">
+                        <a href="blogs.html"
+                            class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between">
+                            <span>Blogs & News</span>
+                            <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                        </a>
                     </li>
-                  </ul>
+                    <li class="h-24">
+                        <a href="contact.html"
+                            class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between">
+                            <span>Contact us</span>
+                            <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                        </a>
+                    </li>
+                    <li class="h-24">
+                        <a href="faq.html"
+                            class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150 xl:justify-start justify-between">
+                            <span>FAQ</span>
+                            <img src="assets/icons/CaretRight.svg" alt="" class="xl:hidden block">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center">
+                <ul class="hidden items-center xl:flex">
+                    <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/facebook.svg" alt=""
+                                class="w-5"></a>
+                    </li>
+                    <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/linkedin.svg" alt=""
+                                class="w-5"></a>
+                    </li>
+                    <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/twitter.svg" alt=""
+                                class="w-5"></a>
+                    </li>
+                    <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/instagram.svg" alt=""
+                                class="w-5"></a>
+                    </li>
+                </ul>
+                <p class="hidden items-center mb-0 xl:flex">
+                    <img src="assets/icons/phone.svg" alt="" class="mr-2 w-5">
+                    <a href="tel:+447823213024" class="font-normal text-base text-white">+447823213024</a>
+                </p>
+
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                    class="text-center inline-flex items-center ml-6 text-base font-normal" type="button">
+                    <img src="assets/icons/GB.svg" alt="">
+                    <span class="font-normal text-base text-white ml-2 mr-1">En</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M16.25 7.5L10 13.75L3.75 7.5" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 shadow w-32 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="dropdownDefaultButton">
+                        <li>
+                            <a href="#"
+                                class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                <img src="assets/icons/GB.svg" alt="">
+                                <span class="font-normal text-base ml-2">Az</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                <img src="assets/icons/GB.svg" alt="">
+                                <span class="font-normal text-base ml-2">En</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                <img src="assets/icons/GB.svg" alt="">
+                                <span class="font-normal text-base ml-2">Ru</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
-            </li>
-            <li class="h-24"><a href="about.html"
-                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">About
-                us</a></li>
-            <li class="h-24"><a href="blogs.html"
-                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">Blogs
-                & News</a></li>
-            <li class="h-24"><a href="contact.html"
-                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">Contact
-                us</a></li>
-            <li class="h-24"><a href="faq.html"
-                class="flex items-center h-full p-4 text-white text-base font-normal border-b-2 border-transparent hover:border-b hover:border-white hover:border-2 transition ease-in-out delay-150">FAQ</a>
-            </li>
-          </ul>
+
+                <button type="button" class="xl:hidden ml-4 menu-open-js">
+                    <img src="assets/icons/menu.svg" alt="" class="menu-open">
+                    <img src="assets/icons/x.svg" alt="" class="menu-close hidden">
+                </button>
+            </div>
         </div>
-        <div class="flex items-center">
-          <ul class="flex items-center">
-            <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/facebook.svg" alt="" class="w-5"></a>
-            </li>
-            <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/linkedin.svg" alt="" class="w-5"></a>
-            </li>
-            <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/twitter.svg" alt="" class="w-5"></a>
-            </li>
-            <li class="mr-6"><a href="#" target="_blank"><img src="assets/icons/instagram.svg" alt="" class="w-5"></a>
-            </li>
-          </ul>
-          <p class="flex items-center mb-0">
-            <img src="assets/icons/phone.svg" alt="" class="mr-2 w-5">
-            <a href="tel:+447823213024" class="font-normal text-base text-white">+447823213024</a>
-          </p>
-
-          <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-            class="text-center inline-flex items-center ml-6 text-base font-normal" type="button">
-            <img src="assets/icons/GB.svg" alt="">
-            <span class="font-normal text-base text-white ml-2 mr-1">En</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M16.25 7.5L10 13.75L3.75 7.5" stroke="white" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
-
-          <!-- Dropdown menu -->
-          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 shadow w-32 dark:bg-gray-700">
-            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-              <li>
-                <a href="#"
-                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <img src="assets/icons/GB.svg" alt="">
-                  <span class="font-normal text-base ml-2">Az</span>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <img src="assets/icons/GB.svg" alt="">
-                  <span class="font-normal text-base ml-2">En</span>
-                </a>
-              </li>
-              <li>
-                <a href="#"
-                  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <img src="assets/icons/GB.svg" alt="">
-                  <span class="font-normal text-base ml-2">Ru</span>
-                </a>
-              </li>
+        <div class="flex items-center justify-between xl:hidden pb-4 header-socials">
+            <ul class="flex items-center">
+                <li class="mr-6">
+                    <a href="#" target="_blank">
+                        <img src="assets/icons/facebook.svg" alt="" class="w-5">
+                    </a>
+                </li>
+                <li class="mr-6">
+                    <a href="#" target="_blank">
+                        <img src="assets/icons/linkedin.svg" alt="" class="w-5">
+                    </a>
+                </li>
+                <li class="mr-6">
+                    <a href="#" target="_blank">
+                        <img src="assets/icons/twitter.svg" alt="" class="w-5">
+                    </a>
+                </li>
+                <li class="mr-6">
+                    <a href="#" target="_blank">
+                        <img src="assets/icons/instagram.svg" alt="" class="w-5">
+                    </a>
+                </li>
             </ul>
-          </div>
+            <p class="flex items-center mb-0">
+                <img src="assets/icons/phone.svg" alt="" class="mr-2 w-5">
+                <a href="tel:+447823213024" class="font-normal text-base text-white">+447823213024</a>
+            </p>
         </div>
-      </div>
     </div>
-  </header>
+</header>
   <section class="home-slider">
     <div id="default-carousel" class="relative w-full" data-carousel="static">
       <div class="relative h-screen overflow-hidden">
@@ -234,16 +349,17 @@
           <video class="w-full h-full object-cover" autoplay muted loop>
             <source src="assets/imgs/londonvideo.mp4" type="video/mp4">
           </video>
-          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
+          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center md:px-0 px-4">
             <div class="container m-auto">
-              <h1 class="title text-white font-medium text-5xl mb-4">EL&M Education Consultancy</h1>
+              <h1 class="title text-white font-medium text-3xl md:text-5xl mb-4">EL&M Education Consultancy</h1>
               <p class="text-white font-normal text-base leading-6 max-w-452 mb-4">Cum ac parturient nulla hendrerit
                 aenean
                 turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
               <a href="#"
                 class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
                 Request a Service
-                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                  fill="none">
                   <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
                     stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -253,16 +369,17 @@
         </div>
         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
           <img src="assets/imgs/contact-cover.jpeg" alt="" class="w-full h-full object-cover">
-          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
+          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center md:px-0 px-4">
             <div class="container m-auto">
-              <h1 class="title text-white font-medium text-5xl mb-4">EL&M Education Consultancy</h1>
+              <h1 class="title text-white font-medium text-3xl md:text-5xl mb-4">EL&M Education Consultancy</h1>
               <p class="text-white font-normal text-base leading-6 max-w-452 mb-4">Cum ac parturient nulla hendrerit
                 aenean
                 turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
               <a href="#"
                 class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
                 Request a Service
-                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                  fill="none">
                   <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
                     stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -272,16 +389,17 @@
         </div>
         <div class="hidden duration-1000 ease-in-out" data-carousel-item>
           <img src="assets/imgs/faq.jpeg" alt="" class="w-full h-full object-cover">
-          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center">
+          <div class="banner-layer absolute w-full h-full left-0 top-0 flex items-center md:px-0 px-4">
             <div class="container m-auto">
-              <h1 class="title text-white font-medium text-5xl mb-4">EL&M Education Consultancy</h1>
+              <h1 class="title text-white font-medium text-3xl md:text-5xl mb-4">EL&M Education Consultancy</h1>
               <p class="text-white font-normal text-base leading-6 max-w-452 mb-4">Cum ac parturient nulla hendrerit
                 aenean
                 turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
               <a href="#"
                 class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 bg-white elm-dark-purple">
                 Request a Service
-                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                  fill="none">
                   <path d="M3.33337 10H16.6667M16.6667 10L11.6667 5M16.6667 10L11.6667 15" stroke="#682B82"
                     stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
@@ -302,15 +420,15 @@
     </div>
   </section>
   <section class="about-section pt-16 pb-16">
-    <div class="container m-auto">
-      <div class="about-item home-about grid grid-cols-2">
+    <div class="container m-auto px-4">
+      <div class="about-item home-about grid grid-cols-1 lg:grid-cols-2">
         <div class="about-img p-4">
           <div class="about-img-cover overflow-hidden">
             <img src="assets/imgs/home-about.jpeg" alt="" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="about-content pt-12">
-          <h5 class="title text-gray-800 font-medium text-4xl mb-2">Welcome to  EL&M Education Consultancy</h5>
+        <div class="about-content pt-8 lg:pt-12">
+          <h5 class="title text-gray-800 font-medium text-3xl md:text-4xl mb-2">Welcome to  EL&M Education Consultancy</h5>
           <div class="text-gray-700 font-normal text-base leading-6">
             Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu commodo cras
             arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla nunc morbi turpis elit.
@@ -330,12 +448,12 @@
     </div>
   </section>
   <section class="our-values pt-16 pb-16 elm-50 relative">
-    <div class="container mx-auto">
-      <h3 class="title title-color text-4xl font-medium mb-2 text-center elm-dark-purple">Our Values</h3>
+    <div class="container mx-auto px-4">
+      <h3 class="title title-color lg:text-4xl text-3xl font-medium mb-2 text-center elm-dark-purple">Our Values</h3>
       <h4 class="font-normal text-base leading-6 text-center elm-500 max-w-452 m-auto">
         At phasellus pulvinar id nisi porta ullamcorper iaculis.
       </h4>
-      <div class="grid grid-cols-4 mt-10">
+      <div class="grid grid-cols-1 mt-10 sm:grid-cols-2 lg:grid-cols-4">
         <div class="p-4 text-center">
           <div class="pt-10 pb-10">
             <div class="value-img-box relative w-16 h-16 m-auto">
@@ -402,8 +520,8 @@
     <img src="assets/icons/valueand2.png" alt="" class="absolute right-0 top-0 value-bg">
   </section>
   <section class="about-section pt-16 pb-16">
-    <div class="container m-auto">
-      <h3 class="title title-color text-4xl font-medium mb-2 text-center max-w-452 m-auto">About EL&M Education
+    <div class="container m-auto px-4">
+      <h3 class="title title-color lg:text-4xl text-3xl font-medium mb-2 text-center max-w-452 m-auto">About EL&M Education
         Consultancy</h3>
       <h4 class="text-gray font-normal text-base leading-6 text-center max-w-960 m-auto max-w-452">
         At phasellus pulvinar id nisi porta ullamcorper iaculis.
@@ -415,7 +533,7 @@
               <img src="assets/imgs/about1.jpeg" alt="" class="w-full h-full object-cover">
             </div>
           </div>
-          <div class="about-content w-percent60 pt-12">
+          <div class="about-content w-percent60 pt-6 lg:pt-12">
             <h5 class="title text-gray-800 font-medium text-4xl mb-2">Diam odio condimentum vitae eget urna. Faucibus
               tortor urna interdum sed in.</h5>
             <div class="text-gray-700 font-normal text-base leading-6">
@@ -436,7 +554,7 @@
               <img src="assets/imgs/about2.jpeg" alt="" class="w-full h-full object-cover">
             </div>
           </div>
-          <div class="about-content w-percent60 pt-12">
+          <div class="about-content w-percent60 pt-6 lg:pt-12">
             <h5 class="title text-gray-800 font-medium text-4xl mb-2">What is an education consultancy?</h5>
             <div class="text-gray-700 font-normal text-base leading-6">
               Ac egestas aliquam tortor elit eget. Rutrum ut condimentum sed non ac leo justo sed morbi. Nisl enim nam
@@ -456,7 +574,7 @@
               <img src="assets/imgs/students.jpeg" alt="" class="w-full h-full object-cover">
             </div>
           </div>
-          <div class="about-content w-percent60 pt-12">
+          <div class="about-content w-percent60 pt-6 lg:pt-12">
             <h5 class="title text-gray-800 font-medium text-4xl mb-2">What is an education consultancy?</h5>
             <div class="text-gray-700 font-normal text-base leading-6">
               Ac egestas aliquam tortor elit eget. Rutrum ut condimentum sed non ac leo justo sed morbi. Nisl enim nam
@@ -473,16 +591,17 @@
       </div>
     </div>
   </section>
-  <section class="pt-16 pb-16">
-    <div class="container mx-auto acceptences relative">
-      <div class="flex items-start">
+  <section class="md:py-16 py-12">
+    <div class="container mx-auto acceptences relative px-4">
+      <div class="flex items-start md:flex-row flex-col">
         <div class="h-64 overflow-hidden acceptences-image">
           <img src="assets/imgs/acceptences.jpeg" alt="" class="w-full h-full object-cover">
         </div>
-        <div class="elm-50 acceptences-content py-8 px-2 relative light-acceptences">
-          <h4 class="text-white text-5xl font-medium mb-4 mt-2 elm-dark-purple">Let’s get your acceptence</h4>
-          <p class="mb-4 elm-600 text-base font-normal leading-6">Cum ac parturient nulla hendrerit aenean turpis massa
-            mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
+        <div class="elm-50 acceptences-content md:py-8 py-6 px-4 md:px-2 relative light-acceptences">
+          <h4 class="text-white lg:text-5xl text-2xl font-medium mb-4 mt-0 md:mt-2 elm-dark-purple">Let’s get your
+            acceptence</h4>
+          <p class="mb-4 elm-600 text-sm lg:text-base font-normal leading-6">Cum ac parturient nulla hendrerit aenean
+            turpis massa mattis. Senectus eu at neque ut vel gravida turpis tortor.</p>
           <a href="#"
             class="inline-flex items-center justify-center h-11 py-3 px-5 text-base font-semibold leading-4 elm-bg-700 text-white">
             Request a Service
@@ -495,61 +614,54 @@
       </div>
     </div>
   </section>
-  <section class="pt-16 pb-14">
-    <div class="container m-auto">
-      <h3 class="title title-color text-4xl font-medium mb-2 text-center">Testimonials</h3>
+  <section class="md:py-16 py-8">
+    <div class="container m-auto px-4">
+      <h3 class="title title-color lg:text-4xl text-3xl font-medium mb-2 text-center">Testimonials</h3>
       <h4 class="text-gray font-normal text-base leading-6 text-center">
         At phasellus pulvinar id nisi porta ullamcorper iaculis.
       </h4>
       <div class="container mt-4 mx-auto">
         <div class="relative">
-          <button type="button"
-            class="elm-50 w-16 h-16 absolute left-0 flex items-center justify-center prev-btn cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <path d="M20 26L10 16L20 6" stroke="#682B82" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
           <div class="owl-carousel owl-theme testimonials">
-            <div class="elm-50 py-16 px-12 testimonial relative">
+            <div class="elm-50 py-24 md:py-16 md:px-12 px-4 testimonial relative">
               <div class="max-w-nav m-auto text-center">
-                <h4 class="elm-dark-purple text-5xl title-space title mb-6 font-medium">What our families says</h4>
+                <h4 class="elm-dark-purple lg:text-5xl text-2xl title-space title mb-6 font-medium">What our families says</h4>
                 <div class="mb-6 elm-500 text-lg font-normal leading-7">
                   Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu
                   commodo cras arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla
                   nunc morbi turpis elit. Urna posuere vestibulum tempus in augue.
                 </div>
-                <p class="text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
+                <p class="text-xl lg:text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
                 <span class="elm-500 text-sm font-normal leading-5">Student at Cambridge University</span>
               </div>
               <img src="assets/icons/testimonial-quote1.svg" alt="" class="absolute top-6 left-6 pointer-events-none">
               <img src="assets/icons/testimonial-quote2.svg" alt=""
                 class="absolute bottom-6 right-6 pointer-events-none">
             </div>
-            <div class="elm-50 py-16 px-12 testimonial relative">
+            <div class="elm-50 py-24 md:py-16 md:px-12 px-4 testimonial relative">
               <div class="max-w-nav m-auto text-center">
-                <h4 class="elm-dark-purple text-5xl title-space title mb-6 font-medium">What our families says</h4>
+                <h4 class="elm-dark-purple lg:text-5xl text-2xl title-space title mb-6 font-medium">What our families says</h4>
                 <div class="mb-6 elm-500 text-lg font-normal leading-7">
                   Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu
                   commodo cras arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla
                   nunc morbi turpis elit. Urna posuere vestibulum tempus in augue.
                 </div>
-                <p class="text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
+                <p class="text-xl lg:text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
                 <span class="elm-500 text-sm font-normal leading-5">Student at Cambridge University</span>
               </div>
               <img src="assets/icons/testimonial-quote1.svg" alt="" class="absolute top-6 left-6 pointer-events-none">
               <img src="assets/icons/testimonial-quote2.svg" alt=""
                 class="absolute bottom-6 right-6 pointer-events-none">
             </div>
-            <div class="elm-50 py-16 px-12 testimonial relative">
+            <div class="elm-50 py-24 md:py-16 md:px-12 px-4 testimonial relative">
               <div class="max-w-nav m-auto text-center">
-                <h4 class="elm-dark-purple text-5xl title-space title mb-6 font-medium">What our families says</h4>
+                <h4 class="elm-dark-purple lg:text-5xl text-2xl title-space title mb-6 font-medium">What our families says</h4>
                 <div class="mb-6 elm-500 text-lg font-normal leading-7">
                   Eros pharetra aliquam blandit lectus vulputate. Mauris lectus nisl mollis sit quam. Ornare arcu
                   commodo cras arcu vitae. Velit suspendisse viverra vestibulum nunc orci netus integer. Ac nulla
                   nunc morbi turpis elit. Urna posuere vestibulum tempus in augue.
                 </div>
-                <p class="text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
+                <p class="text-xl lg:text-2xl font-medium leading-8 elm-dark-purple mb-2">Joe Does</p>
                 <span class="elm-500 text-sm font-normal leading-5">Student at Cambridge University</span>
               </div>
               <img src="assets/icons/testimonial-quote1.svg" alt="" class="absolute top-6 left-6 pointer-events-none">
@@ -558,7 +670,14 @@
             </div>
           </div>
           <button type="button"
-            class="elm-50 w-16 h-16 absolute right-0 flex items-center justify-center next-btn cursor-pointer">
+          class="elm-50 w-16 h-16 absolute left-0 items-center justify-center prev-btn cursor-pointer lg:flex hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M20 26L10 16L20 6" stroke="#682B82" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          </button>
+          <button type="button"
+            class="elm-50 w-16 h-16 absolute right-0 lg:flex hidden items-center justify-center next-btn cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
               <path d="M12 6L22 16L12 26" stroke="#682B82" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
@@ -569,12 +688,12 @@
     </div>
   </section>
   <section class="pt-16 pb-14">
-    <div class="container m-auto">
-      <h3 class="title title-color text-4xl font-medium mb-2 text-center">Our Partners</h3>
+    <div class="container m-auto px-4">
+      <h3 class="title title-color lg:text-4xl text-3xl font-medium mb-2 text-center">Our Partners</h3>
       <h4 class="text-gray font-normal text-base leading-6 text-center">
         At phasellus pulvinar id nisi porta ullamcorper iaculis.
       </h4>
-      <div class="grid grid-cols-3 mt-10 partners-items">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10 partners-items">
         <div class="mb-2 p-6">
           <img src="assets/imgs/partner1.png" alt="" class="w-16 object-contain">
           <h4 class="mt-4 text-gray-800 text-2xl leading-8 font-medium mb-3">University of Oxford</h4>
@@ -633,133 +752,139 @@
     </div>
   </section>
   <section class="blogs-news">
-    <div class="container m-auto pt-16 pb-16">
-      <h3 class="title title-color text-4xl font-medium mb-2 text-center">Our Blogs & News</h3>
-      <h4 class="text-gray font-normal text-base leading-6 text-center">
-        At phasellus pulvinar id nisi porta ullamcorper iaculis.
-      </h4>
-      <div class="blogs-all mt-10">
-        <div class="grid grid-cols-3 gap-8">
-          <div>
-            <a href="blogs-news-single.html">
-              <div class="blog-img h-48 overflow-hidden">
-                <img src="assets/imgs/contact-cover.jpeg" alt="" class="w-full h-full object-cover">
-              </div>
-              <div class="blog-content p-4">
-                <div class="flex items-center">
-                  <small class="text-gray text-base leading-6 font-normal">20.11.2024</small>
-                  <ul class="flex items-center">
-                    <li class="ml-4">
-                      <span
-                        class="elm-50 elm-dark-purple font-medium leading-5 text-sm px-3 py-1 rounded-3xl">Blog</span>
-                    </li>
-                    <li class="ml-4">
-                      <span
-                        class="font-medium leading-5 text-sm px-3 py-1 rounded-3xl success-50 success-700">Education</span>
-                    </li>
-                  </ul>
+    <div class="container m-auto py-8 px-4 md:py-16">
+        <h3 class="title title-color sm:text-4xl text-3xl font-medium mb-2 text-center">Our Blogs & News</h3>
+        <h4 class="text-gray font-normal text-base leading-6 text-center">
+            At phasellus pulvinar id nisi porta ullamcorper iaculis.
+        </h4>
+        <div class="blogs-all mt-6 md:mt-10">
+            <div class="grid grid-cols-1 gap-4 lg:gap-8 lg:grid-cols-3 sm:grid-cols-2">
+                <div>
+                    <a href="blogs-news-single.html">
+                        <div class="blog-img h-48 overflow-hidden">
+                            <img src="assets/imgs/contact-cover.jpeg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="blog-content p-4">
+                            <div class="flex items-center">
+                                <small class="text-gray text-base leading-6 font-normal">20.11.2024</small>
+                                <ul class="flex items-center">
+                                    <li class="ml-4">
+                                        <span
+                                            class="elm-50 elm-dark-purple font-medium leading-5 text-sm px-3 py-1 rounded-3xl">Blog</span>
+                                    </li>
+                                    <li class="ml-4">
+                                        <span
+                                            class="font-medium leading-5 text-sm px-3 py-1 rounded-3xl success-50 success-700">Education</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4 class="mt-2 mb-2 text-gray-800 font-medium leading-7 text-lg h-14 line-clamp-2">Non
+                                vulputate dignissim turpis adipiscing vehicula.pellentesque nibh imperdiet blandit
+                                consequat gravida pharetra. Posuere augue erat eget tellus.</h4>
+                            <div class="text-gray-700 text-sm font-normal leading-5 line-clamp-3 height-60">
+                                Ligula porttitor viverra sit dignissim pharetra ac morbi sem tellus. Nec tempor
+                                ultrices sit lorem et viverra neque rhoncus. Ipsum sed sed pellentesque nibh
+                                imperdiet blandit consequat gravida pharetra. Posuere augue erat eget tellus.
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <h4 class="mt-2 mb-2 text-gray-800 font-medium leading-7 text-lg h-14 line-clamp-2">Non
-                  vulputate dignissim turpis adipiscing vehicula.pellentesque nibh imperdiet blandit
-                  consequat gravida pharetra. Posuere augue erat eget tellus.</h4>
-                <div class="text-gray-700 text-sm font-normal leading-5 line-clamp-3 height-60">
-                  Ligula porttitor viverra sit dignissim pharetra ac morbi sem tellus. Nec tempor
-                  ultrices sit lorem et viverra neque rhoncus. Ipsum sed sed pellentesque nibh
-                  imperdiet blandit consequat gravida pharetra. Posuere augue erat eget tellus.
+                <div>
+                    <a href="blogs-news-single.html">
+                        <div class="blog-img h-48 overflow-hidden">
+                            <img src="assets/imgs/acceptences.jpeg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="blog-content p-4">
+                            <div class="flex items-center">
+                                <small class="text-gray text-base leading-6 font-normal">20.11.2024</small>
+                                <ul class="flex items-center">
+                                    <li class="ml-4">
+                                        <span
+                                            class="text-blue-700 bg-blue-50 font-medium leading-5 text-sm px-3 py-1 rounded-3xl">News</span>
+                                    </li>
+                                    <li class="ml-4">
+                                        <span
+                                            class="font-medium leading-5 text-sm px-3 py-1 rounded-3xl success-50 success-700">Education</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4 class="mt-2 mb-2 text-gray-800 font-medium leading-7 text-lg h-14 line-clamp-2">Non
+                                vulputate dignissim turpis adipiscing vehicula.pellentesque nibh imperdiet blandit
+                                consequat gravida pharetra. Posuere augue erat eget tellus.</h4>
+                            <div class="text-gray-700 text-sm font-normal leading-5 line-clamp-3 height-60">
+                                Ligula porttitor viverra sit dignissim pharetra ac morbi sem tellus. Nec tempor
+                                ultrices sit lorem et viverra neque rhoncus. Ipsum sed sed pellentesque nibh
+                                imperdiet blandit consequat gravida pharetra. Posuere augue erat eget tellus.
+                            </div>
+                        </div>
+                    </a>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="blogs-news-single.html">
-              <div class="blog-img h-48 overflow-hidden">
-                <img src="assets/imgs/acceptences.jpeg" alt="" class="w-full h-full object-cover">
-              </div>
-              <div class="blog-content p-4">
-                <div class="flex items-center">
-                  <small class="text-gray text-base leading-6 font-normal">20.11.2024</small>
-                  <ul class="flex items-center">
-                    <li class="ml-4">
-                      <span
-                        class="text-blue-700 bg-blue-50 font-medium leading-5 text-sm px-3 py-1 rounded-3xl">News</span>
-                    </li>
-                    <li class="ml-4">
-                      <span
-                        class="font-medium leading-5 text-sm px-3 py-1 rounded-3xl success-50 success-700">Education</span>
-                    </li>
-                  </ul>
+                <div>
+                    <a href="blogs-news-single.html">
+                        <div class="blog-img h-48 overflow-hidden">
+                            <img src="assets/imgs/baku.jpeg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="blog-content p-4">
+                            <div class="flex items-center">
+                                <small class="text-gray text-base leading-6 font-normal">20.11.2024</small>
+                                <ul class="flex items-center">
+                                    <li class="ml-4">
+                                        <span
+                                            class="text-blue-700 bg-blue-50 font-medium leading-5 text-sm px-3 py-1 rounded-3xl">News</span>
+                                    </li>
+                                    <li class="ml-4">
+                                        <span
+                                            class="font-medium leading-5 text-sm px-3 py-1 rounded-3xl success-50 success-700">Education</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4 class="mt-2 mb-2 text-gray-800 font-medium leading-7 text-lg h-14 line-clamp-2">Non
+                                vulputate dignissim turpis adipiscing vehicula.pellentesque nibh imperdiet blandit
+                                consequat gravida pharetra. Posuere augue erat eget tellus.</h4>
+                            <div class="text-gray-700 text-sm font-normal leading-5 line-clamp-3 height-60">
+                                Ligula porttitor viverra sit dignissim pharetra ac morbi sem tellus. Nec tempor
+                                ultrices sit lorem et viverra neque rhoncus. Ipsum sed sed pellentesque nibh
+                                imperdiet blandit consequat gravida pharetra. Posuere augue erat eget tellus.
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <h4 class="mt-2 mb-2 text-gray-800 font-medium leading-7 text-lg h-14 line-clamp-2">Non
-                  vulputate dignissim turpis adipiscing vehicula.pellentesque nibh imperdiet blandit
-                  consequat gravida pharetra. Posuere augue erat eget tellus.</h4>
-                <div class="text-gray-700 text-sm font-normal leading-5 line-clamp-3 height-60">
-                  Ligula porttitor viverra sit dignissim pharetra ac morbi sem tellus. Nec tempor
-                  ultrices sit lorem et viverra neque rhoncus. Ipsum sed sed pellentesque nibh
-                  imperdiet blandit consequat gravida pharetra. Posuere augue erat eget tellus.
-                </div>
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="blogs-news-single.html">
-              <div class="blog-img h-48 overflow-hidden">
-                <img src="assets/imgs/baku.jpeg" alt="" class="w-full h-full object-cover">
-              </div>
-              <div class="blog-content p-4">
-                <div class="flex items-center">
-                  <small class="text-gray text-base leading-6 font-normal">20.11.2024</small>
-                  <ul class="flex items-center">
-                    <li class="ml-4">
-                      <span
-                        class="text-blue-700 bg-blue-50 font-medium leading-5 text-sm px-3 py-1 rounded-3xl">News</span>
-                    </li>
-                    <li class="ml-4">
-                      <span
-                        class="font-medium leading-5 text-sm px-3 py-1 rounded-3xl success-50 success-700">Education</span>
-                    </li>
-                  </ul>
-                </div>
-                <h4 class="mt-2 mb-2 text-gray-800 font-medium leading-7 text-lg h-14 line-clamp-2">Non
-                  vulputate dignissim turpis adipiscing vehicula.pellentesque nibh imperdiet blandit
-                  consequat gravida pharetra. Posuere augue erat eget tellus.</h4>
-                <div class="text-gray-700 text-sm font-normal leading-5 line-clamp-3 height-60">
-                  Ligula porttitor viverra sit dignissim pharetra ac morbi sem tellus. Nec tempor
-                  ultrices sit lorem et viverra neque rhoncus. Ipsum sed sed pellentesque nibh
-                  imperdiet blandit consequat gravida pharetra. Posuere augue erat eget tellus.
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
+            <div class="text-center">
+                <a href="index.html"
+                    class="inline-flex items-center justify-center btn-bg mt-5 px-4 py-2 h-11 min-w-152 md:mt-10">
+                    <span class="elm-dark-purple mr-2 font-semibold text-base">See more</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15" stroke="#682B82"
+                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
         </div>
-        <div class="text-center">
-          <a href="index.html" class="inline-flex items-center justify-center btn-bg mt-10 px-4 py-2 h-11 min-w-152">
-            <span class="elm-dark-purple mr-2 font-semibold text-base">See more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15" stroke="#682B82"
-                stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </a>
-        </div>
-      </div>
     </div>
   </section>
   <section class="contact-form">
-    <div class="bg-at pt-16 pb-16">
+    <div class="bg-at sm:py-16 py-12">
       <div class="container mx-auto">
-        <div class="grid grid-cols-2 gap-4">
-          <div class="pr-16">
+        <div class="grid gap-4 lg:grid-cols-2 grid-cols-1">
+          <div class="pr-10 lg:pr-16 hidden lg:block">
             <div class="p-4 relative contact-form-img">
               <div class="contact-img overflow-hidden rounded-tl-6xl rounded-br-6xl relative z-10">
                 <img src="assets/imgs/contact.jpeg" alt="" class="w-full h-full object-cover">
               </div>
             </div>
           </div>
-          <div class="pr-16">
-            <h3 class="title title-color text-4xl font-medium mb-2">Contact us</h3>
-            <h4 class="text-gray font-normal text-base leading-6">
+          <div class="pr-0 lg:pr-16">
+            <h3 class="title title-color sm:text-4xl text-3xl font-medium mb-2 px-4 lg:px-0">Contact us</h3>
+            <h4 class="text-gray font-normal text-base leading-6 px-4 lg:px-0">
               At phasellus pulvinar id nisi porta ullamcorper iaculis.
             </h4>
-            <div class="grid grid-cols-2 gap-6 mt-6">
+            <div class="p-4 relative contact-form-img lg:hidden lg:mt-0 mt-9">
+              <div class="contact-img overflow-hidden rounded-tl-6xl rounded-br-6xl relative z-10">
+                <img src="assets/imgs/contact.jpeg" alt="" class="w-full h-full object-cover">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4 mt-6 md:gap-6 md:grid-cols-2 lg:px-0 px-4">
               <div class="p-2">
                 <p class="flex items-center mb-2 font-normal text-sm leading-5 elm-400">
                   <img src="assets/icons/contact-phone.svg" alt="" class="mr-2">
@@ -787,128 +912,130 @@
                 </p>
               </div>
             </div>
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center lg:px-0 px-4">
               <span class="or-before-after flex items-center w-full">
                 <small class="block elm-dark-purple font-normal text-base leading-6 pl-4 pr-4">or</small>
               </span>
             </div>
-            <form>
-              <div class="mb-4 mt-2">
-                <label for="first-name" class="block mb-2 text-sm font-medium leading-5 text-gray">First
-                  Name</label>
-                <input type="text" id="first-name"
-                  class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
-                  placeholder="Joe" />
-              </div>
-              <div class="mb-4 mt-2">
-                <label for="last-name" class="block mb-2 text-sm font-medium leading-5 text-gray">Last
-                  Name</label>
-                <input type="text" id="last-name"
-                  class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
-                  placeholder="Doe" />
-              </div>
-              <div class="mb-4 mt-2">
-                <label for="contact-email" class="block mb-2 text-sm font-medium leading-5 text-gray">Email</label>
-                <input type="text" id="contact-email"
-                  class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
-                  placeholder="sample@mail.com" />
-              </div>
-              <div class="mb-4 mt-2">
-                <label for="phone-number" class="block mb-2 text-sm font-medium leading-5 text-gray">Phone
-                  Number</label>
-                <div class="relative phone-prefix">
-                  <div class="pl-3 absolute phone-prefix-cover top-2">
-                    <div class="flex items-center w-12">
-                      <select id="phone-number" class="text-gray-900 text-base block w-16 focus:outline-none">
-                        <option value="US">US</option>
-                        <option value="AZ">AZ</option>
-                        <option value="TR">TR</option>
-                      </select>
-                      <svg class="pointer-events-none absolute right-1" xmlns="http://www.w3.org/2000/svg" width="20"
-                        height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
+            <div class="lg:px-0 px-4">
+              <form>
+                <div class="mb-4 mt-2">
+                  <label for="first-name" class="block mb-2 text-sm font-medium leading-5 text-gray">First
+                    Name</label>
+                  <input type="text" id="first-name"
+                    class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
+                    placeholder="Joe" />
+                </div>
+                <div class="mb-4 mt-2">
+                  <label for="last-name" class="block mb-2 text-sm font-medium leading-5 text-gray">Last
+                    Name</label>
+                  <input type="text" id="last-name"
+                    class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
+                    placeholder="Doe" />
+                </div>
+                <div class="mb-4 mt-2">
+                  <label for="contact-email" class="block mb-2 text-sm font-medium leading-5 text-gray">Email</label>
+                  <input type="text" id="contact-email"
+                    class="w-full block h-10 px-3 py-2 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
+                    placeholder="sample@mail.com" />
+                </div>
+                <div class="mb-4 mt-2">
+                  <label for="phone-number" class="block mb-2 text-sm font-medium leading-5 text-gray">Phone
+                    Number</label>
+                  <div class="relative phone-prefix">
+                    <div class="pl-3 absolute phone-prefix-cover top-2">
+                      <div class="flex items-center w-12">
+                        <select id="phone-number" class="text-gray-900 text-base block w-16 focus:outline-none">
+                          <option value="US">US</option>
+                          <option value="AZ">AZ</option>
+                          <option value="TR">TR</option>
+                        </select>
+                        <svg class="pointer-events-none absolute right-1" xmlns="http://www.w3.org/2000/svg" width="20"
+                          height="20" viewBox="0 0 20 20" fill="none">
+                          <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </div>
                     </div>
+                    <input type="text" id="phone-number"
+                      class="w-full block h-10 px-3 py-2 pl-16 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
+                      placeholder="000 000 00 00" />
                   </div>
-                  <input type="text" id="phone-number"
-                    class="w-full block h-10 px-3 py-2 pl-16 text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none"
-                    placeholder="000 000 00 00" />
                 </div>
-              </div>
-              <div class="mb-4 mt-2">
-                <label for="hear-about" class="block mb-2 text-sm font-medium leading-5 text-gray">How
-                  did you hear about us?</label>
-                <div class="relative">
-                  <select id="hear-about"
-                    class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
-                    <option value="" selected>Select...</option>
-                    <option value="linkedin">Linkedin</option>
-                    <option value="google">Google</option>
-                    <option value="facebook">Facebook</option>
-                  </select>
-                  <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    viewBox="0 0 16 16" fill="none">
-                    <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
+                <div class="mb-4 mt-2">
+                  <label for="hear-about" class="block mb-2 text-sm font-medium leading-5 text-gray">How
+                    did you hear about us?</label>
+                  <div class="relative">
+                    <select id="hear-about"
+                      class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
+                      <option value="" selected>Select...</option>
+                      <option value="linkedin">Linkedin</option>
+                      <option value="google">Google</option>
+                      <option value="facebook">Facebook</option>
+                    </select>
+                    <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      viewBox="0 0 16 16" fill="none">
+                      <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="mb-4 mt-2">
+                  <label for="services" class="block mb-2 text-sm font-medium leading-5 text-gray">Services</label>
+                  <div class="relative">
+                    <select id="services"
+                      class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
+                      <option value="" selected>Select...</option>
+                      <option value="trust">Trust</option>
+                      <option value="⁠excellence">⁠Excellence</option>
+                      <option value="commitment">Commitment</option>
+                      <option value="global-perspective">Global Perspective</option>
+                    </select>
+                    <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                      viewBox="0 0 16 16" fill="none">
+                      <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="mb-4 mt-2">
+                  <button type="button"
+                    class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
+                    data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
+                    <img src="assets/icons/time.svg" alt="" class="mr-2">
+                    Choose available time
+                  </button>
+                </div>
+                <div class="mb-4 mt-2">
+                  <label class="container-checkbox relative block cursor-pointer pl-8">
+                    <a href="privacy-policy.html" target="_blank"
+                      class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
+                      Policy</a>
+                    <input type="checkbox" checked="checked" class="absolute opacity-0 cursor-pointer w-0 h-0">
+                    <span class="checkmark w-5 h-5 absolute left-0 bg-white border"></span>
+                  </label>
+                </div>
+                <button type="submit"
+                  class="flex items-center justify-center w-full elm-bg-700 h-11 text-white font-semibold leading-6">
+                  <span>Request a Service</span>
+                  <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                    fill="none">
+                    <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15" stroke="white"
+                      stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-                </div>
-              </div>
-              <div class="mb-4 mt-2">
-                <label for="services" class="block mb-2 text-sm font-medium leading-5 text-gray">Services</label>
-                <div class="relative">
-                  <select id="services"
-                    class="none-appearance h-10 px-3 py-2 block w-full text-gray-700 text-sm font-medium leading-6 border border-gray-300 focus:border-gray-500 focus:outline-none">
-                    <option value="" selected>Select...</option>
-                    <option value="trust">Trust</option>
-                    <option value="⁠excellence">⁠Excellence</option>
-                    <option value="commitment">Commitment</option>
-                    <option value="global-perspective">Global Perspective</option>
-                  </select>
-                  <svg class="absolute top-3 right-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                    viewBox="0 0 16 16" fill="none">
-                    <path d="M4 6L8 10L12 6" stroke="#344054" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </div>
-              </div>
-              <div class="mb-4 mt-2">
-                <button type="button"
-                  class="font-medium w-full h-10 text-center pl-2 pr-2 text-gray border border-gray-300 flex items-center justify-center"
-                  data-modal-target="calendly-modal" data-modal-toggle="calendly-modal">
-                  <img src="assets/icons/time.svg" alt="" class="mr-2">
-                  Choose available time
                 </button>
-              </div>
-              <div class="mb-4 mt-2">
-                <label class="container-checkbox relative block cursor-pointer pl-8">
-                  <a href="privacy-policy.html" target="_blank"
-                    class="text-base leading-6 font-medium text-gray-700">I’m accepting Privacy &
-                    Policy</a>
-                  <input type="checkbox" checked="checked" class="absolute opacity-0 cursor-pointer w-0 h-0">
-                  <span class="checkmark w-5 h-5 absolute left-0 bg-white border"></span>
-                </label>
-              </div>
-              <button type="submit"
-                class="flex items-center justify-center w-full elm-bg-700 h-11 text-white font-semibold leading-6">
-                <span>Request a Service</span>
-                <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                  fill="none">
-                  <path d="M3.33398 10H16.6673M16.6673 10L11.6673 5M16.6673 10L11.6673 15" stroke="white"
-                    stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
   <footer class="bg-dark-purple">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
       <div class="pt-16 pb-14">
-        <div class="grid grid-cols-3 gap-4">
-          <div class="">
+        <div class="grid grid-cols-1 gap-6 md:gap-4 md:grid-cols-3">
+          <div>
             <a href="index.html" class="logo">
               <img src="assets/icons/logo.svg" alt="" class="object-contain">
             </a>
@@ -922,12 +1049,15 @@
               </ul>
             </div>
           </div>
-          <div class="">
+          <div>
             <p class="leading-5 text-light-purple font-normal text-sm mb-4">Menu</p>
             <ul>
-              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University placements </a></li>
-              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Short Courses</a></li>
-              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">School Placements</a></li>
+              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">University
+                  placements </a></li>
+              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Short Courses</a>
+              </li>
+              <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">School
+                  Placements</a></li>
               <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Blog</a></li>
               <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">About us</a></li>
               <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">Contact us</a>
@@ -935,13 +1065,13 @@
               <li class="mb-2"><a href="#" class="text-light-white font-medium text-lg">FAQ</a></li>
             </ul>
           </div>
-          <div class="">
+          <div>
             <p class="leading-5 text-light-purple font-normal text-sm mb-4">Info</p>
             <ul>
               <li class="flex items-start mb-2">
                 <img src="assets/icons/map.svg" alt="" class="mr-2">
                 <span class="font-normal text-base text-light-white max180px">167-169 Great Portland
-                   Street,
+                  Street,
                   London</span>
               </li>
               <li class="flex items-start mb-2">
@@ -961,15 +1091,15 @@
                 in. Commodo sit mus at velit dis.</p>
             </div>
             <form action="">
-              <div class="foot-form mt-4 flex items-center justify-start">
+              <div class="foot-form mt-4 flex items-center justify-start lg:flex-row flex-col">
                 <div class="relative w-full">
-                  <input type="text" class="h-11 text-base font-normal text-dark-purple pl-4 pr-4 w-full"
+                  <input type="text" class="h-11 text-base font-normal text-dark-purple pl-4 w-full pr-8"
                     placeholder="sample@sample.com">
                   <span class="absolute help-icon" title="Subscribe to our Newsletter"><img src="assets/icons/help.svg"
                       alt=""></span>
                 </div>
                 <button type="submit"
-                  class="inline-flex items-center justify-center h-11 bg-white text-dark-purple text-base leading-6 font-semibold subscribe-btn ml-4">
+                  class="lg:inline-flex flex items-center justify-center h-11 bg-white text-dark-purple text-base leading-6 font-semibold subscribe-btn lg:ml-4 w-full lg:w-auto lg:mt-0 mt-4">
                   Subscribe
                   <img src="assets/icons/arrow-narrow-right.svg" alt="" class="ml-2">
                 </button>
@@ -980,15 +1110,15 @@
       </div>
     </div>
     <div class="border-t border-bg-light-purple">
-      <div class="container mx-auto flex justify-between items-center py-2">
-        <p class="text-light-purple font-normal text-sm">2024, EL&M Consulting</p>
-        <ul class="flex items-center justify-center">
-          <li class="ml-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy &
+      <div class="container px-4 mx-auto flex justify-between md:flex-row items-center flex-col py-2">
+        <p class="text-light-purple font-normal text-sm md:mb-0 mb-4">2024, EL&M Consulting</p>
+        <ul class="flex items-center justify-center footer-bottom sm:flex-row flex-col">
+          <li class="md:ml-6 mr-6"><a href="privacy-policy.html" class="text-light-purple font-normal text-sm">Privacy &
               Policy</a></li>
-          <li class="ml-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms & Conditions</a>
-          </li>
-          <li class="ml-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data privacy</a>
-          </li>
+          <li class="md:ml-6 mr-6"><a href="terms.html" class="text-light-purple font-normal text-sm">Terms &
+              Conditions</a></li>
+          <li class="md:ml-6 mr-6"><a href="data-privacy.html" class="text-light-purple font-normal text-sm">Data
+              privacy</a></li>
         </ul>
       </div>
     </div>

@@ -65,7 +65,7 @@ $(function () {
   })
 
   //HEADER SCROLL ACTIVE
-  function scrollTopActive(){
+  function scrollTopActive() {
     if ($(window).scrollTop() > 50) {
       $(".header").addClass("active");
     } else {
@@ -78,24 +78,38 @@ $(function () {
   scrollTopActive();
 
   // owl carousel init
-	$('.testimonials').owlCarousel({
-    loop:true,
-		dots: true,
-    nav:false,
-    items:1,
-    smartSpeed:1000
-	});
+  $('.testimonials').owlCarousel({
+    loop: true,
+    dots: true,
+    nav: true,
+    items: 1,
+    smartSpeed: 1000,
+    navText: [
+      `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M20 26L10 16L20 6" stroke="#682B82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M12 6L22 16L12 26" stroke="#682B82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>`
+  ] ,
+    responsive: {
+      1024: {
+        nav: false,
+       
+      }
+    }
+  });
 
-  $('.prev-btn').click(function(){
+  $('.prev-btn').click(function () {
     $('.owl-prev').click();
   })
 
-  $('.next-btn').click(function(){
+  $('.next-btn').click(function () {
     $('.owl-next').click();
   })
 
   //Cookies modal
-  $('.cookie-accept-all').click(function(){
+  $('.cookie-accept-all').click(function () {
     $('#cookies-modal').addClass('hidden');
   })
 
@@ -107,24 +121,31 @@ $(function () {
       console.log($(this).attr('id') + ' disabled');
     }
   })
-  $('.cookie-customize').click(function(){
+  $('.cookie-customize').click(function () {
     $('.cookies-content').addClass('hidden');
     $('.cookies-cutomise').removeClass('hidden');
   })
 
-  $('.cookie-close').click(function(){
+  $('.cookie-close').click(function () {
     $('.cookies-content').removeClass('hidden');
     $('.cookies-cutomise').addClass('hidden');
   })
 
-  $('.accept-all').click(function(){
+  $('.accept-all').click(function () {
     $('#cookies-modal').addClass('hidden');
   })
 
   //MOBILE MENU
-  $('.menu-open-js').click(function(){
+  $('.menu-open-js').click(function () {
     $('.menu-open,.menu-close').toggleClass('hidden');
     $('.menu-nav').toggleClass('active');
   })
+
+  $('.cookie-read-js').click(function(){
+    $(this).parent('.cookie-parent').find('.cookie-txt').toggleClass('line-clamp-2');
+    $(this).find('.read-more-txt').toggleClass('hidden');
+    $(this).find('.read-less-txt').toggleClass('hidden');
+  })
+
 
 });
