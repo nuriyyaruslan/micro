@@ -1,18 +1,4 @@
 $(function () {
-  $("#jqueryBtn").on("click", function () {
-    alert("Bu jQuery tarafından çalıştırıldı!");
-  });
-
-  //COPY PHONE NUMBER
-  $('#copyButton').click(function () {
-    const textToCopy = $('.copied-text').text();
-    const tempInput = $('<input>');
-    $('body').append(tempInput);
-    tempInput.val(textToCopy).select();
-    document.execCommand('copy');
-    tempInput.remove();
-    alert('Phone number copied to clipboard!');
-  });
 
   /* starts contact map */
   if ($('#map').length > 0) {
@@ -24,11 +10,10 @@ $(function () {
         console.log(markerIcon);
         var location = { lat, lng }
         map = new google.maps.Map(document.getElementById(getId), {
-          zoom: 16,
+          zoom: 6,
           disableDefaultUI: true,
           center: location,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
-          styles: [{ "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#e9e9e9" }, { "lightness": 17 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 20 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#ffffff" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 16 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 21 }] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#dedede" }, { "lightness": 21 }] }, { "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#ffffff" }, { "lightness": 16 }] }, { "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#333333" }, { "lightness": 40 }] }, { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#f2f2f2" }, { "lightness": 19 }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#fefefe" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#fefefe" }, { "lightness": 17 }, { "weight": 1.2 }] }]
         });
         marker = new google.maps.Marker({
           map: map,
@@ -54,16 +39,6 @@ $(function () {
   }
   /* ends contact map */
 
-  //Blogs and News filter dropdown
-  $('.filters-btn').click(function () {
-    $('.filters-open,.filters-close,.filter-dropdown').toggleClass('hidden');
-  })
-
-  $('.hide-filter-dropdown').click(function () {
-    $('.filter-dropdown,.filters-close').addClass('hidden');
-    $('.filters-open').removeClass('hidden');
-  })
-
   //HEADER SCROLL ACTIVE
   function scrollTopActive() {
     if ($(window).scrollTop() > 50) {
@@ -78,74 +53,40 @@ $(function () {
   scrollTopActive();
 
   // owl carousel init
-  $('.testimonials').owlCarousel({
-    loop: true,
-    dots: true,
-    nav: true,
-    items: 1,
-    smartSpeed: 1000,
-    navText: [
-      `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path d="M20 26L10 16L20 6" stroke="#682B82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>`,
-      `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <path d="M12 6L22 16L12 26" stroke="#682B82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>`
-  ] ,
-    responsive: {
-      1024: {
-        nav: false,
+  // $('.testimonials').owlCarousel({
+  //   loop: true,
+  //   dots: true,
+  //   nav: true,
+  //   items: 1,
+  //   smartSpeed: 1000,
+  //   navText: [
+  //     `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  //         <path d="M20 26L10 16L20 6" stroke="#682B82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  //     </svg>`,
+  //     `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  //         <path d="M12 6L22 16L12 26" stroke="#682B82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  //     </svg>`
+  // ] ,
+  //   responsive: {
+  //     1024: {
+  //       nav: false,
        
-      }
-    }
-  });
+  //     }
+  //   }
+  // });
 
-  $('.prev-btn').click(function () {
-    $('.owl-prev').click();
-  })
+  // $('.prev-btn').click(function () {
+  //   $('.owl-prev').click();
+  // })
 
-  $('.next-btn').click(function () {
-    $('.owl-next').click();
-  })
-
-  //Cookies modal
-  $('.cookie-accept-all').click(function () {
-    $('#cookies-modal').addClass('hidden');
-  })
-
-  //Cookies toggles buttons
-  $('.toggle').on('change', function () {
-    if ($(this).is(':checked')) {
-      console.log($(this).attr('id') + ' enabled');
-    } else {
-      console.log($(this).attr('id') + ' disabled');
-    }
-  })
-  $('.cookie-customize').click(function () {
-    $('.cookies-content').addClass('hidden');
-    $('.cookies-cutomise').removeClass('hidden');
-  })
-
-  $('.cookie-close').click(function () {
-    $('.cookies-content').removeClass('hidden');
-    $('.cookies-cutomise').addClass('hidden');
-  })
-
-  $('.accept-all').click(function () {
-    $('#cookies-modal').addClass('hidden');
-  })
+  // $('.next-btn').click(function () {
+  //   $('.owl-next').click();
+  // })
 
   //MOBILE MENU
-  $('.menu-open-js').click(function () {
-    $('.menu-open,.menu-close').toggleClass('hidden');
-    $('.menu-nav').toggleClass('active');
-  })
-
-  $('.cookie-read-js').click(function(){
-    $(this).parent('.cookie-parent').find('.cookie-txt').toggleClass('line-clamp-2');
-    $(this).find('.read-more-txt').toggleClass('hidden');
-    $(this).find('.read-less-txt').toggleClass('hidden');
-  })
-
+  // $('.menu-open-js').click(function () {
+  //   $('.menu-open,.menu-close').toggleClass('hidden');
+  //   $('.menu-nav').toggleClass('active');
+  // })
 
 });
