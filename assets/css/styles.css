@@ -1,61 +1,111 @@
-body{
+body {
     font-family: "Geist", serif;
 }
 
-.bg-black{
+.bg-black {
     background-color: #0D0D12;
 }
 
-.text-black{
+.text-black {
     color: #36394A;
 }
 
-.text-dark-gray{
-    color:#1E293B;
+.text-dark-gray {
+    color: #1E293B;
 }
 
-.text-black-500{
-    color:#666D80;
+.text-black-500 {
+    color: #666D80;
 }
 
-.footer{
-    min-height: 600px;
-    background-image: url('../icons/Footer.svg');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-}
-
-.page-head{
+.page-head {
     background-image: url('../icons/head-gradient.png');
     min-height: 484px;
 }
 
-.page-titles{
+.page-titles {
     max-width: 872px;
 }
 
-.contact-box-item{
+.contact-box-item {
     background-color: #F6F8FA;
-    border:2px solid #ECEFF3;
+    border: 2px solid #ECEFF3;
     border-radius: 24px;
 }
 
-.cbox-item{
-    border:1px solid #ECEFF3;
+.cbox-item {
+    border: 1px solid #ECEFF3;
 }
 
-.contact-info{
+.contact-info {
     width: calc(100% - 256px);
 }
 
-.contact-info a{
+.contact-info a {
     min-height: 108px;
 }
 
-.header.active{
+.header.active {
     background-color: #fff;
     -webkit-box-shadow: 0px 3px 14px -7px rgba(153, 153, 153, 0.55);
     -moz-box-shadow: 0px 3px 14px -7px rgba(153, 153, 153, 0.55);
     box-shadow: 0px 3px 14px -7px rgba(153, 153, 153, 0.55);
+}
+
+.custom-select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+}
+
+/* For IE10 */
+.custom-select::-ms-expand {
+    display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.input-number[type=number] {
+    -moz-appearance: textfield;
+}
+
+.contact-submit{
+    background-color: #0D0D12;
+}
+
+.contact-social-box{
+    padding: 10px;
+}
+
+.contact-collapse button[aria-expanded="true"] .faq-plus{
+    transform: rotate(-45deg);
+}
+
+.contact-collapse h3 button{
+    color:#36394A;
+}
+
+.contact-collapse-item{
+    background-color: #F6F8FA;
+    border:1px solid #ECEFF3;
+}
+
+.contact-collapse-text{
+    color:#666D80;
+}
+
+.contact-collapse-item button{
+    background-color: transparent;
+}
+
+.bg-img{
+    min-height: 600px;
+    z-index: -1;
 }
