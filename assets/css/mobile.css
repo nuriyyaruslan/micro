@@ -3,7 +3,7 @@
         max-width: 100%;
     }
     .nav-menu{
-        transform: translate(100%);
+        transform: translate(-100%);
         z-index: 999;
         background-color: #fff;
         transition: all .6s ease;
@@ -17,6 +17,9 @@
 @media screen and (max-width:1024px){
     .contact-info{
         width: 100%;
+    }
+    .blog-cover-img{
+        height: 64vw;
     }
 }
 
