@@ -52,6 +52,13 @@ $(function () {
   });
   scrollTopActive();
 
+  $('.mobile-menu').click(function(){
+    $('.nav-menu').addClass('active');
+  })
+  $('.menu-close').click(function(){
+    $('.nav-menu').removeClass('active');
+  })
+
   // owl carousel init
   // $('.testimonials').owlCarousel({
   //   loop: true,

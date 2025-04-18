@@ -2,4 +2,24 @@
     .container{
         max-width: 100%;
     }
+    .nav-menu{
+        transform: translate(100%);
+        z-index: 999;
+        background-color: #fff;
+        transition: all .6s ease;
+    }
+
+    .nav-menu.active{
+        transform: translate(0%) !important;
+    }
+}
+
+@media screen and (max-width:360px){
+    .mobile-menu{
+        margin-right: 8px;
+    }
+    .head-contact{
+        padding: 8px 10px;
+        margin-left: 8px;
+    }
 }

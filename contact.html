@@ -15,47 +15,65 @@
 
 <body>
  <main class="relative">
-  <!-- <header class="header py-4 fixed w-full z-50 ">
+  <header class="header py-4 fixed w-full z-50 ">
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between">
         <div class="flex items-center">
+          <button type="button" class="mr-4 xl:hidden block mobile-menu">
+            <img src="assets/icons/menu.svg" alt="">
+          </button>
           <a href="index.html">
-            <img src="assets/icons/head-logo.svg" alt="">
+            <img src="assets/icons/head-logo.svg" alt="" class="xl:h-12 h-8">
           </a>
-          <ul class="flex items-center">
-            <li class="ml-10"><a href="#"
-                class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Home</a>
-            </li>
-            <li class="ml-10"><a href="#"
-                class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">About
-                us</a></li>
-            <li class="ml-10"><a href="#"
-                class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Portfolio</a>
-            </li>
-            <li class="ml-10"><a href="#"
-                class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Blogs</a>
-            </li>
-            <li class="ml-10"><a href="#"
-                class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Contact
-                us</a></li>
-          </ul>
+          <div class="nav-menu xl:static fixed right-0 top-0 w-full xl:h-auto h-full">
+            <div class="text-right pt-4 pr-4 xl:hidden block">
+              <button type="button" class="menu-close">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="#36394A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+              </button>
+            </div>
+            <ul class="flex items-center xl:flex-row flex-col xl:justify-start justify-center xl:h-auto h-full">
+              <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Home</a>
+              </li>
+              <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">About
+                  us</a></li>
+              <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Portfolio</a>
+              </li>
+              <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Blogs</a>
+              </li>
+              <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Contact
+                  us</a></li>
+            </ul>
+          </div>
         </div>
         <div class="flex items-center">
-          <a href="tel:+994 51 625 51 45" class="inline-flex items-center">
+          <a href="tel:+994 51 625 51 45" class="xl:hidden block">
+            <img src="assets/icons/phone-call.svg" alt="">
+          </a>
+          <a href="tel:+994 51 625 51 45" class="xl:inline-flex items-center hidden">
             <img src="assets/icons/call.svg" alt="">
             <span
               class="ml-2 font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">+994
               51 625 51 45</span>
           </a>
           <a href="contact.html"
-            class="inline-flex items-center ml-6 bg-black text-white text-base font-normal px-6 py-3 rounded-3xl hover:opacity-80 transition duration-300 ease-in-out">
-            <span class="mr-3">Lets Have a Chat</span>
+            class="inline-flex items-center xl:ml-6 ml-4 bg-black text-white xl:text-base text-sm font-normal xl:px-6 px-4 xl:py-3 py-2 rounded-3xl hover:opacity-80 transition duration-300 ease-in-out head-contact">
+            <span class="mr-3">
+              <span class="xl:block hidden">Lets Have a Chat</span>
+              <span class="xl:hidden block">Contact</span>
+            </span>
             <img src="assets/icons/arrow-right.svg" alt="">
           </a>
         </div>
       </div>
     </div>
-  </header> -->
+  </header>
   <!-- <section class="min-h-screen relative">
     <div class="page-head bg-no-repeat bg-cover bg-center absolute top-0 w-full pointer-events-none -z-10"></div>
     <div class="text-center pb-24 pt-44 page-titles m-auto">
@@ -353,15 +371,15 @@
       </div>
     </div>
   </section> -->
-  <footer class="footer flex items-end pb-40 pt-32">
+  <footer class="footer flex items-end lg:pb-40 lg:pt-32 pb-16 pt-16">
     <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between">
-        <p class="font-normal text-base leading-6 text-black">© 2025 MicroCode, All Rights Reserved</p>
-        <ul class="flex items-center justify-end">
-          <li class="ml-6"><a href="#"
+      <div class="flex items-center md:justify-between md:flex-row flex-col">
+        <p class="font-normal text-base leading-6 text-black md:text-left text-center">© 2025 MicroCode, All Rights Reserved</p>
+        <ul class="flex items-center md:justify-end justify-center md:mt-0 mt-2 md:text-right text-center flex-wrap">
+          <li class="md:ml-6 ml-2 mr-2 md:mr-0 text-center md:text-right"><a href="#"
               class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Privacy
               Policy</a></li>
-          <li class="ml-6"><a href="#"
+          <li class="md:ml-6 ml-2 mr-2 md:mr-0 text-center md:text-right"><a href="#"
               class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Terms
               and Conditions</a></li>
         </ul>
