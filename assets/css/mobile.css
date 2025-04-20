@@ -21,6 +21,27 @@
     .blog-cover-img{
         height: 64vw;
     }
+    .portfolio-nav li a{
+        min-width: 100px;
+    }
+    .project-content img{
+        max-height: 64vw;
+        margin-top: 24px;
+    }
+    .illus-icons li img{
+        width: 64px;
+    }
+
+    .illus-icons li{
+        margin:6px;
+    }
+    
+}
+
+@media screen and (max-width:576px) {
+    .illus-icons li img{
+        width: 42px;
+    }
 }
 
 @media screen and (max-width:360px){
