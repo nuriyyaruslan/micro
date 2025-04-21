@@ -302,3 +302,15 @@ body {
 .philosophy .philosophy-item:nth-child(4) .philosophy-text{
     color:#450A0A;
 }
+
+.philosophy .philosophy-item:nth-child(odd){
+    transform: rotate(-1deg);
+}
+
+.philosophy .philosophy-item:nth-child(even){
+    transform: rotate(1deg);
+}
+
+.philosophy-text{
+    max-width: 560px;
+}

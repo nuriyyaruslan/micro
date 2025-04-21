@@ -1,5 +1,5 @@
 @media screen and (max-width:1280px){
-    .container{
+    .container,.philosophy-text{
         max-width: 100%;
     }
     .nav-menu{
