@@ -196,3 +196,109 @@ body {
     width: 100%;
     height: 100%;
 }
+
+.service-item:first-child,.service-item:nth-child(5){
+    background-color: #F0F9FF;
+}
+
+.service-item:first-child p,.service-item:nth-child(5) p{
+    color:#0C4A6E;
+}
+
+.service-item:nth-child(2),.service-item:nth-child(7){
+    background-color: #FFFBEB;
+}
+
+.service-item:nth-child(2) p,.service-item:nth-child(7) p{
+    color:#78350F;
+}
+
+.service-item:nth-child(3){
+    background-color: #FEF2F2;
+}
+
+.service-item:nth-child(3) p{
+    color:#7F1D1D;
+}
+
+.service-item:nth-child(4){
+    background-color: #F0FDFA;
+}
+
+.service-item:nth-child(4) p{
+    color:#134E4A;
+}
+
+.service-item:nth-child(6){
+    background-color: #FDF4FF;
+}
+
+.service-item:nth-child(6) p{
+    color:#701A75;
+}
+
+.service-item a{
+    transition: all .4s ease;
+}
+
+.service-item a:hover{
+    -webkit-box-shadow: 0px 0px 19px -8px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 19px -8px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 19px -8px rgba(0,0,0,0.35);
+}
+
+.philosophy span{
+    max-width: 520px;
+}
+
+.philosophy .philosophy-item:first-child{
+    background-color: #F0FDF4;
+    border-color: #16A34A;
+}
+
+.philosophy .philosophy-item:first-child h4 span{
+    color:#16A34A;
+}
+
+.philosophy .philosophy-item:first-child .philosophy-text{
+    color:#052E16;
+}
+
+.philosophy .philosophy-item:nth-child(2){
+    background-color: #EFF6FF;
+    border-color: #2563EB;
+}
+
+.philosophy .philosophy-item:nth-child(2) h4 span{
+    color: #2563EB;
+}
+
+.philosophy .philosophy-item:nth-child(2) .philosophy-text{
+    color:#172554;
+}
+
+.philosophy .philosophy-item:nth-child(3){
+    background-color: #FDF4FF;
+    border-color: #C026D3;
+}
+
+.philosophy .philosophy-item:nth-child(3) h4 span{
+    color: #C026D3;
+}
+
+.philosophy .philosophy-item:nth-child(3) .philosophy-text{
+    color:#4A044E;
+}
+
+.philosophy .philosophy-item:nth-child(4){
+    background-color: #FEF2F2;
+    border-color: #DC2626;
+}
+
+.philosophy .philosophy-item:nth-child(4) h4 span{
+    color: #DC2626;
+}
+
+.philosophy .philosophy-item:nth-child(4) .philosophy-text{
+    color:#450A0A;
+}
