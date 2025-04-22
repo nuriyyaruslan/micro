@@ -321,9 +321,12 @@ body {
     max-width: 560px;
 }
 
+.testimonials{
+    background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 50%, #F8FAFC 100%);
+}
+
 .testimonials-items{
     height: 662px;
-    background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 50%, #F8FAFC 100%);
 }
 
 .testimonials-content{
