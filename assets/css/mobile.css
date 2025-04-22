@@ -1,4 +1,4 @@
-@media screen and (max-width:1280px){
+@media screen and (max-width:1279px){
     .container,.philosophy-text{
         max-width: 100%;
     }
@@ -75,6 +75,14 @@
     .testimonials-items{
         overflow: auto;
         padding: 12px;
+    }
+
+    .home-project-img{
+        height: 64vw;
+    }
+
+    .home-h1{
+        line-height: 40px;
     }
 }
 

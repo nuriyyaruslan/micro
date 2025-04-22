@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microcode.az</title>
+  <title>About</title>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="libs/owl-carousel/owl.carousel.min.css">
   <link rel="stylesheet" href="libs/owl-carousel/owl.theme.default.min.css">
@@ -14,45 +14,621 @@
 </head>
 
 <body>
-  <header class="header py-4">
-    <div class="container m-auto">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center">
-          <a href="index.html">
-            <img src="assets/icons/head-logo.svg" alt="">
-          </a>
-          <ul class="flex items-center">
-            <li class="ml-10"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Home</a></li>
-            <li class="ml-10"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">About us</a></li>
-            <li class="ml-10"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Services</a></li>
-            <li class="ml-10"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Portfolio</a></li>
-            <li class="ml-10"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Blogs</a></li>
-            <li class="ml-10"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Contact us</a></li>
-          </ul>
+  <main class="relative">
+    <header class="header py-3 fixed w-full z-50 ">
+      <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                  <button type="button" class="mr-4 xl:hidden block mobile-menu">
+                      <img src="assets/icons/menu.svg" alt="">
+                  </button>
+                  <a href="index.html">
+                      <img src="assets/icons/head-logo.svg" alt="" class="xl:h-16 h-8">
+                  </a>
+                  <div class="nav-menu xl:static fixed right-0 top-0 w-full xl:h-auto h-full">
+                      <div class="pt-4 pl-4 xl:hidden block">
+                          <div class="flex items-center justify-between">
+                              <button type="button" class="menu-close">
+                                  <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                                  </svg>
+                              </button>
+                              <ul class="flex items-center justify-center pl-0 mb-0 pr-4 mobile-lang">
+                                  <li class="ml-2 active"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Az</a></li>
+                                  <li class="ml-2"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">En</a></li>
+                                  <li class="ml-2"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Ru</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <ul
+                          class="flex items-center xl:flex-row flex-col xl:justify-start justify-center xl:h-auto h-full">
+                          <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="index.html"
+                                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Home</a>
+                          </li>
+                          <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="about.html"
+                                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">About
+                                  us</a></li>
+                          <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="portfolio.html"
+                                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Portfolio</a>
+                          </li>
+                          <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="blogs.html"
+                                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Blogs</a>
+                          </li>
+                          <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="contact.html"
+                                  class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Contact
+                                  us</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="flex items-center">
+                  <div class="relative w-14 mr-3 xl:block hidden">
+                      <select id="langs"
+                        class="border text-gray-900 text-base focus:ring-blue-500 focus:outline-none block h-8 rounded-lg px-2 cbox-item font-normal lang-select w-14">
+                        <option value="Az" selected>Az</option>
+                        <option value="En">En</option>
+                        <option value="Ru">Ru</option>
+                      </select>
+                      <img src="assets/icons/icn-chevron-down.svg" alt="" class="absolute top-2 right-2 pointer-events-none">
+                  </div>
+                  <a href="tel:+994 51 625 51 45" class="xl:hidden block">
+                      <img src="assets/icons/phone-call.svg" alt="">
+                  </a>
+                  <a href="tel:+994 51 625 51 45" class="xl:inline-flex items-center hidden">
+                      <img src="assets/icons/call.svg" alt="">
+                      <span
+                          class="ml-2 font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">+994
+                          51 625 51 45</span>
+                  </a>
+                  <a href="contact.html"
+                      class="inline-flex items-center xl:ml-6 ml-4 bg-black text-white xl:text-base text-sm font-normal xl:px-6 px-4 xl:py-3 py-2 rounded-3xl hover:opacity-80 transition duration-300 ease-in-out head-contact">
+                      <span class="mr-3">
+                          <span class="xl:block hidden">Lets Have a Chat</span>
+                          <span class="xl:hidden block">Contact</span>
+                      </span>
+                      <img src="assets/icons/arrow-right.svg" alt="">
+                  </a>
+              </div>
+          </div>
+      </div>
+  </header>
+    <section class="min-h-screen relative">
+      <div class="page-head bg-no-repeat bg-cover bg-center absolute top-0 w-full pointer-events-none -z-10">
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="pb-4 pt-36 lg:pb-28 lg:pt-48">
+          <div class="text-center">
+            <h1 class="font-medium lg:text-5xl text-3xl mb-6 text-dark-gray home-h1 mx-auto">
+              Baku-based design agency crafting captivating digital experiences for clients and audiences.
+            </h1>
+            <a href="contact.html"
+              class="inline-flex items-center mt-3 bg-black text-white xl:text-base text-sm font-normal xl:px-6 px-4 xl:py-3 py-2 rounded-3xl hover:opacity-80 transition duration-300 ease-in-out head-contact">
+              <span class="mr-3">
+                <span>Lets Have a Chat</span>
+              </span>
+              <img src="assets/icons/arrow-right.svg" alt="">
+            </a>
+          </div>
+          <div class="owl-carousel owl-theme home-carousel mt-8">
+            <div class="h-60 lg:h-80 overflow-hidden rounded-3xl home-carousel-item">
+              <a href="#" class="h-full w-full">
+                <img src="assets/imgs/home1.png" alt="" class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </a>
+            </div>
+            <div class="h-60 lg:h-80 overflow-hidden rounded-3xl home-carousel-item">
+              <a href="#" class="h-full w-full">
+                <img src="assets/imgs/home2.png" alt="" class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </a>
+            </div>
+            <div class="h-60 lg:h-80 overflow-hidden rounded-3xl home-carousel-item">
+              <a href="#" class="h-full w-full">
+                <img src="assets/imgs/home3.png" alt="" class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="flex items-center">
-          <a href="tel:+994 51 625 51 45" class="inline-flex items-center">
-            <img src="assets/icons/call.svg" alt="">
-            <span class="ml-2 font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">+994 51 625 51 45</span>
-          </a>
-          <a href="contact.html" class="inline-flex items-center ml-6 bg-black text-white text-base font-normal px-6 py-3 rounded-3xl">
-            <span class="mr-3">Lets Have a Chat</span>
-            <img src="assets/icons/arrow-right.svg" alt="">
+      </div>
+      <div class="container mx-auto px-4 mb-20 md:mt-4 lg:mt-4 mt-8">
+        <p class="text-dark-gray text-center text-xl lg:text-2xxl font-medium">We worked with</p>
+        <div class="owl-carousel owl-theme partners-carousel mt-5">
+          <div class="item">
+            <img src="assets/imgs/logo1.png" alt="" class="h-10 object-contain">
+          </div>
+          <div class="item">
+            <img src="assets/imgs/logo2.png" alt="" class="h-10 object-contain">
+          </div>
+          <div class="item">
+            <img src="assets/imgs/logo3.png" alt="" class="h-10 object-contain">
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto mb-16 lg:mb-24 px-4 mt-4">
+        <h2 class="text-dark-gray font-medium sm:text-3xl text-2xl mb-4">Our Services</h2>
+        <div class="text-lg leading-7 text-black-500">Innovation is at the core of everything we do. We believe in
+          pushing boundaries, challenging norms, and crafting solutions that not only meet but exceed expectations.
+        </div>
+        <div class="philosophy services-all mt-6">
+          <div class="p-6 philosophy-item rounded-3xl border-b mb-6 transition duration-300 ease-in-out">
+            <a href="services-single.html">
+              <h4 class="flex items-start">
+                <img src="assets/icons/edge1.svg" alt="" class="mr-3 mt-1">
+                <span class="font-normal xl:text-3xl text-2xl">Web Design</span>
+              </h4>
+              <div class="lg:text-xl text-base font-medium philosophy-text mt-4">
+                Our team of talented designers and developers are passionate about their craft. With a keen eye for
+                detail and a drive for perfection, we deliver designs that captivate and experiences that resonate.
+              </div>
+            </a>
+          </div>
+          <div class="p-6 philosophy-item rounded-3xl border-b mb-6 transition duration-300 ease-in-out">
+            <a href="services-single.html">
+              <h4 class="flex items-start">
+                <img src="assets/icons/edge2.svg" alt="" class="mr-3 mt-1">
+                <span class="font-normal xl:text-3xl text-2xl">Development</span>
+              </h4>
+              <div class="lg:text-xl text-base font-medium philosophy-text mt-4">
+                We believe in the power of collaboration. By working closely with our clients, we ensure that every
+                project is tailored to their unique needs and objectives.
+              </div>
+            </a>
+          </div>
+          <div class="p-6 philosophy-item rounded-3xl border-b mb-6 transition duration-300 ease-in-out">
+            <a href="services-single.html">
+              <h4 class="flex items-start">
+                <img src="assets/icons/edge3.svg" alt="" class="mr-3 mt-1">
+                <span class="font-normal xl:text-3xl text-2xl">Devops</span>
+              </h4>
+              <div class="lg:text-xl text-base font-medium philosophy-text mt-4">
+                In a fast-paced digital world, staying ahead of the curve is essential. That's why we're committed to
+                using the latest tools and technologies to deliver solutions that are not only innovative but also
+                future-proof.
+              </div>
+            </a>
+          </div>
+          <div class="p-6 philosophy-item rounded-3xl border-b mb-6 transition duration-300 ease-in-out">
+            <a href="services-single.html">
+              <h4 class="flex items-start">
+                <img src="assets/icons/edge4.svg" alt="" class="mr-3 mt-1">
+                <span class="font-normal xl:text-3xl text-2xl">Branding</span>
+              </h4>
+              <div class="lg:text-xl text-base font-medium philosophy-text mt-4">
+                Our clients are at the heart of everything we do. From concept to execution, we strive to exceed
+                expectations and deliver results that drive success.
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto mb-16 lg:mb-24 px-4 mt-4">
+        <h2 class="text-dark-gray font-medium sm:text-3xl text-2xl mb-4">Our Projects</h2>
+        <div class="text-lg leading-7 text-black-500">
+          Innovation is at the core of everything we do. We believe in pushing boundaries, challenging norms, and
+          crafting solutions that not only meet but exceed expectations.
+        </div>
+        <div class="mt-6">
+          <div class="mb-6">
+            <div class="lg:rounded-3xl rounded-xl overflow-hidden home-project-img">
+              <a href="#" class="w-full h-full">
+                <img src="assets/imgs/project-img.png" alt=""
+                  class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </a>
+            </div>
+            <div class="flex lg:items-center justify-between mt-4 lg:flex-row flex-col lg:mt-8">
+              <h5 class="text-dark-gray lg:text-4xl text-2xl font-medium lg:mr-6 mr-0 lg:mb-0 mb-4">Project 1</h5>
+              <a href="project.html"
+                class="view-project text-lg text-white font-normal leading-6 inline-flex items-center px-6 py-3 lg:py-4 hover:opacity-80 transition duration-300 ease-in-out justify-center">
+                <span class="mr-3">View Project</span>
+                <img src="assets/icons/arrow-right.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="mb-6">
+            <div class="lg:rounded-3xl rounded-xl overflow-hidden home-project-img">
+              <a href="#" class="w-full h-full">
+                <img src="assets/imgs/project-img.png" alt=""
+                  class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </a>
+            </div>
+            <div class="flex lg:items-center justify-between mt-4 lg:flex-row flex-col lg:mt-8">
+              <h5 class="text-dark-gray lg:text-4xl text-2xl font-medium lg:mr-6 mr-0 lg:mb-0 mb-4">Project 1</h5>
+              <a href="project.html"
+                class="view-project text-lg text-white font-normal leading-6 inline-flex items-center px-6 py-3 lg:py-4 hover:opacity-80 transition duration-300 ease-in-out justify-center">
+                <span class="mr-3">View Project</span>
+                <img src="assets/icons/arrow-right.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="mb-6">
+            <div class="lg:rounded-3xl rounded-xl overflow-hidden home-project-img">
+              <a href="#" class="w-full h-full">
+                <img src="assets/imgs/project-img.png" alt=""
+                  class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </a>
+            </div>
+            <div class="flex lg:items-center justify-between mt-4 lg:flex-row flex-col lg:mt-8">
+              <h5 class="text-dark-gray lg:text-4xl text-2xl font-medium lg:mr-6 mr-0 lg:mb-0 mb-4">Project 1</h5>
+              <a href="project.html"
+                class="view-project text-lg text-white font-normal leading-6 inline-flex items-center px-6 py-3 lg:py-4 hover:opacity-80 transition duration-300 ease-in-out justify-center">
+                <span class="mr-3">View Project</span>
+                <img src="assets/icons/arrow-right.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto md:mb-20 px-4 lg:mb-20 mb-12 lg:mt-0 mt-10">
+        <h2 class="text-dark-gray font-medium text-3xl mb-6">Our Tech Stack</h2>
+        <img src="assets/icons/techstack.png" alt="" class="w-full h-auto">
+      </div>
+      <div class="container mx-auto md:mb-20 mb-12 px-4 lg:mb-20">
+        <h2 class="text-dark-gray font-medium text-3xl mb-6">Our other Blogs</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 blogs">
+          <div class="blog-item">
+            <a href="blog-single.html" class="block rounded-3xl p-4">
+              <div class="h-52 overflow-hidden rounded-xl">
+                <img src="assets/imgs/00fd94e9bf78847fee18dceaa30c4d3f.png" alt=""
+                  class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </div>
+              <div>
+                <p class="mt-2 mb-2 text-dark-black blog-author flex items-center">
+                  <span>Joe Doe</span>
+                  <span>256</span>
+                </p>
+                <h4
+                  class="text-dark-gray text-2xl font-medium mb-2 overflow-hidden whitespace-nowrap text-ellipsis transition duration-500 ease-in-out">
+                  Veb Saytların hazırlanması</h4>
+                <div class="text-gray-600 font-normal text-base h-12 line-clamp-2">
+                  Pop-up they vhs celiac kinfolk vaporware jean ipsum. Cliche blue locavore
+                  Nulla dolor velit adipisicing duis excepteur esse in duis nostrud occaecat mollit
+                  incididunt deserunt sunt. Ut ut
+                  sunt laborum ex occaecat eu tempor labore enim adipisicing minim ad. Est in quis eu
+                  dolore occaecat excepteur fugiat
+                  dolore nisi aliqua fugiat enim ut cillum. Labore enim duis nostrud eu. Est ut
+                  eiusmod consequat irure quis deserunt
+                  ex. Enim laboris dolor magna pariatur. Dolor et ad sint voluptate sunt elit mollit
+                  officia ad enim sit consectetur
+                  enim.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blog-item">
+            <a href="blog-single.html" class="block rounded-3xl p-4">
+              <div class="h-52 overflow-hidden rounded-xl">
+                <img src="assets/imgs/00fd94e9bf78847fee18dceaa30c4d3f.png" alt=""
+                  class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </div>
+              <div>
+                <p class="mt-2 mb-2 text-dark-black blog-author flex items-center">
+                  <span>Joe Doe</span>
+                  <span>256</span>
+                </p>
+                <h4
+                  class="text-dark-gray text-2xl font-medium mb-2 overflow-hidden whitespace-nowrap text-ellipsis transition duration-500 ease-in-out">
+                  Veb Saytların hazırlanması</h4>
+                <div class="text-gray-600 font-normal text-base h-12 line-clamp-2">
+                  Pop-up they vhs celiac kinfolk vaporware jean ipsum. Cliche blue locavore
+                  Nulla dolor velit adipisicing duis excepteur esse in duis nostrud occaecat mollit
+                  incididunt deserunt sunt. Ut ut
+                  sunt laborum ex occaecat eu tempor labore enim adipisicing minim ad. Est in quis eu
+                  dolore occaecat excepteur fugiat
+                  dolore nisi aliqua fugiat enim ut cillum. Labore enim duis nostrud eu. Est ut
+                  eiusmod consequat irure quis deserunt
+                  ex. Enim laboris dolor magna pariatur. Dolor et ad sint voluptate sunt elit mollit
+                  officia ad enim sit consectetur
+                  enim.
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blog-item">
+            <a href="blog-single.html" class="block rounded-3xl p-4">
+              <div class="h-52 overflow-hidden rounded-xl">
+                <img src="assets/imgs/00fd94e9bf78847fee18dceaa30c4d3f.png" alt=""
+                  class="w-full h-full object-cover transition duration-500 ease-in-out">
+              </div>
+              <div>
+                <p class="mt-2 mb-2 text-dark-black blog-author flex items-center">
+                  <span>Joe Doe</span>
+                  <span>256</span>
+                </p>
+                <h4
+                  class="text-dark-gray text-2xl font-medium mb-2 overflow-hidden whitespace-nowrap text-ellipsis transition duration-500 ease-in-out">
+                  Veb Saytların hazırlanması</h4>
+                <div class="text-gray-600 font-normal text-base h-12 line-clamp-2">
+                  Pop-up they vhs celiac kinfolk vaporware jean ipsum. Cliche blue locavore
+                  Nulla dolor velit adipisicing duis excepteur esse in duis nostrud occaecat mollit
+                  incididunt deserunt sunt. Ut ut
+                  sunt laborum ex occaecat eu tempor labore enim adipisicing minim ad. Est in quis eu
+                  dolore occaecat excepteur fugiat
+                  dolore nisi aliqua fugiat enim ut cillum. Labore enim duis nostrud eu. Est ut
+                  eiusmod consequat irure quis deserunt
+                  ex. Enim laboris dolor magna pariatur. Dolor et ad sint voluptate sunt elit mollit
+                  officia ad enim sit consectetur
+                  enim.
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="text-center md:mt-12 mt-4">
+          <a href="blogs.html"
+            class="inline-flex items-center justify-center h-11 py-8 text-dark-gray hover:text-blue-600">
+            <span class="mr-3 font-normal text-base">See More</span>
+            <svg " width=" 16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.33398 8.5H12.6673M12.6673 8.5L8.00065 3.83333M12.6673 8.5L8.00065 13.1667" stroke="#36394A"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </a>
         </div>
       </div>
-    </div>
-  </header>
-  <section class="min-h-screen"></section>
-  <footer class="footer flex items-end">
-    <div class="container m-auto">
-      <p class="font-normal text-base leading-6 text-black">© 2025 MicroCode, All Rights Reserved</p>
-      <ul class="flex items-center justify-end">
-        <li class="ml-6"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Privacy Policy</a></li>
-        <li class="ml-6"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Terms and Conditions</a></li>
-      </ul>
-    </div>
-  </footer>
+      <div class="container mx-auto mt-12 mb-24 px-4">
+        <div class="testimonials rounded-3xl relative flex items-center justify-center overflow-hidden">
+          <div class="testimonials-content">
+            <h4 class="text-black font-medium text-4xl text-center lg:mb-0 mb-3">What our clients say about us?</h4>
+            <!-- <p class="flex items-center justify-center">
+                          <span class="mr-2 text-black-500 text-base font-normal">Click to read</span>
+                          <img src="assets/icons/hand-drawn.svg" alt="" class="relative top-3 rotate-12">
+                      </p> -->
+          </div>
+          <div class="testimonials-items">
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+            <div class="testimonial-item p-3 border rounded-xl">
+              <div class="mb-3 font-normal text-xs testimonial-text">
+                Cray plaid 3-moon dollar vice vice bruh glossier organic v. Readymade ennui franzen v batch. Twee
+                affogato sus whatever kale ugh microdosing roof.Readymade ennui franzen v batch. Twee affogato sus
+                whatever kale ugh microdosing roof.
+              </div>
+              <p class="text-dark-gray text-base font-normal mb-0">Samanda Rose</p>
+              <span class="uppercase text-gray-200 text-xs font-normal">CEO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto mb-24 px-4 lg:mb-36">
+        <h2 class="text-dark-gray font-medium text-3xl mb-6">Contact us</h2>
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div>
+            <div class="contact-box-item p-2 rounded-3xl">
+              <p class="cbox-item p-4 text-black bg-white rounded-t-2xl rounded-b-lg mb-2">Have a Project
+                in Mind?</p>
+              <form action="">
+                <div class="mb-2">
+                  <input type="text" id="fullname"
+                    class="bg-white border text-gray-900 text-base focus:ring-blue-500 focus:border-blue-500 focus:outline-none block w-full h-14 rounded-lg px-4 cbox-item font-normal"
+                    placeholder="Ad və Soyadınız" required />
+                </div>
+                <div class="mb-2">
+                  <div class="flex">
+                    <div class="relative mr-2">
+                      <select id="countries"
+                        class="bg-white border text-gray-900 text-base focus:ring-blue-500 focus:border-blue-500 focus:outline-none block h-14 rounded-lg px-4 cbox-item font-normal custom-select md:w-28 w-24">
+                        <option value="+994" selected>+994</option>
+                        <option value="+90">+90</option>
+                      </select>
+                      <svg class="absolute top-4 right-4 pointer-events-none" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 19C11.7 19 11.5 18.9 11.3 18.7L7.3 14.7C6.9 14.3 6.9 13.7 7.3 13.3C7.7 12.9 8.3 12.9 8.7 13.3L12 16.6L15.3 13.3C15.7 12.9 16.3 12.9 16.7 13.3C17.1 13.7 17.1 14.3 16.7 14.7L12.7 18.7C12.5 18.9 12.3 19 12 19ZM16.7 9.7C17.1 9.3 17.1 8.7 16.7 8.3L12.7 4.3C12.3 3.9 11.7 3.9 11.3 4.3L7.3 8.3C6.9 8.7 6.9 9.3 7.3 9.7C7.7 10.1 8.3 10.1 8.7 9.7L12 6.4L15.3 9.7C15.7 10.1 16.3 10.1 16.7 9.7Z"
+                          fill="#36394A" />
+                      </svg>
+                    </div>
+                    <input type="number" id="number"
+                      class="bg-white border text-gray-900 text-base focus:ring-blue-500 focus:border-blue-500 focus:outline-none block w-full h-14 rounded-lg px-4 cbox-item font-normal input-number"
+                      placeholder="XX XXX XX XX" required />
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <input type="email" id="mail"
+                    class="bg-white border text-gray-900 text-base focus:ring-blue-500 focus:border-blue-500 focus:outline-none block w-full h-14 rounded-lg px-4 cbox-item font-normal"
+                    placeholder="Mailiniz" required />
+                </div>
+                <div class="mb-2 relative">
+                  <select id="countries"
+                    class="bg-white border text-gray-900 text-base focus:ring-blue-500 focus:border-blue-500 focus:outline-none block w-full h-14 rounded-lg px-4 cbox-item font-normal custom-select">
+                    <option selected>İstədiyiniz Xidməti seçin</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="Development">Development</option>
+                    <option value="Devops">Devops</option>
+                    <option value="Branding">Branding</option>
+                  </select>
+                  <svg class="absolute top-4 right-4 pointer-events-none" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 19C11.7 19 11.5 18.9 11.3 18.7L7.3 14.7C6.9 14.3 6.9 13.7 7.3 13.3C7.7 12.9 8.3 12.9 8.7 13.3L12 16.6L15.3 13.3C15.7 12.9 16.3 12.9 16.7 13.3C17.1 13.7 17.1 14.3 16.7 14.7L12.7 18.7C12.5 18.9 12.3 19 12 19ZM16.7 9.7C17.1 9.3 17.1 8.7 16.7 8.3L12.7 4.3C12.3 3.9 11.7 3.9 11.3 4.3L7.3 8.3C6.9 8.7 6.9 9.3 7.3 9.7C7.7 10.1 8.3 10.1 8.7 9.7L12 6.4L15.3 9.7C15.7 10.1 16.3 10.1 16.7 9.7Z"
+                      fill="#36394A" />
+                  </svg>
+                </div>
+                <div class="mb-2">
+                  <textarea name="message" id="message"
+                    class="bg-white border text-gray-900 text-base focus:ring-blue-500 focus:border-blue-500 focus:outline-none block w-full rounded-lg px-4 cbox-item font-normal required h-80 resize-none pt-4"
+                    placeholder="Əlavə məlumat daxil edin"></textarea>
+                </div>
+                <button type="submit"
+                  class="flex items-center justify-center contact-submit h-14 w-full rounded-b-2xl rounded-t-lg">
+                  <span class="mr-4 text-white font-normal text-xl">Qiymət təklifi al</span>
+                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.83398 8.49999H13.1673M13.1673 8.49999L8.50065 3.83333M13.1673 8.49999L8.50065 13.1667"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="contact-box-item p-2 rounded-3xl mb-6">
+              <div class="cbox-item p-4 bg-white rounded-2xl mb-2">
+                <h4 class="text-black text-2xl font-normal mb-2">Bizimlə Əlaqə:</h4>
+                <p class="text-black-500 text-base">Plz bodega listicle polaroid axe pitchfork. Pok
+                  pabst put schlitz.</p>
+              </div>
+              <div class="cbox-item p-4 bg-white rounded-2xl mb-2 text-center">
+                <a href="mailto:salam@mircocode.az" class="inline-flex items-center justify-center">
+                  <span
+                    class="text-black sm:text-2xl text-lg font-normal hover:text-blue-600 transition duration-300 ease-in-out">salam@mircocode.az</span>
+                  <img src="assets/icons/icn-mail.svg" alt="" class="ml-4">
+                </a>
+              </div>
+              <div class="cbox-item p-4 bg-white rounded-2xl mb-2 text-center">
+                <a href="tel:+994 (00) 00-00-000" class="inline-flex items-center justify-center">
+                  <span
+                    class="text-black sm:text-2xl text-lg font-normal hover:text-blue-600 transition duration-300 ease-in-out">+994
+                    (00) 00-00-000</span>
+                  <img src="assets/icons/icn-phone-call.svg" alt="" class="ml-4">
+                </a>
+              </div>
+            </div>
+            <div class="contact-box-item p-2 rounded-3xl mb-6 flex lg:flex-row flex-col">
+              <div class="cbox-item rounded-2xl overflow-hidden lg:mb-0 mb-4 lg:h-auto h-48 lg:w-64 w-full">
+                <div id="map" lat="40.329974" lng="49.777274" class="w-full h-full"></div>
+              </div>
+              <div class="pl-0 contact-info lg:pl-2 w-full">
+                <div class="cbox-item rounded-2xl bg-white p-4 mb-2">
+                  <span class="text-black-500 text-base mb-2">Bizim ofis</span>
+                  <p class="text-black sm:text-2xl text-lg font-normal">38 Khatai Ave, Baku 1008</p>
+                </div>
+                <a href="#" class="flex items-center justify-between h-24 p-4 bg-white cbox-item rounded-2xl">
+                  <span
+                    class="text-xl font-normal text-black hover:text-blue-600 transition duration-300 ease-in-out">Open
+                    in Google Maps</span>
+                  <img src="assets/icons/icn-arrow-right.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="contact-box-item rounded-3xl contact-social-box">
+              <div class="cbox-item p-4 bg-white rounded-2xl mb-2">
+                <h4 class="text-black sm:text-2xl text-lg font-normal">Sosial Mediada biz</h4>
+              </div>
+              <ul class="grid grid-cols-4 gap-2">
+                <li>
+                  <a href="#"
+                    class="cbox-item flex items-center justify-center sm:h-20 h-16 bg-white rounded-2xl hover:bg-gray-100 transition duration-300 ease-in-out">
+                    <img src="assets/icons/instagram.svg" alt="" class="sm:w-8 w-8">
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="cbox-item flex items-center justify-center sm:h-20 h-16 bg-white rounded-2xl hover:bg-gray-100 transition duration-300 ease-in-out">
+                    <img src="assets/icons/facebook.svg" alt="" class="sm:w-8 w-8">
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="cbox-item flex items-center justify-center sm:h-20 h-16 bg-white rounded-2xl hover:bg-gray-100 transition duration-300 ease-in-out">
+                    <img src="assets/icons/linkedin.svg" alt="" class="sm:w-8 w-8">
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="cbox-item flex items-center justify-center sm:h-20 h-16 bg-white rounded-2xl hover:bg-gray-100 transition duration-300 ease-in-out">
+                    <img src="assets/icons/telegram.svg" alt="" class="sm:w-8 w-8">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer flex items-end lg:pb-40 lg:pt-32 pb-16 pt-16">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center md:justify-between md:flex-row flex-col">
+          <p class="font-normal text-base leading-6 text-black md:text-left text-center">© 2025 MicroCode, All
+            Rights Reserved</p>
+          <ul class="flex items-center md:justify-end justify-center md:mt-0 mt-2 md:text-right text-center flex-wrap">
+            <li class="md:ml-6 ml-2 mr-2 md:mr-0 text-center md:text-right"><a href="#"
+                class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Privacy
+                Policy</a></li>
+            <li class="md:ml-6 ml-2 mr-2 md:mr-0 text-center md:text-right"><a href="#"
+                class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Terms
+                and Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <img src="assets/icons/Footer.png" alt=""
+      class="bg-img w-full absolute bottom-0 left-0 pointer-events-none object-cover">
+  </main>
   <!-- jQuery -->
   <script src="libs/jquery/jquery-3.6.4.min.js"></script>
   <!-- Flowbite JS -->

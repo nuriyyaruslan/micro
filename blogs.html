@@ -27,33 +27,49 @@
                         </a>
                         <div class="nav-menu xl:static fixed right-0 top-0 w-full xl:h-auto h-full">
                             <div class="pt-4 pl-4 xl:hidden block">
-                                <button type="button" class="menu-close">
-                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
-                                    </svg>
-                                </button>
+                                <div class="flex items-center justify-between">
+                                    <button type="button" class="menu-close">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+                                        </svg>
+                                    </button>
+                                    <ul class="flex items-center justify-center pl-0 mb-0 pr-4 mobile-lang">
+                                        <li class="ml-2 active"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Az</a></li>
+                                        <li class="ml-2"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">En</a></li>
+                                        <li class="ml-2"><a href="#" class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Ru</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <ul
                                 class="flex items-center xl:flex-row flex-col xl:justify-start justify-center xl:h-auto h-full">
-                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="index.html"
                                         class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Home</a>
                                 </li>
-                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="about.html"
                                         class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">About
                                         us</a></li>
-                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="portfolio.html"
                                         class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Portfolio</a>
                                 </li>
-                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="blogs.html"
                                         class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Blogs</a>
                                 </li>
-                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="#"
+                                <li class="xl:ml-10 ml-0 xl:mb-0 mb-4"><a href="contact.html"
                                         class="font-normal text-base leading-6 text-black transition duration-300 ease-in-out hover:text-blue-600">Contact
                                         us</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="flex items-center">
+                        <div class="relative w-14 mr-3 xl:block hidden">
+                            <select id="langs"
+                              class="border text-gray-900 text-base focus:ring-blue-500 focus:outline-none block h-8 rounded-lg px-2 cbox-item font-normal lang-select w-14">
+                              <option value="Az" selected>Az</option>
+                              <option value="En">En</option>
+                              <option value="Ru">Ru</option>
+                            </select>
+                            <img src="assets/icons/icn-chevron-down.svg" alt="" class="absolute top-2 right-2 pointer-events-none">
+                        </div>
                         <a href="tel:+994 51 625 51 45" class="xl:hidden block">
                             <img src="assets/icons/phone-call.svg" alt="">
                         </a>

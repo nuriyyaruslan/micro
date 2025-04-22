@@ -59,41 +59,50 @@ $(function () {
     $('.nav-menu').removeClass('active');
   })
 
-  // owl carousel init
-  // $('.testimonials').owlCarousel({
-  //   loop: true,
-  //   dots: true,
-  //   nav: true,
-  //   items: 1,
-  //   smartSpeed: 1000,
-  //   navText: [
-  //     `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-  //         <path d="M20 26L10 16L20 6" stroke="#682B82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  //     </svg>`,
-  //     `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-  //         <path d="M12 6L22 16L12 26" stroke="#682B82" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-  //     </svg>`
-  // ] ,
-  //   responsive: {
-  //     1024: {
-  //       nav: false,
-       
-  //     }
-  //   }
-  // });
+  $('.partners-carousel').owlCarousel({
+    loop:true,
+    margin:64,
+    nav:false,
+    autoplay:true,
+    dots:false,
+    smartSpeed: 400,
+    responsive:{
+        0:{
+          items:2,
+          margin:16
+        },
+        576:{
+          items:3,
+          margin:16
+        },
+        1024:{
+          items:5
+        }
+    }
+  })
 
-  // $('.prev-btn').click(function () {
-  //   $('.owl-prev').click();
-  // })
-
-  // $('.next-btn').click(function () {
-  //   $('.owl-next').click();
-  // })
-
-  //MOBILE MENU
-  // $('.menu-open-js').click(function () {
-  //   $('.menu-open,.menu-close').toggleClass('hidden');
-  //   $('.menu-nav').toggleClass('active');
-  // })
+  $('.home-carousel').owlCarousel({
+    loop:true,
+    margin:24,
+    nav:false,
+    autoplay:true,
+    dots:false,
+    responsive:{
+        0:{
+          items:1,
+          margin:12,
+          dots:true,
+        },
+        576:{
+          items:2,
+          margin:12,
+          smartSpeed: 800,
+        },
+        1024:{
+          items:3,
+          smartSpeed: 900,
+        }
+    }
+  })
 
 });
